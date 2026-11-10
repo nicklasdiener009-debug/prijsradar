@@ -31,6 +31,7 @@ function logo(id, cls = '') {
   const src = state.logos[id];
   return `<span class="logo ${cls}" style="${chainVars(id)}">${src ? `<img src="${esc(src)}" alt="" loading="lazy" onerror="this.parentNode.classList.add('fail')">` : ''}<b>${esc(c.short || c.name?.[0] || '?')}</b></span>`;
 }
+const storeOnlyChains = () => (state.storeChains ? [...state.storeChains].filter((c) => CHAINS[c] && !state.chainsWithData.includes(c)) : []);
 const activeChains = () => state.chainsWithData.filter((c) => !state.storeChains || state.storeChains.has(c));
 
 function nearest(chain) {
@@ -38,7 +39,7 @@ function nearest(chain) {
   for (const s of state.stores) if (s.chain === chain) { const d = distanceKm(state.here, s); if (!best || d < best.d) best = { s, d }; }
   return best;
 }
-const chainsByDistance = () => activeChains().map((c) => ({ c, n: nearest(c) })).sort((a, b) => (a.n?.d ?? 99) - (b.n?.d ?? 99));
+const chainsByDistance = (all = false) => (all ? [...activeChains(), ...storeOnlyChains()] : activeChains()).map((c) => ({ c, n: nearest(c) })).sort((a, b) => (a.n?.d ?? 99) - (b.n?.d ?? 99));
 
 function offersFor(chain) {
   const t = today();
@@ -57,6 +58,17 @@ function staples() {
 }
 
 // ---------- pieces ----------
+function folderOf(chain) {
+  const f = state.offers.chains?.[chain]?.folder;
+  if (!f?.pages?.length) return null;
+  if (f.validUntil && f.validUntil < today()) return null;
+  return f;
+}
+function folderTiles(chain, f, max = 12) {
+  return f.pages.slice(0, max).map((p, i) => `<a class="tile pagetile rise" style="--i:${i};${chainVars(chain)}" href="${esc(f.url.replace(/\/page\/\d+$/, '/page/' + p.n))}" target="_blank" rel="noopener">
+    <div class="pg"><img src="${esc(p.image)}" alt="Folder page ${p.n}" loading="lazy"></div><div class="bd"><span class="u">Page ${p.n}</span></div></a>`).join('');
+}
+
 function dealTile(o, i = 0) {
   return `<a class="tile rise" style="--i:${Math.min(i, 12)};${chainVars(o.chain)}" href="${esc(o.url || '#/chain/' + o.chain)}" ${o.url ? 'target="_blank" rel="noopener"' : ''}>
     <div class="ph ${o.image ? '' : 'word'}">${o.image ? `<img src="${esc(o.image)}" alt="" loading="lazy">` : `<span>${esc(o.title.split(' ').slice(0, 3).join(' '))}</span>`}<span class="ribbon">${esc(o.mechanism)}</span></div>
@@ -83,21 +95,30 @@ function viewHome() {
   let html = `<div class="greeting"><div><h1>${hello}</h1><p>Every supermarket in Amsterdam, in one place.</p></div>${locButton()}</div>`;
   if (!state.ready) return html + skeletons(3, 220);
 
-  const chains = chainsByDistance();
-  html += `<section class="sec"><div class="sec-head"><h2>Supermarkets near you</h2></div><div class="rail">${chains.map(({ c, n }, i) => {
+  const chains = chainsByDistance(true);
+  html += `<section class="sec"><div class="sec-head"><h2>Supermarkets near you</h2><span class="sub">${chains.length} chains</span></div><div class="rail">${chains.map(({ c, n }, i) => {
     const deals = offersFor(c).length;
-    return `<a class="storecard rise" style="--i:${i};${chainVars(c)}" href="#/chain/${c}">${logo(c)}<div><div class="n">${esc(CHAINS[c].name)}</div><div class="d">${n ? `${km(n.d)} away` : 'Prices only'}</div></div>${deals ? `<span class="tag">${deals} deals</span>` : ''}</a>`;
+    return `<a class="storecard rise" style="--i:${i};${chainVars(c)}" href="#/chain/${c}">${logo(c)}<div><div class="n">${esc(CHAINS[c].name)}</div><div class="d">${n ? `${km(n.d)} away` : 'Prices only'}${state.chainsWithData.includes(c) ? '' : ' · no online prices'}</div></div>${deals ? `<span class="tag">${deals} deals</span>` : ''}</a>`;
   }).join('')}</div></section>`;
 
   const st = staples();
   for (const [ci, { c, n }] of chains.entries()) {
     const deals = offersFor(c);
+    const hasPrices = state.chainsWithData.includes(c);
+    const storeTiles = () => state.stores.filter((s) => s.chain === c).map((s) => ({ s, d: distanceKm(state.here, s) })).sort((a, b) => a.d - b.d).slice(0, 6)
+      .map(({ s, d }, i) => `<button class="storecard rise" style="--i:${i};${chainVars(c)};text-align:left;border:0;cursor:pointer" data-go="#/chain/${c}">${logo(c, 'sm')}<div><div class="n">${esc(s.address || s.name)}</div><div class="d">${km(d)} away</div></div></button>`).join('');
     const tiles = deals.length
       ? deals.slice(0, 12).map((o, i) => dealTile({ ...o, chain: c }, i)).join('')
-      : st.filter((x) => x.by.get(c)).map((x, i) => productTile(x.by.get(c), x.q, i)).join('');
+      : hasPrices ? st.filter((x) => x.by.get(c)).map((x, i) => productTile(x.by.get(c), x.q, i)).join('') : storeTiles();
     html += `<section class="chainsec rise" style="--i:${ci}">
-      <div class="sec-head">${logo(c)}<div class="titles"><h2>${esc(CHAINS[c].name)}</h2><div class="sub">${n ? `${km(n.d)} · ${esc(n.s.address || n.s.name)}` : 'No store location found'}${deals.length ? ` · ${deals.length} deals this week` : ' · Everyday prices'}</div></div><a class="more" href="#/chain/${c}">View</a></div>
-      <div class="rail">${tiles}<a class="tile add" href="#/chain/${c}">See everything at ${esc(CHAINS[c].name)}</a></div></section>`;
+      <div class="sec-head">${logo(c)}<div class="titles"><h2>${esc(CHAINS[c].name)}</h2><div class="sub">${n ? `${km(n.d)} · ${esc(n.s.address || n.s.name)}` : 'No store location found'}${deals.length ? ` · ${deals.length} deals this week` : hasPrices ? ' · Everyday prices' : ' · Stores (no online prices)'}</div></div><a class="more" href="#/chain/${c}">View</a></div>
+      <div class="rail">${tiles}<a class="tile add" href="#/chain/${c}">See everything at ${esc(CHAINS[c].name)}</a></div>
+      ${folderOf(c) ? `<div class="subhead">This week’s folder${folderOf(c).validUntil ? ` · until ${dayLabel(folderOf(c).validUntil)}` : ''}</div><div class="rail pages">${folderTiles(c, folderOf(c), 10)}</div>` : ''}</section>`;
+  }
+  const locals = state.stores.filter((s) => s.chain === 'other').map((s) => ({ s, d: distanceKm(state.here, s) })).sort((a, b) => a.d - b.d).slice(0, 14);
+  if (locals.length) {
+    html += `<section class="sec"><div class="sec-head"><div class="titles"><h2>Local and speciality shops</h2><div class="sub">Turkish, Moroccan, Asian, organic and independent supermarkets near you</div></div><a class="more" href="#/map">Map</a></div>
+      <div class="rail">${locals.map(({ s, d }, i) => `<button class="storecard rise" style="--i:${i};--chain:#8e8e93;text-align:left;border:0;cursor:pointer" data-go="#/map" data-focus-after="${esc(s.id)}"><span class="logo" style="--chain:#8e8e93"><b>${esc((s.name || '?').trim()[0].toUpperCase())}</b></span><div><div class="n">${esc(s.name)}</div><div class="d">${km(d)} away${s.address ? ' · ' + esc(s.address) : ''}</div></div></button>`).join('')}</div></section>`;
   }
   return html + footer();
 }
@@ -153,11 +174,14 @@ function viewChain(id, q = '') {
       const g = bestPerChain(r, state.sortBy)[0];
       products = g ? g.items.concat(r.filter((p) => !g.items.includes(p))).slice(0, 30).map((p) => productRow(p)).join('') : `<div class="empty"><h3>Not found at ${esc(c.name)}</h3></div>`;
     } else {
-      products = staples().filter((x) => x.by.get(id)).map((x) => productRow(x.by.get(id), ` · <span class="muted">${esc(x.q)}</span>`)).join('');
+      products = staples().filter((x) => x.by.get(id)).map((x) => productRow(x.by.get(id), ` · <span class="muted">${esc(x.q)}</span>`)).join('')
+        || `<div class="empty"><h3>No online prices</h3><p>${esc(c.name)} doesn’t publish its prices online, so we can only show stores${deals.length ? ' and deals' : ''}.</p></div>`;
     }
   }
 
-  html += `<div class="two" style="margin-top:20px"><div>
+  const fol = folderOf(id);
+  html += `${fol ? `<section class="sec"><div class="sec-head"><h2>This week’s folder</h2><span class="sub">${fol.validUntil ? `Valid until ${dayLabel(fol.validUntil)}` : ''}</span><a class="more" href="${esc(fol.url)}" target="_blank" rel="noopener">Open</a></div><div class="rail pages">${folderTiles(id, fol, 40)}</div></section>` : ''}
+    <div class="two" style="margin-top:20px"><div>
       ${deals.length ? `<section class="sec" style="margin-top:0"><div class="sec-head"><h2>Deals this week</h2><span class="sub">${state.offers.chains[id]?.status === 'stale' ? 'Last known deals' : ''}</span></div><div class="grid">${deals.slice(0, 24).map((o, i) => dealTile({ ...o, chain: id }, i)).join('')}</div></section>` : ''}
       <section class="sec" ${deals.length ? '' : 'style="margin-top:0"'}><div class="sec-head"><h2>${inner ? 'Results' : 'Everyday prices'}</h2></div>
         <form class="innersearch" data-chain-search="${id}"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.2-4.2"/></svg><input name="q" value="${esc(inner)}" placeholder="Search at ${esc(c.name)}" autocomplete="off"></form>
@@ -340,7 +364,7 @@ function wire() {
   document.addEventListener('click', (e) => {
     const b = e.target.closest('button, [data-go]');
     if (!b) return;
-    if (b.dataset.go) location.hash = b.dataset.go;
+    if (b.dataset.go) { location.hash = b.dataset.go; if (b.dataset.focusAfter) setTimeout(() => focusStore(b.dataset.focusAfter), 400); }
     else if (b.dataset.sort) { state.sortBy = b.dataset.sort; render({ keepScroll: true }); }
     else if (b.dataset.remove != null) { state.list.splice(Number(b.dataset.remove), 1); saveList(); render({ keepScroll: true }); }
     else if (b.dataset.add) { state.list.push(b.dataset.add); saveList(); render({ keepScroll: true }); }

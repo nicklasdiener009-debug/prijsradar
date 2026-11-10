@@ -255,3 +255,11 @@ a.row:hover { background: var(--sunken); }
   *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0s !important; transition-duration: .01ms !important; }
   .rise { opacity: 1; }
 }
+
+/* weekly folder pages */
+.rail.pages { grid-auto-columns: 132px; }
+.pagetile .pg { aspect-ratio: 3 / 4; background: #fff; overflow: hidden; }
+.pagetile .pg img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .5s var(--ease); }
+.pagetile:hover .pg img { transform: scale(1.04); }
+.pagetile .bd { padding: 7px 10px 9px; }
+.subhead { font-size: 13px; font-weight: 650; color: var(--muted); margin: 2px 0 8px; }

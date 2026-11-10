@@ -11,7 +11,11 @@ export const CHAINS = {
   spar:      { name: 'SPAR',         short: 'S', color: '#008a4b', match: /spar\b/i },
   dekamarkt: { name: 'DekaMarkt',    short: 'D', color: '#d6001c', match: /deka/i },
   hoogvliet: { name: 'Hoogvliet',    short: 'H', color: '#00539f', match: /hoogvliet/i },
-  ekoplaza:  { name: 'Ekoplaza',     short: 'E', color: '#7ab51d', match: /ekoplaza/i },
+  ekoplaza:  { name: 'Ekoplaza',     short: 'E', color: '#7ab51d', match: /ekoplaza|foodmarqt/i },
+  amazing:   { name: 'Amazing Oriental', short: 'AO', color: '#c8102e', match: /amazing oriental/i },
+  wahnamhong:{ name: 'Wah Nam Hong', short: 'WN', color: '#b5121b', match: /wah nam hong/i },
+  tanger:    { name: 'Tanger Markt', short: 'T', color: '#0b7a3e', match: /tanger\s*markt/i },
+  genco:     { name: 'Genco',        short: 'G', color: '#1f5fa8', match: /genco/i },
 };
 
 export function chainForTags(tags = {}) {

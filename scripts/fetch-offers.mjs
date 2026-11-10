@@ -91,55 +91,103 @@ async function fetchAH() {
   return offers;
 }
 
-// ---------- Jumbo (app API) ----------
+// ---------- weekly folders on Publitas ----------
+// Many chains publish their weekly folder on Publitas, a public folder-hosting
+// service. Each folder exposes its pages (images + text) as JSON. We keep the
+// page pictures and read the offers out of the page text.
 
-async function fetchJumbo() {
-  const offers = [];
-  const sources = [];
-  const errors = [];
-  // The app API version moves now and then; try the recent ones.
-  for (const v of ['v17', 'v18', 'v19', 'v20', 'v16']) {
-    const base = `https://mobileapi.jumbo.com/${v}`;
-    const overview = await http(`${base}/promotion-overview`).catch((e) => { errors.push(`${v} overview: ${e.message}`); return null; });
-    if (overview) sources.push(overview);
-    for (let offset = 0; offset < 3000; offset += 100) {
-      const res = await http(`${base}/search?offset=${offset}&limit=100&filters=promotion`).catch((e) => { errors.push(`${v} search: ${e.message}`); return null; });
-      const items = res?.products?.data || [];
-      if (!items.length) break;
-      sources.push(res);
-      if (items.length < 100) break;
-    }
-    if (sources.length) break;
-  }
-  for (const src of sources) {
-    for (const n of walk(src)) {
-      const promo = n.promotion || (Array.isArray(n.promotions) ? n.promotions[0] : null);
-      const title = n.title || n.name;
-      if (!title || !promo) continue;
-      offers.push(clean({
-        title,
-        mechanism: promo.tags?.[0]?.text || promo.name || promo.title || 'Aanbieding',
-        price: num(n.prices?.promotionalPrice) || num(n.prices?.price),
-        was: num(n.prices?.price),
-        size: n.quantity,
-        validFrom: date(promo.fromDate || promo.startDate),
-        validUntil: date(promo.toDate || promo.endDate),
-        image: n.imageInfo?.primaryView?.[0]?.url || n.image,
-        url: n.id ? `https://www.jumbo.com/producten/${n.id}` : null,
-      }));
-    }
-  }
-  if (!offers.length) {
-    const sample = sources[0] ? JSON.stringify(sources[0]).slice(0, 600) : 'no responses';
-    throw new Error(`no offers parsed. ${errors.slice(0, 6).join('; ')}. sample: ${sample}`);
-  }
-  return offers;
+const BOT_UA = 'prijsradar-bot/1.0 (+https://github.com/nicklasdiener009-debug/prijsradar)';
+const MONTHS = { jan: 1, feb: 2, mrt: 3, maa: 3, apr: 4, mei: 5, jun: 6, jul: 7, aug: 8, sep: 9, okt: 10, nov: 11, dec: 12 };
+const PRICE = /^(\d{1,3})[.,](\d{2})-?$/;
+const MECH = /(\d\s*\+\s*\d\s*gratis|2e\s+halve\s+prijs|\d+\s*%\s*korting|\d+\s+voor\s+\d+(?:[.,]\d{1,2})?|nu\s+\d+[.,]\d{2}|op\s*=\s*op|halve\s+prijs|gratis)/i;
+const SIZE = /(\d+(?:[.,]\d+)?\s*(?:gram|g|kg|kilo|ml|cl|liter|l|stuks?|st|rollen|tabletten)\b|per\s+(?:stuk|kilo|pak|bos|zak)|\bbak\b|\bzak\b|\bpak\b|\bfles\b|\bpot\b)/i;
+const SKIP = /geldig|aanbieding|folder|prijzen|www\.|\.nl\b|t\/m|alleen|zolang|voorraad|week\s*\d|per persoon|max\./i;
+
+function validity(text, year) {
+  const m = text.match(/geldig[^\d]{0,30}(\d{1,2})\s*([a-z]{3})?[a-z]*\.?\s*t\/?m\s*[a-z]{0,3}\.?\s*(\d{1,2})\s*([a-z]{3})[a-z]*\.?\s*(\d{4})?/i);
+  if (!m) return {};
+  const y = Number(m[5] || year);
+  const m2 = MONTHS[m[4].toLowerCase()];
+  const m1 = MONTHS[(m[2] || m[4]).toLowerCase()];
+  if (!m1 || !m2) return {};
+  const pad = (n) => String(n).padStart(2, '0');
+  return { validFrom: `${m1 > m2 ? y - 1 : y}-${pad(m1)}-${pad(m[1])}`, validUntil: `${y}-${pad(m2)}-${pad(m[3])}` };
 }
 
+function offersFromText(text, page) {
+  const lines = text.split(/\n+/).map((l) => l.trim()).filter(Boolean);
+  const out = [];
+  let prices = [];
+  let mech = null;
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const pm = line.match(PRICE);
+    if (pm) { prices.push(Number(`${pm[1]}.${pm[2]}`)); continue; }
+    const two = `${line} ${lines[i + 1] || ''}`;
+    const single = line.match(MECH);
+    const joined = !single && line.length < 12 ? two.match(MECH) : null;
+    const mm = single || joined;
+    if (mm && line.length < 40) { mech = mm[0].replace(/\s+/g, ' ').trim(); if (joined && joined.index + joined[0].length > line.length) i++; continue; }
+    if (SKIP.test(line) || line.length < 3 || line.length > 70 || !/[a-z]{3}/i.test(line) || SIZE.test(line) && !/[a-z]{4,}.*[a-z]{4,}/i.test(line)) continue;
+    if (!prices.length && !mech) continue;
+    const next = lines[i + 1] || '';
+    const size = SIZE.test(next) && next.length < 40 ? next : null;
+    const price = prices.length ? prices[prices.length - 1] : null;
+    const was = prices.length > 1 && prices[prices.length - 2] > price ? prices[prices.length - 2] : null;
+    out.push(clean({
+      title: line.replace(/\s+/g, ' '),
+      mechanism: mech ? mech[0].toUpperCase() + mech.slice(1).toLowerCase() : was ? `Van ${was.toFixed(2).replace('.', ',')} voor ${price.toFixed(2).replace('.', ',')}` : 'In de folder',
+      price, was, size, page,
+    }));
+    if (size) i++;
+    prices = [];
+    mech = null;
+  }
+  return out;
+}
+
+async function fetchPublitas(candidates) {
+  let base = null;
+  for (const url of candidates) {
+    try {
+      const r = await fetch(url, { redirect: 'follow', headers: { 'User-Agent': BOT_UA } });
+      if (r.ok) { base = r.url.replace(/\/page\/\d+.*$/, '').replace(/\/$/, ''); break; }
+    } catch { /* try next */ }
+  }
+  if (!base) throw new Error('no folder found at ' + candidates.join(', '));
+  const host = new URL(base).origin;
+  const headers = { 'User-Agent': BOT_UA };
+  const spreads = await http(`${base}/spreads.json`, { headers });
+  const pages = spreads.flatMap((s) => s.pages || []);
+  const allText = pages.map((p) => p.text || '').join('\n');
+  const valid = validity(allText, new Date().getFullYear());
+  const pick = (imgs) => imgs && (imgs.at600 || imgs.at800 || imgs.at1000 || imgs.at1200 || Object.values(imgs)[0]);
+  const folder = {
+    url: `${base}/page/1`,
+    pages: pages.slice(0, 40).map((p) => ({ n: p.number, image: pick(p.images) ? host + pick(p.images) : null })).filter((p) => p.image),
+    ...valid,
+  };
+  const offers = pages.flatMap((p) => offersFromText(p.text || '', p.number).map((o) => ({ ...o, ...valid, url: `${base}/page/${p.number}` })));
+  return { offers, folder };
+}
+
+const folderAdapter = (...urls) => () => fetchPublitas(urls);
+
 // Add more chains here: { id, fetch } returning [{ title, mechanism, price?, was?, validFrom?, validUntil?, image?, url? }]
+// Adapters return either an array of offers or { offers, folder }.
+const PUB = 'https://view.publitas.com';
 const ADAPTERS = [
   { id: 'ah', fetch: fetchAH },
-  { id: 'jumbo', fetch: fetchJumbo },
+  { id: 'jumbo', fetch: folderAdapter(`${PUB}/jumbo-supermarkten`) },
+  { id: 'vomar', fetch: folderAdapter('https://view.folders.nl/vomar') },
+  { id: 'dekamarkt', fetch: folderAdapter(`${PUB}/dekamarkt`) },
+  { id: 'spar', fetch: folderAdapter(`${PUB}/spar`) },
+  { id: 'hoogvliet', fetch: folderAdapter(`${PUB}/hoogvliet`) },
+  { id: 'ekoplaza', fetch: folderAdapter(`${PUB}/ekoplaza`) },
+  // Not found on Publitas yet; these candidates are tried each day and fail quietly.
+  { id: 'dirk', fetch: folderAdapter(`${PUB}/dirk-van-den-broek-supermarkten`, `${PUB}/dirk-vdbroek`, 'https://view.folders.nl/dirk-van-den-broek') },
+  { id: 'plus', fetch: folderAdapter(`${PUB}/plus-supermarkten`, `${PUB}/plus-retail`, 'https://view.folders.nl/plus') },
+  { id: 'aldi', fetch: folderAdapter(`${PUB}/aldi-nl`, `${PUB}/aldi-nord`, 'https://view.folders.nl/aldi') },
 ];
 
 // ---------- run ----------
@@ -154,14 +202,18 @@ async function main() {
   for (const { id, fetch } of ADAPTERS) {
     const prev = previous.chains?.[id];
     try {
-      const offers = dedupe((await fetch()).filter((o) => o.title && o.mechanism));
-      if (offers.length < 5) throw new Error(`only ${offers.length} offers found, looks broken`);
-      result.chains[id] = { status: 'ok', checkedAt: result.updatedAt, fetchedAt: result.updatedAt, offers };
+      const got = await fetch();
+      const folder = Array.isArray(got) ? null : got.folder;
+      const offers = dedupe((Array.isArray(got) ? got : got.offers).filter((o) => o.title && o.mechanism));
+      if (offers.length < 5 && !folder?.pages?.length) throw new Error(`only ${offers.length} offers found, looks broken`);
+      result.chains[id] = { status: 'ok', checkedAt: result.updatedAt, fetchedAt: result.updatedAt, offers, ...(folder ? { folder } : {}) };
       ok++;
-      console.log(`${id}: ${offers.length} offers`);
+      console.log(`${id}: ${offers.length} offers${folder ? `, folder with ${folder.pages.length} pages` : ''}`);
+      for (const o of offers.slice(0, 4)) console.log('   ', JSON.stringify(o));
     } catch (err) {
       const kept = (prev?.offers || []).filter((o) => !o.validUntil || o.validUntil >= today);
-      result.chains[id] = { status: kept.length ? 'stale' : 'error', checkedAt: result.updatedAt, fetchedAt: prev?.fetchedAt || null, error: String(err.message || err).slice(0, 300), offers: kept };
+      const keepFolder = prev?.folder && (!prev.folder.validUntil || prev.folder.validUntil >= today) ? { folder: prev.folder } : {};
+      result.chains[id] = { status: kept.length || keepFolder.folder ? 'stale' : 'error', checkedAt: result.updatedAt, fetchedAt: prev?.fetchedAt || null, error: String(err.message || err).slice(0, 300), offers: kept, ...keepFolder };
       console.error(`${id}: FAILED (${err.message}); keeping ${kept.length} previous offers`);
     }
   }
@@ -173,4 +225,6 @@ async function main() {
   }
 }
 
-main();
+export { offersFromText, validity };
+
+if (process.argv[1] && import.meta.url.endsWith(process.argv[1].split('/').pop())) main();
