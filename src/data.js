@@ -56,6 +56,7 @@ export async function loadPrices() {
         size: p.s || '',
         price: p.p,
         url: chain.u && p.l ? chain.u + p.l : null,
+        link: p.l,
         unit: unitPrice(p),
         key: normalize(p.n + ' ' + (p.s || '')),
       });

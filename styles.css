@@ -263,3 +263,19 @@ a.row:hover { background: var(--sunken); }
 .pagetile:hover .pg img { transform: scale(1.04); }
 .pagetile .bd { padding: 7px 10px 9px; }
 .subhead { font-size: 13px; font-weight: 650; color: var(--muted); margin: 2px 0 8px; }
+
+/* product pictures */
+.pic { position: relative; display: block; overflow: hidden; background: #fff; flex-shrink: 0; }
+.pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 8%; z-index: 1; background: #fff; }
+.pic-type { position: absolute; inset: 0; display: grid; place-items: center; font-size: 2.6em; line-height: 1; }
+.pic.fill { position: absolute; inset: 0; font-size: 26px; }
+.pic.row { width: 52px; height: 52px; border-radius: 12px; font-size: 10px; box-shadow: 0 0 0 1px var(--hair); }
+.pic.xs { display: inline-block; vertical-align: middle; width: 22px; height: 22px; border-radius: 6px; margin-right: 8px; font-size: 5px; box-shadow: 0 0 0 1px var(--hair); }
+.thumb { position: relative; flex-shrink: 0; }
+.logo.badge { --size: 20px; position: absolute; right: -6px; bottom: -6px; border: 2px solid var(--surface); box-shadow: none; }
+.tile .ph { overflow: hidden; }
+.tile .ph .ribbon { z-index: 2; }
+.ribbon.soft { background: rgba(22,22,26,.72) !important; text-transform: capitalize; font-weight: 600 !important; }
+.pickname { display: flex; align-items: center; min-width: 0; }
+.compare-group details summary { padding-left: 84px; }
+.compare-group details .row { padding-left: 18px; }

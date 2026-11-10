@@ -14,7 +14,8 @@
 import { readFile, writeFile } from 'node:fs/promises';
 
 const OUT = new URL('../data/offers.json', import.meta.url);
-const UA = 'Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Mobile Safari/537.36';
+// We identify ourselves honestly; sources that refuse bots are skipped, not tricked.
+const UA = 'prijsradar-bot/1.0 (+https://github.com/nicklasdiener009-debug/prijsradar)';
 const today = new Date().toISOString().slice(0, 10);
 
 async function http(url, opts = {}) {
@@ -191,7 +192,8 @@ const folderAdapter = (...urls) => () => fetchPublitas(urls);
 // Adapters return either an array of offers or { offers, folder }.
 const PUB = 'https://view.publitas.com';
 const ADAPTERS = [
-  { id: 'ah', fetch: fetchAH },
+  // AH's app API first; if it refuses us, fall back to AH's public weekly folder.
+  { id: 'ah', fetch: async () => { try { return await fetchAH(); } catch (e) { console.error('ah api:', e.message); return fetchPublitas(['https://folder.ah.nl/']); } } },
   { id: 'jumbo', fetch: folderAdapter(`${PUB}/jumbo-supermarkten`) },
   { id: 'vomar', fetch: folderAdapter('https://view.folders.nl/vomar') },
   { id: 'dekamarkt', fetch: folderAdapter(`${PUB}/dekamarkt`) },

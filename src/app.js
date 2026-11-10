@@ -2,6 +2,7 @@ import { CHAINS } from './chains.js';
 import { BASE_LABEL } from './units.js';
 import { loadPrices, loadStores, loadOffers, distanceKm, normalize } from './data.js';
 import { search, bestPerChain } from './search.js';
+import { loadImages, pictureHtml } from './pictures.js';
 
 const DEFAULT_LOCATION = { lat: 52.3791, lon: 4.9003, label: 'Amsterdam Centraal' };
 const LIST_KEY = 'ams-shopping-list-v1';
@@ -72,18 +73,18 @@ function folderTiles(chain, f, max = 12) {
 
 function dealTile(o, i = 0) {
   return `<a class="tile rise" style="--i:${Math.min(i, 12)};${chainVars(o.chain)}" href="${esc(o.url || '#/chain/' + o.chain)}" ${o.url ? 'target="_blank" rel="noopener"' : ''}>
-    <div class="ph ${o.image ? '' : 'word'}">${o.image ? `<img src="${esc(o.image)}" alt="" loading="lazy">` : `<span>${esc(o.title.split(' ').slice(0, 3).join(' '))}</span>`}<span class="ribbon">${esc(o.mechanism)}</span></div>
+    <div class="ph">${pictureHtml({ chain: o.chain, name: o.title, image: o.image }, 'fill')}<span class="ribbon">${esc(o.mechanism)}</span></div>
     <div class="bd"><span class="t">${esc(o.title)}</span>
       <span class="p">${o.price ? `<strong>${euro(o.price)}</strong>` : ''}${o.was && o.price && o.was > o.price ? `<s>${euro(o.was)}</s>` : ''}</span>
       ${o.validFrom && o.validFrom > today() ? `<span class="u">From ${dayLabel(o.validFrom)}</span>` : o.validUntil ? `<span class="u">Until ${dayLabel(o.validUntil)}</span>` : ''}</div></a>`;
 }
 function productTile(p, label, i = 0) {
   return `<a class="tile rise" style="--i:${i};${chainVars(p.chain)}" href="${p.url ? esc(p.url) : '#'}" target="_blank" rel="noopener">
-    <div class="ph word"><span>${esc(label)}</span></div>
+    <div class="ph">${pictureHtml(p, 'fill')}<span class="ribbon soft">${esc(label)}</span></div>
     <div class="bd"><span class="t">${esc(p.name)}</span><span class="p"><strong>${euro(p.price)}</strong></span><span class="u">${esc(p.size)}${p.unit ? ' · ' + unitText(p.unit) : ''}</span></div></a>`;
 }
 function productRow(p, extra = '') {
-  return `<a class="row" href="${p.url ? esc(p.url) : '#'}" target="_blank" rel="noopener">${logo(p.chain)}
+  return `<a class="row" href="${p.url ? esc(p.url) : '#'}" target="_blank" rel="noopener"><span class="thumb">${pictureHtml(p, 'row')}${logo(p.chain, 'badge')}</span>
     <div class="main"><div class="n">${esc(p.name)}</div><div class="s">${esc(p.size)}${extra}</div></div>
     <div class="price"><strong>${euro(p.price)}</strong><span>${unitText(p.unit)}</span></div></a>`;
 }
@@ -215,7 +216,7 @@ function viewList() {
       <div class="main"><div class="n">${esc(CHAINS[r.c].name)} ${i === 0 && r.found === N ? '<span class="pill good">Cheapest</span>' : ''}${r.deals ? ` <span class="pill deal">${r.deals} on offer</span>` : ''}</div>
       <div class="s">${r.found}/${N} items${r.n ? ` · ${km(r.n.d)} away` : ''}</div></div>
       <div class="price"><strong>${euro(r.total)}</strong><span>${r.found < N ? 'incomplete' : 'total'}</span></div></div>
-    <details class="rise" style="--i:${i}"><summary class="picks" style="cursor:pointer;color:var(--accent);font-weight:600;list-style:none">What’s in it</summary><ul class="picks">${r.picks.map((x) => `<li><span>${x.p ? esc(x.p.name) : `<em>${esc(x.q)}: not found</em>`}</span><span class="num">${x.p ? euro(x.p.price) : ''}</span></li>`).join('')}</ul></details>`).join('')}</div></div>
+    <details class="rise" style="--i:${i}"><summary class="picks" style="cursor:pointer;color:var(--accent);font-weight:600;list-style:none">What’s in it</summary><ul class="picks">${r.picks.map((x) => `<li><span class="pickname">${x.p ? pictureHtml(x.p, 'xs') + esc(x.p.name) : `<em>${esc(x.q)}: not found</em>`}</span><span class="num">${x.p ? euro(x.p.price) : ''}</span></li>`).join('')}</ul></details>`).join('')}</div></div>
     <p class="note">Uses the cheapest matching product per item. Baskets with missing items rank lower.</p>`;
   return html;
 }
@@ -386,6 +387,7 @@ async function main() {
   wire();
   updateCounts();
   render();
+  loadImages().then(() => { if (state.ready) render({ keepScroll: true }); });
   loadOffers().then((o) => { state.offers = o; if (state.ready) render({ keepScroll: true }); });
   loadStores().then(({ stores }) => {
     state.stores = stores;

@@ -71,7 +71,7 @@ class Index {
 // ---------- Albert Heijn ----------
 async function ahCatalogue(ahNames) {
   const base = 'https://api.ah.nl';
-  const headers = { 'x-application': 'AHWEBSHOP', 'Content-Type': 'application/json' };
+  const headers = { 'x-application': 'AHWEBSHOP', 'Content-Type': 'application/json', 'User-Agent': BOT_UA };
   const tok = await json(`${base}/mobile-auth/v1/auth/token/anonymous`, { method: 'POST', headers, body: JSON.stringify({ clientId: 'appie' }) });
   const auth = { headers: { ...headers, Authorization: `Bearer ${tok.access_token}` } };
   const byId = new Map();
@@ -105,27 +105,35 @@ async function ahCatalogue(ahNames) {
 }
 
 // ---------- Open Food Facts ----------
+// Their recommended way to use the data in bulk is the daily export file, so we
+// stream that once a month and keep only Dutch products that have a photo.
 async function offCatalogue() {
   const file = new URL('data/cache/off-nl.json', ROOT);
   try {
     const cached = JSON.parse(await readFile(file, 'utf8'));
-    if (Date.now() - cached.at < 30 * 864e5 && cached.items.length) { console.log(`OFF: ${cached.items.length} cached`); return cached.items; }
+    if (Date.now() - cached.at < 30 * 864e5 && cached.items.length > 1000) { console.log(`OFF: ${cached.items.length} cached`); return cached.items; }
   } catch { /* none yet */ }
+  const { createGunzip } = await import('node:zlib');
+  const { Readable } = await import('node:stream');
+  const readline = await import('node:readline');
+  const res = await fetch('https://static.openfoodfacts.org/data/en.openfoodfacts.org.products.csv.gz', { headers: { 'User-Agent': BOT_UA } });
+  if (!res.ok) throw new Error(`export download ${res.status}`);
+  const rl = readline.createInterface({ input: Readable.fromWeb(res.body).pipe(createGunzip()), crlfDelay: Infinity });
+  let col = null;
   const items = [];
-  const fields = 'code,product_name,product_name_nl,brands,image_front_small_url';
-  for (let page = 1; page <= 120; page++) {
-    const url = `https://world.openfoodfacts.org/api/v2/search?countries_tags_en=netherlands&fields=${fields}&page_size=1000&page=${page}`;
-    const res = await json(url, { headers: { 'User-Agent': BOT_UA } }).catch((e) => { console.error('OFF', e.message); return null; });
-    const prods = res?.products || [];
-    for (const p of prods) {
-      const img = p.image_front_small_url;
-      const name = p.product_name_nl || p.product_name;
-      if (img?.startsWith(OFF_PREFIX) && name) items.push([name, (p.brands || '').split(',')[0].trim(), img.slice(OFF_PREFIX.length)]);
-    }
-    if (prods.length < 1000) break;
-    await sleep(6500); // stay under their 10 searches/minute limit
+  let rows = 0;
+  for await (const line of rl) {
+    const f = line.split('\t');
+    if (!col) { col = Object.fromEntries(f.map((h, i) => [h, i])); continue; }
+    rows++;
+    const countries = f[col.countries_en] || '';
+    if (!countries.includes('Netherlands')) continue;
+    const img = f[col.image_small_url] || f[col.image_front_small_url] || '';
+    const name = f[col.product_name] || '';
+    if (!img.startsWith(OFF_PREFIX) || !name) continue;
+    items.push([name, (f[col.brands] || '').split(',')[0].trim(), img.slice(OFF_PREFIX.length)]);
   }
-  console.log(`OFF: ${items.length} products with photos`);
+  console.log(`OFF: read ${rows} products, ${items.length} Dutch ones with photos`);
   await mkdir(new URL('data/cache/', ROOT), { recursive: true });
   await writeFile(file, JSON.stringify({ at: Date.now(), items }));
   return items;
