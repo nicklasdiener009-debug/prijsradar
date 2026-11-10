@@ -114,6 +114,17 @@ function validity(text, year) {
   return { validFrom: `${m1 > m2 ? y - 1 : y}-${pad(m1)}-${pad(m[1])}`, validUntil: `${y}-${pad(m2)}-${pad(m[3])}` };
 }
 
+const BAD_TITLE = /^(totaal|let op|zonder|met|voor|nu|per|van|bij|op|elke|alle|extra|vanaf|ontdek|prijsvoorbeeld|nov|okt|dec|gram|rollen|stuks?)\b|zegels|spaar|combinatie|kwaliteit|iedereen|prijsverlaging|voucher|^[+•\-–*!0-9]|:$/i;
+const BAD_TITLE_RESET = /^totaal|prijsvoorbeeld|zonder spaarkaart/i;
+function goodTitle(t) {
+  if (BAD_TITLE.test(t)) return false;
+  if (!/^[A-ZÀ-ÖØ-Ý'’]/.test(t)) return false; // product names start with a capital or brand
+  const letters = t.replace(/[^a-zà-ÿ]/gi, '');
+  if (letters.length < 4) return false;
+  if (t === t.toUpperCase() && t.split(' ').length === 1 && t.length < 8) return false; // shouty fragments like "VOMA"
+  return true;
+}
+
 function offersFromText(text, page) {
   const lines = text.split(/\n+/).map((l) => l.trim()).filter(Boolean);
   const out = [];
@@ -130,6 +141,7 @@ function offersFromText(text, page) {
     if (mm && line.length < 40) { mech = mm[0].replace(/\s+/g, ' ').trim(); if (joined && joined.index + joined[0].length > line.length) i++; continue; }
     if (SKIP.test(line) || line.length < 3 || line.length > 70 || !/[a-z]{3}/i.test(line) || SIZE.test(line) && !/[a-z]{4,}.*[a-z]{4,}/i.test(line)) continue;
     if (!prices.length && !mech) continue;
+    if (!goodTitle(line)) { prices = []; if (BAD_TITLE_RESET.test(line)) mech = null; continue; }
     const next = lines[i + 1] || '';
     const size = SIZE.test(next) && next.length < 40 ? next : null;
     const price = prices.length ? prices[prices.length - 1] : null;
@@ -167,7 +179,9 @@ async function fetchPublitas(candidates) {
     pages: pages.slice(0, 40).map((p) => ({ n: p.number, image: pick(p.images) ? host + pick(p.images) : null })).filter((p) => p.image),
     ...valid,
   };
-  const offers = pages.flatMap((p) => offersFromText(p.text || '', p.number).map((o) => ({ ...o, ...valid, url: `${base}/page/${p.number}` })));
+  // Keep only confident matches: a real discount (old > new price) or a recognised deal like "1+1 gratis".
+  const offers = pages.flatMap((p) => offersFromText(p.text || '', p.number).map((o) => ({ ...o, ...valid, url: `${base}/page/${p.number}` })))
+    .filter((o) => (o.was && o.price && o.was > o.price && o.price < 60) || (o.mechanism !== 'In de folder' && !/^Van /.test(o.mechanism)));
   return { offers, folder };
 }
 
@@ -184,10 +198,10 @@ const ADAPTERS = [
   { id: 'spar', fetch: folderAdapter(`${PUB}/spar`) },
   { id: 'hoogvliet', fetch: folderAdapter(`${PUB}/hoogvliet`) },
   { id: 'ekoplaza', fetch: folderAdapter(`${PUB}/ekoplaza`) },
-  // Not found on Publitas yet; these candidates are tried each day and fail quietly.
+  // Not found on Publitas yet (ALDI's folder there is the German one, so it is left out).
+  // These candidates are tried each day and fail quietly.
   { id: 'dirk', fetch: folderAdapter(`${PUB}/dirk-van-den-broek-supermarkten`, `${PUB}/dirk-vdbroek`, 'https://view.folders.nl/dirk-van-den-broek') },
   { id: 'plus', fetch: folderAdapter(`${PUB}/plus-supermarkten`, `${PUB}/plus-retail`, 'https://view.folders.nl/plus') },
-  { id: 'aldi', fetch: folderAdapter(`${PUB}/aldi-nl`, `${PUB}/aldi-nord`, 'https://view.folders.nl/aldi') },
 ];
 
 // ---------- run ----------
