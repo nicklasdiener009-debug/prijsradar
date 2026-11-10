@@ -24,6 +24,10 @@ export function photoFor(chain, link) {
 
 // [pattern, emoji, background tint]
 const TYPES = [
+  [/pindakaas|pinda|notenpasta/, '🥜', '#f6ead9'],
+  [/hagelslag|chocopasta|nutella|hazelnootpasta|jam\b|confiture|honing|stroop/, '🍯', '#fbefd9'],
+  [/kaasstengel|kaaskoek/, '🥨', '#fbf0dc'],
+  [/chocolademelk|chocomel/, '🍫', '#f6e9e1'],
   [/melk|karnemelk|chocomel|zuivel|yoghurt|kwark|vla|room\b|slagroom|skyr/, '🥛', '#e8f1fb'],
   [/kaas|brie|mozzarella|parmezaan|feta|camembert|geitenkaas/, '🧀', '#fff4d6'],
   [/\bei\b|eieren|scharrel/, '🥚', '#fdf3e3'],

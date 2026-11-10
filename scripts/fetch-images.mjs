@@ -154,11 +154,23 @@ async function main() {
   const branded = new Index();
   for (const { title, img } of ahById.values()) if (!HOUSE.test(norm(title))) branded.add(title, img);
   const offIdx = new Index();
+  const byBrand = new Map(); // first word of brand -> Index of names without the brand
   for (const [name, brand, img] of off) {
     const n = norm(name);
     const b = norm(brand);
     offIdx.add(b && !n.startsWith(b.split(' ')[0]) ? `${brand} ${name}` : name, 'o' + img);
+    if (b) {
+      const key = b.split(' ')[0];
+      if (!byBrand.has(key)) byBrand.set(key, new Index());
+      byBrand.get(key).add(n.startsWith(key) ? n.slice(b.length).trim() || n : n, 'o' + img);
+    }
   }
+  const brandFind = (name) => {
+    const n = norm(name);
+    const [first, ...rest] = n.split(' ');
+    const idx = byBrand.get(first === '1' ? '1' : first) || (first === 'ah' ? byBrand.get('albert') : null);
+    return idx && rest.length ? idx.find(rest.join(' '), 0.6) : null;
+  };
 
   const img = {};
   const stats = {};
@@ -169,7 +181,7 @@ async function main() {
       let hit = null;
       if (chain.n === 'ah') { const id = (p.l.match(/^wi(\d+)/) || [])[1]; hit = ahById.get(id)?.img; if (hit) s.own++; }
       if (!hit && !HOUSE.test(norm(p.n))) { hit = branded.find(p.n, 0.8); if (hit) s.branded++; }
-      if (!hit) { hit = offIdx.find(p.n, 0.7); if (hit) s.off++; }
+      if (!hit) { hit = offIdx.find(p.n, 0.7) || brandFind(p.n); if (hit) s.off++; }
       if (hit) img[key] = hit;
     }
   }
