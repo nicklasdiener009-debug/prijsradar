@@ -34,7 +34,7 @@ jobs:
         run: |
           git config user.name "prijsradar-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/offers.json data/stores-snapshot.json
+          git add -A data
           git diff --cached --quiet || (git commit -m "Update offers and stores" && git push)
       - name: Flag a problem
         if: steps.offers.outcome == 'failure'

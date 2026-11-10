@@ -94,18 +94,22 @@ async function fetchAH() {
 // ---------- Jumbo (app API) ----------
 
 async function fetchJumbo() {
-  const base = 'https://mobileapi.jumbo.com/v17';
   const offers = [];
-  const tabs = await http(`${base}/promotion-overview`).catch(() => null);
   const sources = [];
-  if (tabs) sources.push(tabs);
-  // Promotions are also exposed through product search with a promotion filter.
-  for (let offset = 0; offset < 3000; offset += 100) {
-    const res = await http(`${base}/search?offset=${offset}&limit=100&filters=promotion`).catch(() => null);
-    const items = res?.products?.data || [];
-    if (!items.length) break;
-    sources.push(res);
-    if (items.length < 100) break;
+  const errors = [];
+  // The app API version moves now and then; try the recent ones.
+  for (const v of ['v17', 'v18', 'v19', 'v20', 'v16']) {
+    const base = `https://mobileapi.jumbo.com/${v}`;
+    const overview = await http(`${base}/promotion-overview`).catch((e) => { errors.push(`${v} overview: ${e.message}`); return null; });
+    if (overview) sources.push(overview);
+    for (let offset = 0; offset < 3000; offset += 100) {
+      const res = await http(`${base}/search?offset=${offset}&limit=100&filters=promotion`).catch((e) => { errors.push(`${v} search: ${e.message}`); return null; });
+      const items = res?.products?.data || [];
+      if (!items.length) break;
+      sources.push(res);
+      if (items.length < 100) break;
+    }
+    if (sources.length) break;
   }
   for (const src of sources) {
     for (const n of walk(src)) {
@@ -124,6 +128,10 @@ async function fetchJumbo() {
         url: n.id ? `https://www.jumbo.com/producten/${n.id}` : null,
       }));
     }
+  }
+  if (!offers.length) {
+    const sample = sources[0] ? JSON.stringify(sources[0]).slice(0, 600) : 'no responses';
+    throw new Error(`no offers parsed. ${errors.slice(0, 6).join('; ')}. sample: ${sample}`);
   }
   return offers;
 }
