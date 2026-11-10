@@ -1,0 +1,14 @@
+name: Find public offer folders (temporary)
+on: workflow_dispatch
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          UA='prijsradar-bot/1.0 (+https://github.com/nicklasdiener009-debug/prijsradar)'
+          curl -s -A "$UA" https://view.publitas.com/robots.txt | head -20
+          for g in jumbo-supermarkten dirk dirk-van-den-broek vomar plus plus-supermarkt dekamarkt ekoplaza aldi aldi-nederland lidl-nederland spar hoogvliet; do
+            code=$(curl -s -A "$UA" -o p.html -w '%{http_code}' "https://view.publitas.com/$g")
+            echo "=== $g $code $(wc -c < p.html)"
+            grep -oE 'href="/'"$g"'/[^"]+' p.html | sort -u | head -5
+          done
