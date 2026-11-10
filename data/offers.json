@@ -1,10 +1,10 @@
 {
- "updatedAt": "2026-11-10T16:54:57.883Z",
+ "updatedAt": "2026-11-10T16:57:02.219Z",
  "chains": {
   "ah": {
    "status": "ok",
-   "checkedAt": "2026-11-10T16:54:57.883Z",
-   "fetchedAt": "2026-11-10T16:54:57.883Z",
+   "checkedAt": "2026-11-10T16:57:02.219Z",
+   "fetchedAt": "2026-11-10T16:57:02.219Z",
    "offers": [
     {
      "title": "Coca-Cola Zero sugar",
@@ -13242,8 +13242,8 @@
   },
   "jumbo": {
    "status": "ok",
-   "checkedAt": "2026-11-10T16:54:57.883Z",
-   "fetchedAt": "2026-11-10T16:54:57.883Z",
+   "checkedAt": "2026-11-10T16:57:02.219Z",
+   "fetchedAt": "2026-11-10T16:57:02.219Z",
    "offers": [
     {
      "title": "Mandarijnen",
@@ -13268,14 +13268,6 @@
      "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/1"
     },
     {
-     "title": "Let op: per combinatie kan de totaalprijs verschillen.",
-     "mechanism": "Gratis",
-     "page": 2,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/2"
-    },
-    {
      "title": "Pitloze witte druiven",
      "mechanism": "Van 2,59 voor 1,99",
      "price": 1.99,
@@ -13296,16 +13288,6 @@
      "validFrom": "2026-11-11",
      "validUntil": "2026-11-17",
      "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/3"
-    },
-    {
-     "title": "Aubergine",
-     "mechanism": "In de folder",
-     "price": 1.49,
-     "size": "Los, per stuk",
-     "page": 4,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/4"
     },
     {
      "title": "Snackgroente",
@@ -13339,35 +13321,8 @@
      "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/5"
     },
     {
-     "title": "Alle Jumbo gekoelde",
-     "mechanism": "In de folder",
-     "price": 4.99,
-     "page": 6,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/6"
-    },
-    {
-     "title": "tot",
-     "mechanism": "In de folder",
-     "price": 0.99,
-     "page": 7,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/7"
-    },
-    {
-     "title": "tot",
-     "mechanism": "2 voor 3.99",
-     "page": 8,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/8"
-    },
-    {
-     "title": "tot",
+     "title": "Bijv. Easy Chicken Tonight zoetzuur 2 potten à 525 gram",
      "mechanism": "2 voor 2",
-     "price": 6.99,
      "page": 10,
      "validFrom": "2026-11-11",
      "validUntil": "2026-11-17",
@@ -13376,6 +13331,14 @@
     {
      "title": "Campina kwark of yoghurt",
      "mechanism": "2 voor 2.99",
+     "page": 11,
+     "validFrom": "2026-11-11",
+     "validUntil": "2026-11-17",
+     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/11"
+    },
+    {
+     "title": "Beemster",
+     "mechanism": "2 voor 3.99",
      "page": 11,
      "validFrom": "2026-11-11",
      "validUntil": "2026-11-17",
@@ -13403,14 +13366,6 @@
      "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/14"
     },
     {
-     "title": "bezorging",
-     "mechanism": "Gratis",
-     "page": 15,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/15"
-    },
-    {
      "title": "Maggi Jus, Nestlé baby,",
      "mechanism": "Gratis",
      "page": 15,
@@ -13419,25 +13374,9 @@
      "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/15"
     },
     {
-     "title": "Alle Nivea",
-     "mechanism": "Gratis",
-     "page": 15,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/15"
-    },
-    {
-     "title": "tot",
-     "mechanism": "2 voor 4.99",
-     "page": 17,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/17"
-    },
-    {
-     "title": "tot",
+     "title": "Unox rookworst",
      "mechanism": "2 voor 5.49",
-     "price": 7.78,
+     "size": "Alle verpakkingen à 250-285 gram",
      "page": 17,
      "validFrom": "2026-11-11",
      "validUntil": "2026-11-17",
@@ -13455,27 +13394,26 @@
      "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/19"
     },
     {
-     "title": "Alle Iglo maaltijden",
-     "mechanism": "In de folder",
-     "price": 4.49,
-     "page": 20,
+     "title": "Heinz of Wijko sauzen",
+     "mechanism": "2 voor 3.99",
+     "size": "Alle verpakkingen Heinz 400ml of Wijko",
+     "page": 19,
      "validFrom": "2026-11-11",
      "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/20"
+     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/19"
     },
     {
-     "title": "Alle Crosta Mollica",
-     "mechanism": "In de folder",
-     "price": 4.49,
-     "page": 20,
+     "title": "Wereldgerechten",
+     "mechanism": "2 voor 4.99",
+     "page": 19,
      "validFrom": "2026-11-11",
      "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/20"
+     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/19"
     },
     {
-     "title": "Alle Iglo Chicken Shop",
-     "mechanism": "In de folder",
-     "price": 5.99,
+     "title": "Mona pudding",
+     "mechanism": "2 voor 2",
+     "size": "Alle bekers à 450 ml",
      "page": 21,
      "validFrom": "2026-11-11",
      "validUntil": "2026-11-17",
@@ -13488,61 +13426,6 @@
      "validFrom": "2026-11-11",
      "validUntil": "2026-11-17",
      "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/23"
-    },
-    {
-     "title": "Cadeau knuffel",
-     "mechanism": "In de folder",
-     "price": 4.99,
-     "page": 24,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/24"
-    },
-    {
-     "title": "Klei set",
-     "mechanism": "In de folder",
-     "price": 1.99,
-     "size": "Verpakking 6 stuks",
-     "page": 24,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/24"
-    },
-    {
-     "title": "Speelgoed auto",
-     "mechanism": "In de folder",
-     "price": 2.99,
-     "page": 24,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/24"
-    },
-    {
-     "title": "Stoomboot om",
-     "mechanism": "In de folder",
-     "price": 1.99,
-     "page": 24,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/24"
-    },
-    {
-     "title": "Kralenset",
-     "mechanism": "In de folder",
-     "price": 3.49,
-     "page": 24,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/24"
-    },
-    {
-     "title": "Jute tas groot",
-     "mechanism": "In de folder",
-     "price": 2.99,
-     "page": 24,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/24"
     },
     {
      "title": "M&M’s of Maltesers",
@@ -13563,36 +13446,17 @@
      "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/27"
     },
     {
-     "title": "Jumbo’s Dolce Gusto",
-     "mechanism": "In de folder",
-     "price": 6.99,
-     "size": "Doos 16 stuks",
-     "page": 27,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/27"
-    },
-    {
-     "title": "Alle Extra Gum",
-     "mechanism": "In de folder",
-     "price": 2.49,
-     "page": 28,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/28"
-    },
-    {
-     "title": "Autodrop, Oldtimers of",
-     "mechanism": "In de folder",
-     "price": 2.29,
-     "page": 28,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/28"
-    },
-    {
      "title": "Lay’s Max, Doritos, Cheetos,",
      "mechanism": "2 voor 4.49",
+     "page": 29,
+     "validFrom": "2026-11-11",
+     "validUntil": "2026-11-17",
+     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/29"
+    },
+    {
+     "title": "Lipton",
+     "mechanism": "2 voor 3.99",
+     "size": "Alle flessen à 1,5 liter",
      "page": 29,
      "validFrom": "2026-11-11",
      "validUntil": "2026-11-17",
@@ -13621,16 +13485,6 @@
      "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/30"
     },
     {
-     "title": "Pringles",
-     "mechanism": "In de folder",
-     "price": 3.49,
-     "size": "Alle bussen à 150-165 gram",
-     "page": 30,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/30"
-    },
-    {
      "title": "Red Bull",
      "mechanism": "2 voor 3",
      "price": 2.75,
@@ -13649,33 +13503,6 @@
      "validFrom": "2026-11-11",
      "validUntil": "2026-11-17",
      "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/31"
-    },
-    {
-     "title": "Hooghoudt dubbele",
-     "mechanism": "In de folder",
-     "price": 13.99,
-     "page": 32,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/32"
-    },
-    {
-     "title": "BIO",
-     "mechanism": "In de folder",
-     "price": 9.98,
-     "page": 34,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/34"
-    },
-    {
-     "title": "LOgisch",
-     "mechanism": "In de folder",
-     "price": 6.99,
-     "page": 34,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-kymt-46/page/34"
     },
     {
      "title": "Excellence",
@@ -13883,16 +13710,9 @@
   },
   "vomar": {
    "status": "ok",
-   "checkedAt": "2026-11-10T16:54:57.883Z",
-   "fetchedAt": "2026-11-10T16:54:57.883Z",
+   "checkedAt": "2026-11-10T16:57:02.219Z",
+   "fetchedAt": "2026-11-10T16:57:02.219Z",
    "offers": [
-    {
-     "title": "Verse",
-     "mechanism": "In de folder",
-     "price": 7.49,
-     "page": 1,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/1"
-    },
     {
      "title": "DORITOS SWEET CHILI 170 GRAM",
      "mechanism": "Van 1,19 voor 0,30",
@@ -13910,104 +13730,11 @@
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/2"
     },
     {
-     "title": "TOTAAL",
-     "mechanism": "Van 1,99 voor 0,49",
-     "price": 0.49,
-     "was": 1.99,
-     "page": 2,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/2"
-    },
-    {
-     "title": "VOMA",
-     "mechanism": "In de folder",
-     "price": 99.84,
-     "page": 2,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/2"
-    },
-    {
-     "title": "Mona",
-     "mechanism": "In de folder",
-     "price": 2.49,
-     "page": 3,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/3"
-    },
-    {
-     "title": "gram",
-     "mechanism": "In de folder",
-     "price": 3.89,
-     "size": "Pak 5 stuks",
-     "page": 3,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/3"
-    },
-    {
-     "title": "Galbani",
-     "mechanism": "In de folder",
-     "price": 3.19,
-     "page": 3,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/3"
-    },
-    {
-     "title": "Mozzarella",
-     "mechanism": "In de folder",
-     "price": 2.85,
-     "page": 3,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/3"
-    },
-    {
-     "title": "AGD!",
-     "mechanism": "In de folder",
-     "price": 2.89,
-     "page": 3,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/3"
-    },
-    {
-     "title": "Luxe Ei",
-     "mechanism": "In de folder",
-     "price": 1.28,
-     "page": 3,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/3"
-    },
-    {
-     "title": "Ontdek alle prijsverlagingen in jouw Vomar!",
-     "mechanism": "In de folder",
-     "price": 5.69,
-     "page": 3,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/3"
-    },
-    {
      "title": "Chicken",
      "mechanism": "50% korting",
      "price": 2.29,
      "page": 4,
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/4"
-    },
-    {
-     "title": "2 pakken",
-     "mechanism": "In de folder",
-     "price": 2.99,
-     "page": 4,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/4"
-    },
-    {
-     "title": "Vo uc her",
-     "mechanism": "In de folder",
-     "price": 4.59,
-     "page": 4,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/4"
-    },
-    {
-     "title": "Muffins",
-     "mechanism": "In de folder",
-     "price": 2.65,
-     "page": 4,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/4"
-    },
-    {
-     "title": "Prijsvoorbeeld:",
-     "mechanism": "In de folder",
-     "price": 3.99,
-     "page": 5,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/5"
     },
     {
      "title": "Page Vochtig",
@@ -14020,14 +13747,6 @@
      "title": "Lay's",
      "mechanism": "Op=op",
      "price": 7.99,
-     "page": 6,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/6"
-    },
-    {
-     "title": "NOV",
-     "mechanism": "In de folder",
-     "price": 4.99,
-     "size": "PER ZAK",
      "page": 6,
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/6"
     },
@@ -14077,13 +13796,6 @@
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/7"
     },
     {
-     "title": "ROLLEN",
-     "mechanism": "2+3 gratis",
-     "price": 14.45,
-     "page": 8,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/8"
-    },
-    {
      "title": "Ooops! Toiletpapier",
      "mechanism": "Op=op",
      "price": 6.99,
@@ -14111,23 +13823,9 @@
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/9"
     },
     {
-     "title": "Lipton",
-     "mechanism": "In de folder",
-     "price": 4.79,
-     "page": 9,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/9"
-    },
-    {
      "title": "Abaco Olijfolie",
      "mechanism": "Op=op",
      "price": 3.74,
-     "page": 10,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/10"
-    },
-    {
-     "title": "GIGAGANTISCH",
-     "mechanism": "In de folder",
-     "price": 18.99,
      "page": 10,
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/10"
     },
@@ -14146,22 +13844,6 @@
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/11"
     },
     {
-     "title": "Alle soorten",
-     "mechanism": "In de folder",
-     "price": 3.49,
-     "size": "400-450 gram",
-     "page": 11,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/11"
-    },
-    {
-     "title": "Quaker Cruesli",
-     "mechanism": "In de folder",
-     "price": 3.55,
-     "size": "XL-pak 725-850 gram",
-     "page": 11,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/11"
-    },
-    {
      "title": "Lazarro",
      "mechanism": "Op=op",
      "page": 12,
@@ -14176,63 +13858,14 @@
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/13"
     },
     {
-     "title": "ROSÉ DROOG",
-     "mechanism": "In de folder",
-     "price": 37.99,
-     "page": 13,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/13"
-    },
-    {
-     "title": "LITER",
-     "mechanism": "In de folder",
-     "price": 24.99,
-     "page": 13,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/13"
-    },
-    {
-     "title": "Drakensberg",
-     "mechanism": "In de folder",
-     "price": 13.29,
-     "page": 13,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/13"
-    },
-    {
-     "title": "GIGAGANTISCH VOORDEEL GIGA PRODUCTEN MET GIGA KORTINGEN!",
-     "mechanism": "In de folder",
-     "price": 7.99,
-     "page": 13,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/13"
-    },
-    {
      "title": "Pepsi of 7UP",
      "mechanism": "Op=op",
      "page": 14,
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/14"
     },
     {
-     "title": "Smirnoff Vodka,",
-     "mechanism": "In de folder",
-     "price": 6.36,
-     "page": 14,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/14"
-    },
-    {
-     "title": "Jan",
+     "title": "Duopack",
      "mechanism": "Op=op",
-     "page": 15,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/15"
-    },
-    {
-     "title": "Familiemaaltijden",
-     "mechanism": "In de folder",
-     "price": 7.99,
-     "page": 15,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/15"
-    },
-    {
-     "title": "DIEPVRIES",
-     "mechanism": "In de folder",
-     "price": 2.99,
      "page": 15,
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/15"
     },
@@ -14250,25 +13883,10 @@
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/17"
     },
     {
-     "title": "PACK",
-     "mechanism": "Van 4,29 voor 3,89",
-     "price": 3.89,
-     "was": 4.29,
-     "page": 17,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/17"
-    },
-    {
      "title": "Actimel",
      "mechanism": "Op=op",
      "price": 5.99,
      "size": "12-pack fles à 100 ml",
-     "page": 17,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/17"
-    },
-    {
-     "title": "Gerookte",
-     "mechanism": "In de folder",
-     "price": 3.99,
      "page": 17,
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/17"
     },
@@ -14301,31 +13919,10 @@
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/18"
     },
     {
-     "title": "Sum & Sam",
-     "mechanism": "In de folder",
-     "price": 1.52,
-     "page": 19,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/19"
-    },
-    {
      "title": "Alpro Houdbare",
      "mechanism": "Gratis",
      "page": 20,
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/20"
-    },
-    {
-     "title": "Hollandse",
-     "mechanism": "In de folder",
-     "price": 1.89,
-     "page": 21,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/21"
-    },
-    {
-     "title": "Poké Bowl",
-     "mechanism": "In de folder",
-     "price": 4.99,
-     "page": 21,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/21"
     },
     {
      "title": "Citroenen",
@@ -14335,13 +13932,6 @@
      "size": "Net 750 gram",
      "page": 21,
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/21"
-    },
-    {
-     "title": "ALBERT HEIJN",
-     "mechanism": "In de folder",
-     "price": 2.19,
-     "page": 23,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/23"
     },
     {
      "title": "Versgebakken",
@@ -14387,39 +13977,10 @@
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/24"
     },
     {
-     "title": "Rundertartaar",
-     "mechanism": "In de folder",
-     "price": 6.49,
-     "size": "Pak 4 stuks.",
-     "page": 25,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/25"
-    },
-    {
-     "title": "GULDEN HOEVE",
-     "mechanism": "In de folder",
-     "price": 9.59,
-     "page": 25,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/25"
-    },
-    {
-     "title": "Krokante",
-     "mechanism": "In de folder",
-     "price": 3.99,
-     "page": 25,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/25"
-    },
-    {
      "title": "Varkensschnitzel XXL",
      "mechanism": "Op=op",
      "price": 3.99,
      "size": "Pak 250 gram",
-     "page": 25,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/25"
-    },
-    {
-     "title": "Vivera Vleesvervangers",
-     "mechanism": "In de folder",
-     "price": 2.49,
      "page": 25,
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/25"
     },
@@ -14430,21 +13991,6 @@
      "was": 2.59,
      "page": 25,
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/25"
-    },
-    {
-     "title": "WEIDE VELDEN",
-     "mechanism": "In de folder",
-     "price": 9.5,
-     "page": 26,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/26"
-    },
-    {
-     "title": "Herten Biefstuk",
-     "mechanism": "In de folder",
-     "price": 6.58,
-     "size": "Per 200 gram",
-     "page": 26,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/26"
     },
     {
      "title": "Wildzwijn",
@@ -14472,57 +14018,6 @@
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/26"
     },
     {
-     "title": "Mini Rozijnenbollen",
-     "mechanism": "In de folder",
-     "price": 2.39,
-     "size": "Zak 12 stuks",
-     "page": 27,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/27"
-    },
-    {
-     "title": "Frikandelbroodje of",
-     "mechanism": "In de folder",
-     "price": 1.5,
-     "page": 27,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/27"
-    },
-    {
-     "title": "Gemengde",
-     "mechanism": "In de folder",
-     "price": 2.95,
-     "page": 27,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/27"
-    },
-    {
-     "title": "Bananenbrood",
-     "mechanism": "In de folder",
-     "price": 3.19,
-     "size": "Pak 4 plakken",
-     "page": 27,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/27"
-    },
-    {
-     "title": "Robberbrood",
-     "mechanism": "In de folder",
-     "price": 2.39,
-     "page": 28,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/28"
-    },
-    {
-     "title": "SLAGERS",
-     "mechanism": "In de folder",
-     "price": 2.79,
-     "page": 29,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/29"
-    },
-    {
-     "title": "Versgesneden",
-     "mechanism": "In de folder",
-     "price": 2.59,
-     "page": 29,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/29"
-    },
-    {
      "title": "La Vache",
      "mechanism": "Op=op",
      "page": 29,
@@ -14536,13 +14031,6 @@
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/29"
     },
     {
-     "title": "Borrelhapjes, Spreads of Tapenades",
-     "mechanism": "In de folder",
-     "price": 5.99,
-     "page": 29,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/29"
-    },
-    {
      "title": "Lotus Biscoff",
      "mechanism": "Op=op",
      "price": 1.49,
@@ -14550,45 +14038,14 @@
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/31"
     },
     {
-     "title": "Kaneel Swirl",
-     "mechanism": "In de folder",
-     "price": 1.38,
-     "page": 31,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/31"
-    },
-    {
-     "title": "G'woon",
-     "mechanism": "In de folder",
-     "price": 1.99,
-     "page": 32,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/32"
-    },
-    {
-     "title": "Netje",
-     "mechanism": "In de folder",
-     "price": 1.49,
-     "page": 32,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/32"
-    },
-    {
-     "title": "Los",
+     "title": "Pingüinos",
      "mechanism": "25% korting",
-     "price": 4.49,
-     "was": 5.99,
      "page": 33,
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/33"
     },
     {
-     "title": "Njoy Wijn",
-     "mechanism": "In de folder",
-     "price": 9.18,
-     "page": 33,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/33"
-    },
-    {
-     "title": "BIJ 2 KRATTEN",
+     "title": "Krat 24 flesjes à 30 cl",
      "mechanism": "25% korting",
-     "size": "Krat 24 flesjes à 30 cl",
      "page": 33,
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/33"
     },
@@ -14596,20 +14053,6 @@
      "title": "Amstel Pils",
      "mechanism": "25% korting",
      "price": 16.89,
-     "page": 33,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/33"
-    },
-    {
-     "title": "Per krat",
-     "mechanism": "In de folder",
-     "price": 12.67,
-     "page": 33,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/33"
-    },
-    {
-     "title": "M.u.v. gekoeld",
-     "mechanism": "In de folder",
-     "price": 4.19,
      "page": 33,
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/33"
     },
@@ -14653,147 +14096,6 @@
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/34"
     },
     {
-     "title": "Boeket",
-     "mechanism": "In de folder",
-     "price": 9.99,
-     "page": 34,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/34"
-    },
-    {
-     "title": "Crackling Bullets",
-     "mechanism": "In de folder",
-     "price": 4.99,
-     "page": 35,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/35"
-    },
-    {
-     "title": "Knettaah",
-     "mechanism": "In de folder",
-     "price": 3.99,
-     "page": 35,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/35"
-    },
-    {
-     "title": "Top Dog Bag",
-     "mechanism": "In de folder",
-     "price": 14.99,
-     "page": 35,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/35"
-    },
-    {
-     "title": "Deurstopper",
-     "mechanism": "In de folder",
-     "price": 9.99,
-     "page": 37,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/37"
-    },
-    {
-     "title": "PER SET",
-     "mechanism": "In de folder",
-     "price": 4.99,
-     "page": 37,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/37"
-    },
-    {
-     "title": "Nexxt",
-     "mechanism": "In de folder",
-     "price": 1.99,
-     "page": 37,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/37"
-    },
-    {
-     "title": "Sinterklaas",
-     "mechanism": "In de folder",
-     "price": 19.99,
-     "page": 37,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/37"
-    },
-    {
-     "title": "Puzzel",
-     "mechanism": "In de folder",
-     "price": 0.99,
-     "page": 37,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/37"
-    },
-    {
-     "title": "PER PAAR",
-     "mechanism": "Van 12,99 voor 3,99",
-     "price": 3.99,
-     "was": 12.99,
-     "page": 38,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/38"
-    },
-    {
-     "title": "• Met AM/FMradio, zaklamp",
-     "mechanism": "In de folder",
-     "price": 4.99,
-     "page": 39,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/39"
-    },
-    {
-     "title": "Grundig",
-     "mechanism": "In de folder",
-     "price": 9.99,
-     "page": 39,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/39"
-    },
-    {
-     "title": "LED-Zaklamp XXL",
-     "mechanism": "In de folder",
-     "price": 8.99,
-     "page": 39,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/39"
-    },
-    {
-     "title": "Nooddeken",
-     "mechanism": "In de folder",
-     "price": 6.99,
-     "page": 39,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/39"
-    },
-    {
-     "title": "Solar LED",
-     "mechanism": "In de folder",
-     "price": 2.99,
-     "page": 40,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/40"
-    },
-    {
-     "title": "Latte Macchiato",
-     "mechanism": "In de folder",
-     "price": 7.99,
-     "page": 40,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/40"
-    },
-    {
-     "title": "Ovengedroogd",
-     "mechanism": "In de folder",
-     "price": 2.99,
-     "page": 40,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/40"
-    },
-    {
-     "title": "Kunststof",
-     "mechanism": "In de folder",
-     "price": 3.99,
-     "page": 40,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/40"
-    },
-    {
-     "title": "Radiatorfolie",
-     "mechanism": "In de folder",
-     "price": 1.99,
-     "page": 40,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/40"
-    },
-    {
-     "title": "13 nov",
-     "mechanism": "In de folder",
-     "price": 4.99,
-     "page": 41,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/41"
-    },
-    {
      "title": "Nalys",
      "mechanism": "Op=op",
      "page": 41,
@@ -14824,47 +14126,10 @@
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/42"
     },
     {
-     "title": "14 nov",
-     "mechanism": "In de folder",
-     "price": 3.99,
-     "page": 42,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/42"
-    },
-    {
-     "title": "Druiven",
-     "mechanism": "In de folder",
-     "price": 2.49,
-     "page": 42,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/42"
-    },
-    {
-     "title": "Ananas",
-     "mechanism": "In de folder",
-     "price": 1.99,
-     "size": "Per stuk",
-     "page": 42,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/42"
-    },
-    {
      "title": "Luxe",
      "mechanism": "Op=op",
      "price": 3.99,
      "was": 4.99,
-     "page": 43,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/43"
-    },
-    {
-     "title": "14 nov",
-     "mechanism": "Van 3,99 voor 2,99",
-     "price": 2.99,
-     "was": 3.99,
-     "page": 43,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/43"
-    },
-    {
-     "title": "Daily Chef",
-     "mechanism": "In de folder",
-     "price": 2.99,
      "page": 43,
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/43"
     },
@@ -14874,28 +14139,6 @@
      "price": 5.99,
      "page": 43,
      "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/43"
-    },
-    {
-     "title": "BOER'N LAND",
-     "mechanism": "In de folder",
-     "price": 8.28,
-     "page": 44,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/44"
-    },
-    {
-     "title": "WEIDE",
-     "mechanism": "Van 7,37 voor 5,99",
-     "price": 5.99,
-     "was": 7.37,
-     "page": 44,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/44"
-    },
-    {
-     "title": "Runder",
-     "mechanism": "In de folder",
-     "price": 6.24,
-     "page": 44,
-     "url": "https://view.folders.nl/vomar/vomar-week-46-2026/page/44"
     },
     {
      "title": "Verse",
@@ -15073,25 +14316,9 @@
   },
   "dekamarkt": {
    "status": "ok",
-   "checkedAt": "2026-11-10T16:54:57.883Z",
-   "fetchedAt": "2026-11-10T16:54:57.883Z",
+   "checkedAt": "2026-11-10T16:57:02.219Z",
+   "fetchedAt": "2026-11-10T16:57:02.219Z",
    "offers": [
-    {
-     "title": "Mousline aardappelpuree",
-     "mechanism": "In de folder",
-     "price": 3.69,
-     "size": "Pak 176 - 276 gram.",
-     "page": 12,
-     "url": "https://view.publitas.com/dekamarkt/aanbiedingen-week-46/page/12"
-    },
-    {
-     "title": "Maggi jus Zak 18 - 29 gram.",
-     "mechanism": "In de folder",
-     "price": 5.09,
-     "size": "Pak 8, 12 of 16 stuks.",
-     "page": 12,
-     "url": "https://view.publitas.com/dekamarkt/aanbiedingen-week-46/page/12"
-    },
     {
      "title": "Schofrulade of Wao mochi Bak 130 of 210 gram.",
      "mechanism": "2 voor 7",
@@ -15204,30 +14431,9 @@
   },
   "spar": {
    "status": "ok",
-   "checkedAt": "2026-11-10T16:54:57.883Z",
-   "fetchedAt": "2026-11-10T16:54:57.883Z",
+   "checkedAt": "2026-11-10T16:57:02.219Z",
+   "fetchedAt": "2026-11-10T16:57:02.219Z",
    "offers": [
-    {
-     "title": "kort",
-     "mechanism": "In de folder",
-     "price": 2.99,
-     "page": 1,
-     "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/1"
-    },
-    {
-     "title": "Voor iedereen die kwaliteit",
-     "mechanism": "In de folder",
-     "price": 5.58,
-     "page": 3,
-     "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/3"
-    },
-    {
-     "title": "Uniekaas kaasplakken",
-     "mechanism": "In de folder",
-     "price": 2.79,
-     "page": 4,
-     "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/4"
-    },
     {
      "title": "SPAR appeltaart met",
      "mechanism": "36% korting",
@@ -15235,31 +14441,11 @@
      "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/4"
     },
     {
-     "title": "alle Bolletje beschuit,",
-     "mechanism": "In de folder",
-     "price": 5.49,
-     "page": 4,
-     "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/4"
-    },
-    {
-     "title": "alle SPAR wraps",
+     "title": "Optimel pak 1 liter of",
      "mechanism": "39% korting",
+     "size": "beker 450/500 gram",
      "page": 6,
      "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/6"
-    },
-    {
-     "title": "snacktomaten",
-     "mechanism": "32% korting",
-     "size": "bak 500 gram",
-     "page": 7,
-     "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/7"
-    },
-    {
-     "title": "witlof",
-     "mechanism": "42% korting",
-     "size": "zak 500 gram",
-     "page": 7,
-     "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/7"
     },
     {
      "title": "SPAR sappen",
@@ -15267,13 +14453,6 @@
      "price": 2.59,
      "was": 3.69,
      "size": "alle flessen 500 ml",
-     "page": 7,
-     "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/7"
-    },
-    {
-     "title": "conference handperen",
-     "mechanism": "36% korting",
-     "size": "los per kilo",
      "page": 7,
      "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/7"
     },
@@ -15286,47 +14465,9 @@
      "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/8"
     },
     {
-     "title": "pizza",
-     "mechanism": "In de folder",
-     "price": 13.9,
-     "page": 9,
-     "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/9"
-    },
-    {
-     "title": "alle Bio+",
-     "mechanism": "Halve prijs",
-     "page": 10,
-     "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/10"
-    },
-    {
-     "title": "alle Magnum",
-     "mechanism": "Gratis",
-     "page": 11,
-     "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/11"
-    },
-    {
-     "title": "alle Starbucks capsules",
-     "mechanism": "39% korting",
-     "page": 11,
-     "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/11"
-    },
-    {
-     "title": "alle Koopmans",
-     "mechanism": "In de folder",
-     "price": 16.47,
-     "page": 11,
-     "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/11"
-    },
-    {
      "title": "M&M’s of Maltesers",
      "mechanism": "40% korting",
      "size": "alle stazakken 135/200 gram",
-     "page": 11,
-     "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/11"
-    },
-    {
-     "title": "alle Sultana koek",
-     "mechanism": "37% korting",
      "page": 11,
      "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/11"
     },
@@ -15343,8 +14484,9 @@
      "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/12"
     },
     {
-     "title": "alle Frisia",
+     "title": "Red Band en Venco",
      "mechanism": "Gratis",
+     "size": "alle stazakken 190/245 gram",
      "page": 12,
      "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/12"
     },
@@ -15355,29 +14497,7 @@
      "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/13"
     },
     {
-     "title": "Grolsch",
-     "mechanism": "In de folder",
-     "price": 19.29,
-     "size": "krat 24x300 ml",
-     "page": 13,
-     "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/13"
-    },
-    {
-     "title": "alle Lu Tuc",
-     "mechanism": "50% korting",
-     "page": 13,
-     "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/13"
-    },
-    {
-     "title": "I Heart",
-     "mechanism": "In de folder",
-     "price": 11.98,
-     "size": "alle flessen 750 ml",
-     "page": 15,
-     "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/15"
-    },
-    {
-     "title": "alle Kleenex, Tempo of",
+     "title": "Page vochtig",
      "mechanism": "35% korting",
      "page": 16,
      "url": "https://view.publitas.com/spar/spar-folder-wk20264546/page/16"
@@ -15455,62 +14575,15 @@
   },
   "hoogvliet": {
    "status": "ok",
-   "checkedAt": "2026-11-10T16:54:57.883Z",
-   "fetchedAt": "2026-11-10T16:54:57.883Z",
+   "checkedAt": "2026-11-10T16:57:02.219Z",
+   "fetchedAt": "2026-11-10T16:57:02.219Z",
    "offers": [
-    {
-     "title": "+ 20 zegels",
-     "mechanism": "In de folder",
-     "price": 0.99,
-     "page": 4,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/4"
-    },
-    {
-     "title": "+ 10 zegels",
-     "mechanism": "In de folder",
-     "price": 2.99,
-     "page": 4,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/4"
-    },
-    {
-     "title": "Zonder spaarkaart:",
-     "mechanism": "In de folder",
-     "price": 20.99,
-     "page": 5,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/5"
-    },
     {
      "title": "Taartschep",
      "mechanism": "Van 34,99 voor 21,99",
      "price": 21.99,
      "was": 34.99,
      "size": "1 stuk",
-     "page": 5,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/5"
-    },
-    {
-     "title": "Kinderbestekset",
-     "mechanism": "In de folder",
-     "price": 19.99,
-     "size": "3 stuks",
-     "page": 5,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/5"
-    },
-    {
-     "title": "Serveerset",
-     "mechanism": "In de folder",
-     "price": 19.99,
-     "size": "2 stuks",
      "page": 5,
      "validFrom": "2026-11-11",
      "validUntil": "2026-11-17",
@@ -15534,7 +14607,7 @@
      "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/11"
     },
     {
-     "title": "Van 1.49",
+     "title": "Arla",
      "mechanism": "Op=op",
      "page": 11,
      "validFrom": "2026-11-11",
@@ -15559,15 +14632,7 @@
      "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/15"
     },
     {
-     "title": "Van 3.50",
-     "mechanism": "Op=op",
-     "page": 16,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/16"
-    },
-    {
-     "title": "Van 4.29 - 4.89",
+     "title": "Beemster kaasplakken",
      "mechanism": "Op=op",
      "page": 17,
      "validFrom": "2026-11-11",
@@ -15583,16 +14648,8 @@
      "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/18"
     },
     {
-     "title": "Van /",
-     "mechanism": "52% korting",
-     "page": 21,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/21"
-    },
-    {
      "title": "Blue Band te",
-     "mechanism": "In de folder",
+     "mechanism": "52% korting",
      "price": 2.49,
      "page": 21,
      "validFrom": "2026-11-11",
@@ -15600,47 +14657,13 @@
      "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/21"
     },
     {
-     "title": "PER BUS",
-     "mechanism": "52% korting",
-     "page": 21,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/21"
-    },
-    {
      "title": "Grand'Italia",
-     "mechanism": "In de folder",
+     "mechanism": "52% korting",
      "price": 1.69,
      "page": 21,
      "validFrom": "2026-11-11",
      "validUntil": "2026-11-17",
      "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/21"
-    },
-    {
-     "title": "Nescafé",
-     "mechanism": "In de folder",
-     "price": 2.29,
-     "page": 21,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/21"
-    },
-    {
-     "title": "Van 3.89 - 3.99",
-     "mechanism": "50% korting",
-     "page": 21,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/21"
-    },
-    {
-     "title": "Van 9.29",
-     "mechanism": "In de folder",
-     "price": 7.79,
-     "page": 22,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/22"
     },
     {
      "title": "Duyvis",
@@ -15651,43 +14674,8 @@
      "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/24"
     },
     {
-     "title": "Van 18.99",
-     "mechanism": "25% korting",
-     "page": 25,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/25"
-    },
-    {
-     "title": "Van 16.89",
-     "mechanism": "25% korting",
-     "price": 14.24,
-     "page": 25,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/25"
-    },
-    {
-     "title": "Van 19.95",
-     "mechanism": "25% korting",
-     "price": 12.67,
-     "page": 25,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/25"
-    },
-    {
-     "title": "Van 18.93",
-     "mechanism": "25% korting",
-     "price": 14.96,
-     "page": 25,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/25"
-    },
-    {
      "title": "Hertog Jan, Amstel,",
-     "mechanism": "In de folder",
+     "mechanism": "25% korting",
      "price": 14.2,
      "page": 25,
      "validFrom": "2026-11-11",
@@ -15695,7 +14683,7 @@
      "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/25"
     },
     {
-     "title": "Van 5.59",
+     "title": "Hardys",
      "mechanism": "25% korting",
      "page": 26,
      "validFrom": "2026-11-11",
@@ -15711,23 +14699,6 @@
      "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/26"
     },
     {
-     "title": "Van 5.99",
-     "mechanism": "In de folder",
-     "price": 4.49,
-     "page": 26,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/26"
-    },
-    {
-     "title": "Van 9.32",
-     "mechanism": "25% korting",
-     "page": 26,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/26"
-    },
-    {
      "title": "Desperados of Corona",
      "mechanism": "25% korting",
      "page": 26,
@@ -15736,26 +14707,8 @@
      "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/26"
     },
     {
-     "title": "Van 8.99",
-     "mechanism": "In de folder",
-     "price": 6.74,
-     "page": 26,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/26"
-    },
-    {
-     "title": "Van 7.95",
+     "title": "Gato Negro",
      "mechanism": "25% korting",
-     "page": 26,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/26"
-    },
-    {
-     "title": "Van 8.85",
-     "mechanism": "25% korting",
-     "price": 6.64,
      "page": 26,
      "validFrom": "2026-11-11",
      "validUntil": "2026-11-17",
@@ -15775,23 +14728,6 @@
      "title": "Eristoff of",
      "mechanism": "Op=op",
      "price": 14.99,
-     "page": 27,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/27"
-    },
-    {
-     "title": "Germini",
-     "mechanism": "In de folder",
-     "price": 21.99,
-     "page": 27,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/27"
-    },
-    {
-     "title": "Van 13.99 - 15.79",
-     "mechanism": "Op=op",
      "page": 27,
      "validFrom": "2026-11-11",
      "validUntil": "2026-11-17",
@@ -15830,7 +14766,7 @@
      "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/28"
     },
     {
-     "title": "Van 5.08 - 8.49",
+     "title": "Page Compleet Schoon 12 rol",
      "mechanism": "Op=op",
      "page": 29,
      "validFrom": "2026-11-11",
@@ -15838,7 +14774,7 @@
      "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/29"
     },
     {
-     "title": "Van 1.19 - 1.49",
+     "title": "Chocolade",
      "mechanism": "Op=op",
      "page": 30,
      "validFrom": "2026-11-11",
@@ -15852,14 +14788,6 @@
      "validFrom": "2026-11-11",
      "validUntil": "2026-11-17",
      "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/31"
-    },
-    {
-     "title": "bezorging",
-     "mechanism": "Gratis",
-     "page": 34,
-     "validFrom": "2026-11-11",
-     "validUntil": "2026-11-17",
-     "url": "https://view.publitas.com/hoogvliet/folder_2026_46/page/34"
     }
    ],
    "folder": {
@@ -16008,17 +14936,9 @@
   },
   "ekoplaza": {
    "status": "ok",
-   "checkedAt": "2026-11-10T16:54:57.883Z",
-   "fetchedAt": "2026-11-10T16:54:57.883Z",
-   "offers": [
-    {
-     "title": "6002427 • L’Esprit de Paris gechocolateerde",
-     "mechanism": "Op=op",
-     "size": "kruidnootjes puur • 150 g",
-     "page": 6,
-     "url": "https://view.publitas.com/ekoplaza/udea-verbindend-november/page/6"
-    }
-   ],
+   "checkedAt": "2026-11-10T16:57:02.219Z",
+   "fetchedAt": "2026-11-10T16:57:02.219Z",
+   "offers": [],
    "folder": {
     "url": "https://view.publitas.com/ekoplaza/udea-verbindend-november/page/1",
     "pages": [
@@ -16123,88 +15043,17 @@
   },
   "dirk": {
    "status": "error",
-   "checkedAt": "2026-11-10T16:54:57.883Z",
+   "checkedAt": "2026-11-10T16:57:02.219Z",
    "fetchedAt": null,
    "error": "no folder found at https://view.publitas.com/dirk-van-den-broek-supermarkten, https://view.publitas.com/dirk-vdbroek, https://view.folders.nl/dirk-van-den-broek",
    "offers": []
   },
   "plus": {
    "status": "error",
-   "checkedAt": "2026-11-10T16:54:57.883Z",
+   "checkedAt": "2026-11-10T16:57:02.219Z",
    "fetchedAt": null,
    "error": "no folder found at https://view.publitas.com/plus-supermarkten, https://view.publitas.com/plus-retail, https://view.folders.nl/plus",
    "offers": []
-  },
-  "aldi": {
-   "status": "ok",
-   "checkedAt": "2026-11-10T16:54:57.883Z",
-   "fetchedAt": "2026-11-10T16:54:57.883Z",
-   "offers": [],
-   "folder": {
-    "url": "https://view.promozilla.com/aldi-nord/aldi-nord-week-46-olgbg8a4a466/page/1",
-    "pages": [
-     {
-      "n": 1,
-      "image": "https://view.promozilla.com/103440/3521387/pages/586feff4-5036-4da0-a7ea-5f4594b1195f-at600.jpg"
-     },
-     {
-      "n": 2,
-      "image": "https://view.promozilla.com/103440/3521387/pages/5b074660-51b5-47d8-bcba-8ce5c09c9532-at600.jpg"
-     },
-     {
-      "n": 3,
-      "image": "https://view.promozilla.com/103440/3521387/pages/ea459584-3fbe-4d02-b106-76f222cbaafd-at600.jpg"
-     },
-     {
-      "n": 4,
-      "image": "https://view.promozilla.com/103440/3521387/pages/f2d23a3b-09b2-48e5-8af2-0927c234714c-at600.jpg"
-     },
-     {
-      "n": 5,
-      "image": "https://view.promozilla.com/103440/3521387/pages/c592c67d-149a-4432-9925-652afce24ef6-at600.jpg"
-     },
-     {
-      "n": 6,
-      "image": "https://view.promozilla.com/103440/3521387/pages/d36994e2-3b4c-49eb-bcfc-a63e9ba46803-at600.jpg"
-     },
-     {
-      "n": 7,
-      "image": "https://view.promozilla.com/103440/3521387/pages/c25be7e7-3893-43c3-af99-c91038c78fdb-at600.jpg"
-     },
-     {
-      "n": 8,
-      "image": "https://view.promozilla.com/103440/3521387/pages/7d4f55ec-7bb1-4623-9552-bc5ad31d2bdd-at600.jpg"
-     },
-     {
-      "n": 9,
-      "image": "https://view.promozilla.com/103440/3521387/pages/92251613-7875-4a1b-bee7-78cab2db750a-at600.jpg"
-     },
-     {
-      "n": 10,
-      "image": "https://view.promozilla.com/103440/3521387/pages/8396790b-a817-40fc-82b1-6ee46f31586b-at600.jpg"
-     },
-     {
-      "n": 11,
-      "image": "https://view.promozilla.com/103440/3521387/pages/349c0cb1-be32-4585-9873-a61407dd4a47-at600.jpg"
-     },
-     {
-      "n": 12,
-      "image": "https://view.promozilla.com/103440/3521387/pages/1ef6e7a2-4892-4fd8-b1d4-d71e33041422-at600.jpg"
-     },
-     {
-      "n": 13,
-      "image": "https://view.promozilla.com/103440/3521387/pages/883233d2-16a8-4370-943f-9bad72c4fc5d-at600.jpg"
-     },
-     {
-      "n": 14,
-      "image": "https://view.promozilla.com/103440/3521387/pages/0fbcbbba-d815-4d1b-8e02-666b76b11d63-at600.jpg"
-     },
-     {
-      "n": 15,
-      "image": "https://view.promozilla.com/103440/3521387/pages/c333133b-cd33-4c79-8a5f-7e3c10dd5964-at600.jpg"
-     }
-    ]
-   }
   }
  }
 }
