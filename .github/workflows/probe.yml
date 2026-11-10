@@ -6,13 +6,12 @@ jobs:
     steps:
       - run: |
           UA='prijsradar-bot/1.0 (+https://github.com/nicklasdiener009-debug/prijsradar)'
-          for g in jumbo-supermarkten vomar dekamarkt ekoplaza spar hoogvliet lidl-nederland; do
-            final=$(curl -s -A "$UA" -L -o p.html -w '%{url_effective}' "https://view.publitas.com/$g")
-            echo "=== $g -> $final ($(wc -c < p.html) bytes)"
-            grep -oE '"[^"]*\.json[^"]*"' p.html | sort -u | head -8
-            grep -oE '(hotspot|product)[A-Za-z_]*' p.html | sort | uniq -c | sort -rn | head -5
-            base="${final%/page/*}"; base="${base%/}"
-            for e in spreads.json hotspots_data.json pages.json data.json; do
-              c=$(curl -s -A "$UA" -o j.txt -w '%{http_code}' "$base/$e"); echo "  $e $c $(wc -c < j.txt) $(head -c 300 j.txt | tr '\n' ' ')"
-            done
+          for g in jumbo-supermarkten vomar; do
+            final=$(curl -s -A "$UA" -L -o /dev/null -w '%{url_effective}' "https://view.publitas.com/$g"); base="${final%/}"
+            curl -s -A "$UA" "$base/data.json" -o data.json; curl -s -A "$UA" "$base/spreads.json" -o spreads.json
+            echo "=== $g"; jq -c 'del(.sizes) | to_entries | map(select(.value|type!="object" and type!="array")) | from_entries' data.json | cut -c1-900
+            jq -c 'keys' data.json
+            jq -c '.[0] | keys' spreads.json; jq -c '.[1].pages[0] | keys' spreads.json
+            jq -c '[.[].pages[].hotspots // [] | length] | add' spreads.json
+            jq -c '[.[].pages[].hotspots[]?] | .[0:3]' spreads.json | cut -c1-2500
           done
