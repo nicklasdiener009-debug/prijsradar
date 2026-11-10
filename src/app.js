@@ -43,7 +43,8 @@ const chainsByDistance = (all = false) => (all ? [...activeChains(), ...storeOnl
 
 function offersFor(chain) {
   const t = today();
-  return (state.offers.chains?.[chain]?.offers || []).filter((o) => (!o.validUntil || o.validUntil >= t) && (!o.validFrom || o.validFrom <= t));
+  const soon = new Date(Date.now() + 2 * 864e5).toISOString().slice(0, 10); // include next week's folder a day or two early
+  return (state.offers.chains?.[chain]?.offers || []).filter((o) => (!o.validUntil || o.validUntil >= t) && (!o.validFrom || o.validFrom <= soon));
 }
 function matchOffers(chain, q) {
   const tokens = normalize(q).split(' ').filter(Boolean);
@@ -74,7 +75,7 @@ function dealTile(o, i = 0) {
     <div class="ph ${o.image ? '' : 'word'}">${o.image ? `<img src="${esc(o.image)}" alt="" loading="lazy">` : `<span>${esc(o.title.split(' ').slice(0, 3).join(' '))}</span>`}<span class="ribbon">${esc(o.mechanism)}</span></div>
     <div class="bd"><span class="t">${esc(o.title)}</span>
       <span class="p">${o.price ? `<strong>${euro(o.price)}</strong>` : ''}${o.was && o.price && o.was > o.price ? `<s>${euro(o.was)}</s>` : ''}</span>
-      ${o.validUntil ? `<span class="u">Until ${dayLabel(o.validUntil)}</span>` : ''}</div></a>`;
+      ${o.validFrom && o.validFrom > today() ? `<span class="u">From ${dayLabel(o.validFrom)}</span>` : o.validUntil ? `<span class="u">Until ${dayLabel(o.validUntil)}</span>` : ''}</div></a>`;
 }
 function productTile(p, label, i = 0) {
   return `<a class="tile rise" style="--i:${i};${chainVars(p.chain)}" href="${p.url ? esc(p.url) : '#'}" target="_blank" rel="noopener">
