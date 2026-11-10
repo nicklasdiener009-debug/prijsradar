@@ -6,9 +6,13 @@ jobs:
     steps:
       - run: |
           UA='prijsradar-bot/1.0 (+https://github.com/nicklasdiener009-debug/prijsradar)'
-          curl -s -A "$UA" https://view.publitas.com/robots.txt | head -20
-          for g in jumbo-supermarkten dirk dirk-van-den-broek vomar plus plus-supermarkt dekamarkt ekoplaza aldi aldi-nederland lidl-nederland spar hoogvliet; do
-            code=$(curl -s -A "$UA" -o p.html -w '%{http_code}' "https://view.publitas.com/$g")
-            echo "=== $g $code $(wc -c < p.html)"
-            grep -oE 'href="/'"$g"'/[^"]+' p.html | sort -u | head -5
+          for g in jumbo-supermarkten vomar dekamarkt ekoplaza spar hoogvliet lidl-nederland; do
+            final=$(curl -s -A "$UA" -L -o p.html -w '%{url_effective}' "https://view.publitas.com/$g")
+            echo "=== $g -> $final ($(wc -c < p.html) bytes)"
+            grep -oE '"[^"]*\.json[^"]*"' p.html | sort -u | head -8
+            grep -oE '(hotspot|product)[A-Za-z_]*' p.html | sort | uniq -c | sort -rn | head -5
+            base="${final%/page/*}"; base="${base%/}"
+            for e in spreads.json hotspots_data.json pages.json data.json; do
+              c=$(curl -s -A "$UA" -o j.txt -w '%{http_code}' "$base/$e"); echo "  $e $c $(wc -c < j.txt) $(head -c 300 j.txt | tr '\n' ' ')"
+            done
           done
