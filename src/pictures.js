@@ -24,6 +24,7 @@ export function photoFor(chain, link) {
 
 // [pattern, emoji, background tint]
 const TYPES = [
+  [/koffie/, '☕', '#efe7df'],
   [/pindakaas|pinda|notenpasta/, '🥜', '#f6ead9'],
   [/hagelslag|chocopasta|nutella|hazelnootpasta|jam\b|confiture|honing|stroop/, '🍯', '#fbefd9'],
   [/kaasstengel|kaaskoek/, '🥨', '#fbf0dc'],
@@ -81,3 +82,17 @@ export function pictureHtml({ chain, link, name, image }, cls = '') {
   if (!src) return `<span class="pic ${cls}">${fallback}</span>`;
   return `<span class="pic ${cls}"><img src="${src.replace(/"/g, '&quot;')}" alt="" loading="lazy" onerror="this.remove()">${fallback}</span>`;
 }
+
+// Product groups for the search filters (English names; translated in i18n.js).
+const GROUPS = {
+  '🥜': 'Nuts and spreads', '🍯': 'Nuts and spreads', '🥨': 'Snacks', '🍫': 'Sweets and biscuits', '🥛': 'Dairy', '🧀': 'Cheese',
+  '🥚': 'Eggs', '🧈': 'Dairy', '🍞': 'Bread', '🍌': 'Fruit', '🍎': 'Fruit', '🍐': 'Fruit', '🍊': 'Fruit', '🍇': 'Fruit', '🍓': 'Fruit', '🥭': 'Fruit',
+  '🍅': 'Vegetables', '🥦': 'Vegetables', '🥔': 'Vegetables', '🍝': 'Pasta and rice', '🍚': 'Pasta and rice', '🍕': 'Pizza', '🍗': 'Meat and chicken',
+  '🥩': 'Meat and chicken', '🐟': 'Fish', '☕': 'Coffee and tea', '🍵': 'Coffee and tea', '🍺': 'Beer and wine', '🍷': 'Beer and wine', '💧': 'Drinks',
+  '🧃': 'Drinks', '🥣': 'Cereal', '🥫': 'Sauces and soup', '🍼': 'Baby', '🐾': 'Pets', '🧴': 'Personal care', '🧽': 'Household', '💐': 'Flowers', '🧊': 'Frozen',
+};
+export function groupFor(product) {
+  product.group ??= GROUPS[typeFor(product.name).emoji] || 'Other';
+  return product.group;
+}
+export const isOrganic = (product) => /\b(bio|biologisch|biologische|organic|eko|demeter)\b/i.test(product.name);

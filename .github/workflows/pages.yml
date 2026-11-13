@@ -25,6 +25,8 @@ jobs:
         with:
           ref: main
       - uses: actions/configure-pages@v5
+      - name: Stamp the app version
+        run: sed -i "s/__BUILD__/${GITHUB_SHA::8}-$(date -u +%Y%m%d%H%M)/" sw.js
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .

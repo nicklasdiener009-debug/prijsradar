@@ -1,9 +1,10 @@
 import { CHAINS, chainForTags } from './chains.js';
 import { unitPrice } from './units.js';
 
-// Live price data (MIT-licensed, refreshed daily by the Checkjebon.nl project).
+// Prices: our own daily copy first (same address, compressed, cached for offline use),
+// then the live Checkjebon file (MIT-licensed) if that copy is missing.
+const PRICES_LOCAL = 'data/prices.json';
 const PRICES_LIVE = 'https://raw.githubusercontent.com/supermarkt/checkjebon/main/data/supermarkets.json';
-const PRICES_SNAPSHOT = 'data/prices-snapshot.json';
 
 // Amsterdam bounding box (south, west, north, east) for OpenStreetMap store lookup.
 const AMSTERDAM_BBOX = [52.278, 4.728, 52.431, 5.079];
@@ -12,8 +13,6 @@ const OVERPASS_URLS = [
   'https://overpass.kumi.systems/api/interpreter',
 ];
 const STORES_SNAPSHOT = 'data/stores-snapshot.json';
-const STORE_CACHE_KEY = 'ams-stores-v1';
-const STORE_CACHE_MS = 7 * 24 * 3600 * 1000;
 
 export function normalize(s) {
   return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9.,%]+/g, ' ').trim();
@@ -34,12 +33,12 @@ async function fetchJson(url, opts = {}, timeoutMs = 20000) {
 export async function loadPrices() {
   let raw, source;
   try {
-    raw = await fetchJson(PRICES_LIVE, {}, 25000);
-    source = 'live';
+    raw = await fetchJson(PRICES_LOCAL, {}, 60000);
+    source = 'local';
   } catch (e) {
-    console.warn('Live prices unavailable, using snapshot', e);
-    raw = await fetchJson(PRICES_SNAPSHOT, {}, 60000);
-    source = 'snapshot';
+    console.warn('Own price copy unavailable, using the live file', e);
+    raw = await fetchJson(PRICES_LIVE, {}, 60000);
+    source = 'live';
   }
   const products = [];
   const chainsWithData = [];
@@ -49,7 +48,7 @@ export async function loadPrices() {
     if (!CHAINS[chain.n] || !chain.d?.length) continue;
     chainsWithData.push(chain.n);
     for (const p of chain.d) {
-      if (!(p.p > 0)) continue;
+      if (!(p.p >= 0.05)) continue; // a price of one cent is a data error
       products.push({
         chain: chain.n,
         name: p.n,
@@ -58,7 +57,7 @@ export async function loadPrices() {
         url: chain.u && p.l ? chain.u + p.l : null,
         link: p.l,
         unit: unitPrice(p),
-        key: normalize(p.n + ' ' + (p.s || '')),
+        key: ' ' + normalize(p.n + ' ' + (p.s || '')) + ' ',
       });
     }
   }
@@ -88,34 +87,45 @@ function parseOverpass(json) {
   return stores;
 }
 
+// The daily snapshot comes first because it is instant; OpenStreetMap is only asked
+// directly when the snapshot is missing.
 export async function loadStores() {
   try {
-    const cached = JSON.parse(localStorage.getItem(STORE_CACHE_KEY) || 'null');
-    if (cached && Date.now() - cached.at < STORE_CACHE_MS && cached.stores?.length) {
-      return { stores: cached.stores, source: 'cache' };
-    }
-  } catch { /* storage unavailable */ }
-
+    const stores = parseOverpass(await fetchJson(STORES_SNAPSHOT, {}, 15000));
+    if (stores.length) return { stores, source: 'snapshot' };
+  } catch (err) {
+    console.warn('Store snapshot unavailable', err);
+  }
   const [s, w, n, e] = AMSTERDAM_BBOX;
   const query = `[out:json][timeout:60];(node["shop"="supermarket"](${s},${w},${n},${e});way["shop"="supermarket"](${s},${w},${n},${e}););out center tags;`;
   for (const url of OVERPASS_URLS) {
     try {
       const json = await fetchJson(url, { method: 'POST', body: 'data=' + encodeURIComponent(query), headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }, 45000);
       const stores = parseOverpass(json);
-      if (stores.length) {
-        try { localStorage.setItem(STORE_CACHE_KEY, JSON.stringify({ at: Date.now(), stores })); } catch { /* ignore */ }
-        return { stores, source: 'live' };
-      }
+      if (stores.length) return { stores, source: 'live' };
     } catch (err) {
       console.warn('Overpass failed', url, err);
     }
   }
-  try {
-    const json = await fetchJson(STORES_SNAPSHOT, {}, 15000);
-    return { stores: parseOverpass(json), source: 'snapshot' };
-  } catch {
-    return { stores: [], source: 'unavailable' };
+  return { stores: [], source: 'unavailable' };
+}
+
+// Address, street or postcode -> places, using the Dutch government's free address
+// service (PDOK Locatieserver). Results near Amsterdam come first.
+export async function findPlaces(q) {
+  const url = 'https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?rows=6&fl=weergavenaam,centroide_ll,type'
+    + '&fq=type:(adres OR weg OR postcode OR woonplaats OR wijk OR buurt)&lat=52.3728&lon=4.8936&q=' + encodeURIComponent(q);
+  let json;
+  try { json = await fetchJson(url, {}, 8000); } catch { json = await fetchJson('https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?rows=6&q=' + encodeURIComponent(q), {}, 8000); }
+  const [s, w, n, e] = AMSTERDAM_BBOX;
+  const out = [];
+  for (const d of json.response?.docs || []) {
+    const m = /POINT\(([\d.]+) ([\d.]+)\)/.exec(d.centroide_ll || '');
+    if (!m) continue;
+    const lon = +m[1]; const lat = +m[2];
+    out.push({ label: d.weergavenaam, lat, lon, near: lat > s - 0.1 && lat < n + 0.1 && lon > w - 0.15 && lon < e + 0.15 });
   }
+  return out.sort((a, b) => b.near - a.near);
 }
 
 export async function loadOffers() {
