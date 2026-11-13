@@ -6,7 +6,7 @@ const IMG = 'img-v1';
 const SHELL_FILES = [
   './', 'index.html', 'styles.css', 'manifest.webmanifest', 'icons/icon-192.png',
   'src/app.js', 'src/chains.js', 'src/data.js', 'src/search.js', 'src/units.js', 'src/pictures.js',
-  'src/i18n.js', 'src/hours.js', 'src/list.js',
+  'src/i18n.js', 'src/hours.js', 'src/list.js', 'src/translate.js',
   'vendor/leaflet/leaflet.js', 'vendor/leaflet/leaflet.css',
 ];
 const IMG_HOSTS = ['images.openfoodfacts.org', 'static.ah.nl', 'raw.githubusercontent.com'];

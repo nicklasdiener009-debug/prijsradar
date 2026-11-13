@@ -163,6 +163,12 @@ const NL = {
   'Alerts are on.': 'Meldingen staan aan.',
   'Prices could not load': 'Prijzen konden niet laden',
   'Please try again in a moment.': 'Probeer het zo nog eens.',
+  'Translated from “{q}”.': 'Vertaald uit “{q}”.',
+  'Search “{q}” as typed': 'Zoek letterlijk op “{q}”',
+  'Today’s basics at their cheapest': 'De basics van vandaag, op hun goedkoopst',
+  'Total': 'Totaal',
+  'All of it at {chain}, your nearest: {total}. Shopping around saves {amount}.': 'Alles bij {chain}, het dichtst bij jou: {total}. Verspreid kopen scheelt {amount}.',
+  'Put these on my list': 'Zet deze op mijn lijst',
   // product groups
   'Nuts and spreads': 'Noten en beleg', 'Snacks': 'Snacks', 'Sweets and biscuits': 'Snoep en koek', 'Dairy': 'Zuivel', 'Cheese': 'Kaas', 'Eggs': 'Eieren',
   'Bread': 'Brood', 'Fruit': 'Fruit', 'Vegetables': 'Groente', 'Pasta and rice': 'Pasta en rijst', 'Pizza': 'Pizza', 'Meat and chicken': 'Vlees en kip',

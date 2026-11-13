@@ -5,6 +5,7 @@ import { loadImages, pictureHtml, groupFor, isOrganic } from './pictures.js';
 import { openStatus } from './hours.js';
 import { readList, saveList, readFavs, saveFavs, newItem, encodeShare, decodeShare } from './list.js';
 import { t, lang, setLang, locale } from './i18n.js';
+import { translate } from './translate.js';
 
 const DEFAULT_LOCATION = { lat: 52.3791, lon: 4.9003, label: 'Amsterdam Centraal' };
 const HERE_KEY = 'ams-here-v1';
@@ -24,6 +25,8 @@ const view = $('#view');
 const euro = (v) => '€' + v.toFixed(2).replace('.', ',');
 const km = (d) => (d < 1 ? `${Math.round(d * 100) * 10} m` : `${d.toFixed(1).replace('.', ',')} km`);
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+// Prices are set like a Dutch shelf label: big euros, small raised cents.
+const price = (v) => { const [e, c] = v.toFixed(2).split('.'); return `<strong class="pr" aria-label="€${e},${c}"><i>€</i>${e}<sup>${c}</sup></strong>`; };
 const BASE = { g: 'kg', l: 'l', st: 'piece' };
 const unitText = (u) => (u ? `${euro(u.value)} / ${u.unit === 'st' ? t('piece') : BASE[u.unit]}` : '');
 const dayLabel = (iso) => new Date(iso + 'T12:00:00').toLocaleDateString(locale(), { weekday: 'short', day: 'numeric', month: 'short' });
@@ -72,6 +75,20 @@ function matchOffers(chain, q) {
   const tokens = normalize(q).split(' ').filter(Boolean);
   if (!tokens.length) return [];
   return offersFor(chain).filter((o) => { o._k ??= normalize(o.title).split(' '); return tokens.every((x) => o._k.some((w) => w.startsWith(x))); });
+}
+
+// A search that understands English ("milk" -> melk) and forgives typos.
+function find(q, pool = state.products, exact = false) {
+  const dutch = exact ? null : translate(q);
+  let used = dutch || q;
+  let how = dutch ? 'translated' : null;
+  let results = search(pool, used);
+  if (!results.length && dutch) { used = q; how = null; results = search(pool, q); } // the translation found nothing, so try it as typed
+  if (!results.length) {
+    const fixed = correct(state.products, used);
+    if (fixed) { const r = search(pool, fixed); if (r.length) { used = fixed; how = 'corrected'; results = r; } }
+  }
+  return { used, how, results };
 }
 
 // ---------- comparing one product across chains ----------
@@ -147,7 +164,7 @@ function picksFor(item) {
     m = new Map([[pinned.chain, pinned]]);
     for (const a of alternatives(pinned)) m.set(a.p.chain, a.p);
   } else {
-    m = new Map(bestPerChain(search(state.products, item.pin?.name || item.q)).map((g) => [g.chain, g.best.ref]));
+    m = new Map(bestPerChain(find(item.pin?.name || item.q).results).map((g) => [g.chain, g.best.ref]));
   }
   state.picks.set(key, m);
   return m;
@@ -191,6 +208,28 @@ function favDeals() {
   return state.favs.map((f) => state.byId.get(pid(f))).filter(Boolean).map((p) => ({ p, d: dealFor(p) })).filter((x) => x.d);
 }
 
+// The home screen opens with a receipt: today's basics at whichever store sells each cheapest.
+function receipt() {
+  const active = new Set(activeChains());
+  // cheapest pack per chain, so the receipt and the "all at one store" total compare like with like
+  state.packs ??= STAPLES.map((q) => ({ q, by: new Map(bestPerChain(search(state.products, q), 'price').map((g) => [g.chain, g.best])) }));
+  const lines = state.packs.map(({ q, by }) => {
+    const best = [...by.values()].filter((p) => active.has(p.chain)).sort((a, b) => a.price - b.price)[0];
+    return best ? { q, p: best, by } : null;
+  }).filter(Boolean);
+  if (!lines.length) return '';
+  const total = lines.reduce((sum, l) => sum + l.p.price, 0);
+  const near = chainsByDistance().find(({ c, n }) => n && lines.every((l) => l.by.get(c)));
+  const nearTotal = near ? lines.reduce((sum, l) => sum + l.by.get(near.c).price, 0) : 0;
+  return `<aside class="bon" aria-label="${t('Today’s basics at their cheapest')}"><div class="bon-paper">
+    <div class="bon-head"><b>${t('Today’s basics at their cheapest')}</b><span>${new Date().toLocaleDateString(locale(), { weekday: 'long', day: 'numeric', month: 'long' })}</span></div>
+    <ol>${lines.map((l, i) => `<li style="--i:${i}"><a href="${pHref(l.p)}"><span class="what">${esc(l.q)}</span><span class="dots"></span>${logo(l.p.chain, 'sm')}<span class="num">${euro(l.p.price).slice(1)}</span></a></li>`).join('')}</ol>
+    <div class="bon-total" style="--i:${lines.length}"><span>${t('Total')}</span><span class="num">${euro(total)}</span></div>
+    ${near && nearTotal - total >= 0.01 ? `<p class="bon-note" style="--i:${lines.length + 1}">${t('All of it at {chain}, your nearest: {total}. Shopping around saves {amount}.', { chain: esc(CHAINS[near.c].name), total: euro(nearTotal), amount: euro(nearTotal - total) })}</p>` : ''}
+    <button class="btn bon-btn" data-staples style="--i:${lines.length + 2}">${t('Put these on my list')}</button>
+  </div></aside>`;
+}
+
 function staples() {
   if (state.staples) return state.staples;
   state.staples = STAPLES.map((q) => ({ q, by: new Map(bestPerChain(search(state.products, q), 'unit').map((g) => [g.chain, g.best])) }));
@@ -213,20 +252,20 @@ function dealTile(o, i = 0) {
   return `<a class="tile rise" style="--i:${Math.min(i, 12)};${chainVars(o.chain)}" href="${esc(o.url || '#/chain/' + o.chain)}" ${o.url ? 'target="_blank" rel="noopener"' : ''}>
     <div class="ph">${pictureHtml({ chain: o.chain, name: o.title, image: o.image }, 'fill')}<span class="ribbon">${esc(o.mechanism)}</span></div>
     <div class="bd"><span class="t">${esc(o.title)}</span>
-      <span class="p">${o.price ? `<strong>${euro(o.price)}</strong>` : ''}${o.was && o.price && o.was > o.price ? `<s>${euro(o.was)}</s>` : ''}</span>
+      <span class="p">${o.price ? `${price(o.price)}` : ''}${o.was && o.price && o.was > o.price ? `<s>${euro(o.was)}</s>` : ''}</span>
       ${o.validFrom && o.validFrom > today() ? `<span class="u">${t('From {day}', { day: dayLabel(o.validFrom) })}</span>` : o.validUntil ? `<span class="u">${t('Until {day}', { day: dayLabel(o.validUntil) })}</span>` : ''}</div></a>`;
 }
 function productTile(p, label, i = 0) {
   return `<a class="tile rise" style="--i:${i};${chainVars(p.chain)}" href="${pHref(p)}">
     <div class="ph">${pictureHtml(p, 'fill')}<span class="ribbon soft">${esc(label)}</span></div>
-    <div class="bd"><span class="t">${esc(p.name)}</span><span class="p"><strong>${euro(p.price)}</strong></span><span class="u">${esc(p.size)}${p.unit ? ' · ' + unitText(p.unit) : ''}</span></div></a>`;
+    <div class="bd"><span class="t">${esc(p.name)}</span><span class="p">${price(p.price)}</span><span class="u">${esc(p.size)}${p.unit ? ' · ' + unitText(p.unit) : ''}</span></div></a>`;
 }
 const onList = (p) => state.list.find((i) => i.pin && pid(i.pin) === pid(p));
 function productRow(p, extra = '', cls = '') {
   const have = onList(p);
   return `<div class="row ${cls}"><a class="rowlink" href="${pHref(p)}"><span class="thumb">${pictureHtml(p, 'row')}${logo(p.chain, 'badge')}</span>
     <div class="main"><div class="n">${esc(p.name)}</div><div class="s">${esc(p.size)}${extra}</div></div>
-    <div class="price"><strong>${euro(p.price)}</strong><span>${unitText(p.unit)}</span></div></a>
+    <div class="price">${price(p.price)}<span>${unitText(p.unit)}</span></div></a>
     <button class="plus ${have ? 'on' : ''}" data-pin="${esc(pid(p))}" aria-label="${have ? t('On your list') : t('Add to list')}">${have ? '✓' : '+'}</button></div>`;
 }
 const skeletons = (n, h = 120) => Array.from({ length: n }, () => `<div class="skel" style="height:${h}px;margin-top:14px"></div>`).join('');
@@ -236,8 +275,10 @@ const storeRow = (s, d, chain) => `<button class="row rowbtn" data-focus="${esc(
 function viewHome() {
   const h = new Date().getHours();
   const hello = h < 12 ? t('Good morning') : h < 18 ? t('Good afternoon') : t('Good evening');
-  let html = `<div class="greeting"><div><h1>${hello}</h1><p>${t('Every supermarket in Amsterdam, in one place.')}</p></div>${locButton()}</div>`;
-  if (!state.ready) return html + skeletons(3, 220);
+  const intro = `<div class="hero-main"><h1>${hello}</h1><p>${t('Every supermarket in Amsterdam, in one place.')}</p>${locButton()}
+    <div class="suggest">${STAPLES.slice(0, 6).map((q) => `<button data-go="#/search?q=${encodeURIComponent(q)}">${q}</button>`).join('')}</div></div>`;
+  if (!state.ready) return `<section class="hero">${intro}<div class="skel bon-skel"></div></section>` + skeletons(2, 220);
+  let html = `<section class="hero">${intro}${receipt()}</section>`;
 
   const fd = favDeals();
   if (fd.length) html += `<a class="banner rise" href="#/list"><span class="heart">♥</span><div><strong>${fd.length === 1 ? t('1 of your favourites is on offer') : t('{n} of your favourites are on offer', { n: fd.length })}</strong><span>${esc(fd.slice(0, 2).map((x) => x.p.name).join(', '))}</span></div></a>`;
@@ -271,7 +312,7 @@ function viewHome() {
   return html + footer();
 }
 
-function viewSearch(q) {
+function viewSearch(q, exact = false) {
   $('#q').value = q;
   if (!q) return `<div class="pagehead"><div><h1>${t('Search')}</h1><p>${t('Compare any product across every supermarket.')}</p></div></div>
     <div class="suggest">${STAPLES.map((s) => `<button data-go="#/search?q=${encodeURIComponent(s)}">${s}</button>`).join('')}</div>`;
@@ -279,12 +320,9 @@ function viewSearch(q) {
   const f = state.filter;
   if (f.q !== q) Object.assign(f, { q, group: null, organic: false, offer: false });
   const active = new Set(activeChains());
-  let used = q;
-  let all = search(state.products, q).filter((p) => active.has(p.chain));
-  if (!all.length) {
-    const fixed = correct(state.products, q);
-    if (fixed) { used = fixed; all = search(state.products, fixed).filter((p) => active.has(p.chain)); }
-  }
+  const found = find(q, state.products, exact);
+  const used = found.used;
+  const all = found.results.filter((p) => active.has(p.chain));
   // Filters, built from what the results contain.
   const counts = new Map();
   let organic = 0;
@@ -297,9 +335,9 @@ function viewSearch(q) {
   if (f.offer) results = results.filter((p) => dealFor(p.ref));
   const groups = bestPerChain(results, state.sortBy);
 
-  const more = completions(state.products, q, 6).filter((c) => c !== normalize(q)).slice(0, 5);
+  const more = completions(state.products, used, 6).filter((c) => c !== normalize(used)).slice(0, 5);
   const chainHits = normalize(q).length > 1 ? Object.entries(CHAINS).filter(([id, c]) => (active.has(id) || state.storeChains?.has(id)) && normalize(c.name).split(' ').some((w) => w.startsWith(normalize(q)))) : [];
-  let html = `<div class="pagehead"><div><h1>“${esc(used)}”</h1><p>${used !== q ? t('No results for “{q}”, showing “{fixed}” instead.', { q: esc(q), fixed: esc(used) }) + ' ' : ''}${groups.length ? t('Found at {n} supermarkets', { n: groups.length }) : t('No results')}</p></div>
+  let html = `<div class="pagehead"><div><h1>“${esc(used)}”</h1><p>${found.how === 'translated' ? `${t('Translated from “{q}”.', { q: esc(q) })} <a class="inlinelink" href="#/search?q=${encodeURIComponent(q)}&exact=1">${t('Search “{q}” as typed', { q: esc(q) })}</a><br>` : found.how === 'corrected' ? t('No results for “{q}”, showing “{fixed}” instead.', { q: esc(q), fixed: esc(used) }) + ' ' : ''}${groups.length ? t('Found at {n} supermarkets', { n: groups.length }) : t('No results')}</p></div>
     <div class="seg" role="group" aria-label="${t('Sort')}"><button data-sort="unit" class="${state.sortBy === 'unit' ? 'on' : ''}">${t('Per kg / l')}</button><button data-sort="price" class="${state.sortBy === 'price' ? 'on' : ''}">${t('Pack price')}</button></div></div>`;
   if (more.length || chainHits.length) html += `<div class="suggest tight">${chainHits.map(([id, c]) => `<button class="chainchip" data-go="#/chain/${id}">${logo(id, 'sm')}${esc(c.name)}</button>`).join('')}${more.map((s) => `<button data-go="#/search?q=${encodeURIComponent(s)}">${esc(s)}</button>`).join('')}</div>`;
   if (all.length) html += `<div class="filters">${groupsTop.map(([g, n]) => `<button class="${f.group === g ? 'on' : ''}" data-filter="group:${esc(g)}">${t(g)} <small>${n}</small></button>`).join('')}${organic ? `<button class="${f.organic ? 'on' : ''}" data-filter="organic">${t('Organic')} <small>${organic}</small></button>` : ''}${anyOffer ? `<button class="${f.offer ? 'on' : ''}" data-filter="offer">${t('On offer')}</button>` : ''}</div>`;
@@ -308,9 +346,9 @@ function viewSearch(q) {
   const best = groups[0];
   const near = groups.map((g) => ({ g, n: nearest(g.chain) })).filter((x) => x.n).sort((a, b) => a.n.d - b.n.d)[0];
   html += `<div class="summary">
-    <div class="stat rise"><div class="k">${t('Cheapest')}</div><div class="v">${euro(best.best.price)}<small>${esc(CHAINS[best.chain].name)}</small></div></div>
+    <div class="stat rise"><div class="k">${t('Cheapest')}</div><div class="v">${price(best.best.price)}<small>${esc(CHAINS[best.chain].name)}</small></div></div>
     ${near ? `<div class="stat rise" style="--i:1"><div class="k">${t('Closest with it')}</div><div class="v">${km(near.n.d)}<small>${esc(CHAINS[near.g.chain].name)}</small></div></div>` : ''}
-    ${groups.length > 1 ? `<div class="stat rise" style="--i:2"><div class="k">${t('You save up to')}</div><div class="v">${euro(Math.max(0, groups[groups.length - 1].best.price - best.best.price))}</div></div>` : ''}</div>`;
+    ${groups.length > 1 ? `<div class="stat rise" style="--i:2"><div class="k">${t('You save up to')}</div><div class="v">${price(Math.max(0, groups[groups.length - 1].best.price - best.best.price))}</div></div>` : ''}</div>`;
 
   html += groups.map((g, i) => {
     const n = nearest(g.chain);
@@ -344,7 +382,7 @@ function viewProduct(chain, link) {
         <a class="chainline" href="#/chain/${chain}">${logo(chain, 'sm')}<span>${esc(c.name)}</span></a>
         <h1>${esc(p.name)}</h1>
         <p class="muted">${esc(p.size)}</p>
-        <div class="bigprice"><strong>${euro(p.price)}</strong>${p.unit ? `<span>${unitText(p.unit)}</span>` : ''}</div>
+        <div class="bigprice">${price(p.price)}${p.unit ? `<span>${unitText(p.unit)}</span>` : ''}</div>
         ${deal ? `<p class="dealline"><span class="pill deal">${esc(deal.mechanism)}</span> ${esc(deal.title)}${deal.validUntil ? ` · ${t('until {day}', { day: dayLabel(deal.validUntil) })}` : ''}</p>` : ''}
         ${cheaper ? `<p class="dealline"><span class="pill good">${t('{amount} cheaper', { amount: euro(p.price - cheaper.p.price) })}</span> ${t('at {chain}', { chain: esc(CHAINS[cheaper.p.chain].name) })}</p>` : ''}
         <div class="actions">
@@ -380,8 +418,7 @@ function viewChain(id, q = '') {
   if (state.ready) {
     if (inner) {
       const pool = state.byChain.get(id) || [];
-      let r = search(pool, inner);
-      if (!r.length) { const fixed = correct(state.products, inner); if (fixed) r = search(pool, fixed); }
+      const r = find(inner, pool).results;
       const g = bestPerChain(r, state.sortBy)[0];
       products = g ? g.items.concat(r.filter((p) => !g.items.includes(p))).slice(0, 30).map((p) => productRow(p.ref)).join('') : `<div class="empty"><h3>${t('Not found at {chain}', { chain: esc(c.name) })}</h3></div>`;
     } else {
@@ -409,7 +446,7 @@ function itemRow(item) {
   const p = item.pin && state.byId.get(pid(item.pin));
   const pic = p ? pictureHtml(p, 'row') : pictureHtml({ name: item.pin?.name || item.q }, 'row');
   return `<div class="row item"><span class="thumb">${pic}${item.pin ? logo(item.pin.chain, 'badge') : ''}</span>
-    <div class="main">${p ? `<a class="n" href="${pHref(p)}">${esc(p.name)}</a>` : `<div class="n">${esc(item.pin?.name || item.q)}</div>`}<div class="s">${item.pin ? t('Exact product at {chain}', { chain: esc(CHAINS[item.pin.chain]?.name || item.pin.chain) }) : t('Cheapest match at each supermarket')}</div></div>
+    <div class="main">${p ? `<a class="n" href="${pHref(p)}">${esc(p.name)}</a>` : `<div class="n">${esc(item.pin?.name || item.q)}</div>`}<div class="s">${item.pin ? t('Exact product at {chain}', { chain: esc(CHAINS[item.pin.chain]?.name || item.pin.chain) }) : (translate(item.q) ? `“${esc(translate(item.q))}” · ` : '') + t('Cheapest match at each supermarket')}</div></div>
     <div class="stepper"><button data-qty="${item.id}:-1" aria-label="${t('Less')}">−</button><span class="num">${item.qty}</span><button data-qty="${item.id}:1" aria-label="${t('More')}">+</button></div>
     <button class="x" data-remove="${item.id}" aria-label="${t('Remove')}">×</button></div>`;
 }
@@ -474,7 +511,7 @@ function viewList(params) {
     <div class="row ${i === 0 && r.complete ? 'win' : ''} rise" style="--i:${i}">${logo(r.c)}
       <div class="main"><div class="n">${esc(CHAINS[r.c].name)} ${i === 0 && r.complete ? `<span class="pill good">${t('Cheapest')}</span>` : ''}${r.deals ? ` <span class="pill deal">${t('{n} on offer', { n: r.deals })}</span>` : ''}</div>
       <div class="s">${t('{found}/{n} items', { found: r.found, n: N })}${r.n ? ` · ${away(r.n.d)}` : ''}</div></div>
-      <div class="price"><strong>${euro(r.total)}</strong><span>${r.complete ? t('total') : t('incomplete')}</span></div></div>
+      <div class="price">${price(r.total)}<span>${r.complete ? t('total') : t('incomplete')}</span></div></div>
     <details class="rise basket" style="--i:${i}"><summary>${t('What’s in it')}</summary><ul class="picks">${r.picks.map((x) => `<li><span class="pickname">${x.p ? `${pictureHtml(x.p, 'xs')}<a href="${pHref(x.p)}">${x.item.qty > 1 ? x.item.qty + '× ' : ''}${esc(x.p.name)}</a>` : `<em>${t('{item}: not found', { item: esc(x.item.pin?.name || x.item.q) })}</em>`}</span><span class="num">${x.p ? euro(x.p.price * x.item.qty) : ''}</span></li>`).join('')}</ul>
       <button class="btn small" data-go="#/list?shop=${r.c}">${t('Shop here')}</button></details>`).join('')}</div></div>`;
   html += splitCard(rows);
@@ -496,7 +533,7 @@ function viewShop(chain) {
     <span class="num">${p ? euro(p.price * item.qty) : ''}</span></button>`;
   return `<a class="back" href="#/list">${t('Shopping list')}</a>
     <div class="chainhero enter slim" style="${chainVars(chain)}"><div class="top">${logo(chain, 'lg')}<div><h1>${esc(c.name)}</h1><p>${n ? `${esc(n.s.address || n.s.name)} · ${away(n.d)}` : ''}</p></div></div>
-      <div class="stats"><div><strong>${rows.length - left.length}/${rows.length}</strong>${t('in your basket')}</div><div><strong>${euro(leftTotal)}</strong>${t('still to go')}</div></div></div>
+      <div class="stats"><div><strong>${rows.length - left.length}/${rows.length}</strong>${t('in your basket')}</div><div>${price(leftTotal)}${t('still to go')}</div></div></div>
     <div class="card" style="margin-top:16px"><div class="rows">${rows.filter((r) => !r.item.done).map(line).join('')}${rows.filter((r) => r.item.done).map(line).join('')}</div></div>
     ${left.length ? '' : `<div class="tip good"><strong>${t('All done!')}</strong><div class="actions"><button class="btn" data-clear-done>${t('Clear the list')}</button><button class="btn ghost" data-untick>${t('Keep it for next time')}</button></div></div>`}`;
 }
@@ -642,7 +679,7 @@ function render({ keepScroll = false } = {}) {
     if (!state.incoming) toast(t('That shared list could not be read.'));
   }
   const key = `${r.name}/${r.arg || ''}/${r.arg2 || ''}/${r.params.get('shop') || ''}`;
-  const html = r.name === 'search' ? viewSearch(r.q) : r.name === 'list' ? viewList(r.params) : r.name === 'map' ? viewMap()
+  const html = r.name === 'search' ? viewSearch(r.q, r.params.has('exact')) : r.name === 'list' ? viewList(r.params) : r.name === 'map' ? viewMap()
     : r.name === 'chain' ? viewChain(r.arg, r.q) : r.name === 'p' ? viewProduct(r.arg, r.arg2) : viewHome();
   const host = $('#map-host');
   if (host.parentNode !== document.body) document.body.appendChild(host);
@@ -791,6 +828,7 @@ function wire() {
     else if (d.done) { const item = state.list.find((i) => i.id === d.done); if (item) { item.done = !item.done; persistList(); render({ keepScroll: true }); } }
     else if ('clearDone' in d) { state.list = []; persistList(); location.hash = '#/list'; }
     else if ('untick' in d) { state.list.forEach((i) => { i.done = false; }); persistList(); location.hash = '#/list'; }
+    else if ('staples' in d) { for (const q of STAPLES) if (!state.list.some((i) => i.q === q)) state.list.push(newItem(q)); persistList(); location.hash = '#/list'; }
     else if (d.add) { state.list.push(newItem(d.add)); persistList(); render({ keepScroll: true }); }
     else if ('share' in d) shareList();
     else if (d.import) {
