@@ -13,6 +13,8 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 
 const ROOT = new URL('../', import.meta.url);
 const PRICES = 'https://raw.githubusercontent.com/supermarkt/checkjebon/main/data/supermarkets.json';
+// The shops' own photos, gathered by fetch-shop-images.mjs.
+const SHOP_PREFIXES = { h: 'https://static.hoogvliet.nl/ecom/product/', d: 'https://web-fileserver.dirk.nl/', k: 'https://web-fileserver.dekamarkt.nl/', s: 'https://media.spar.nl/product/' };
 const BOT_UA = 'prijsradar-bot/1.0 (+https://github.com/nicklasdiener009-debug/prijsradar)';
 const AH_PREFIX = 'https://static.ah.nl/dam/product/';
 const OFF_PREFIX = 'https://images.openfoodfacts.org/images/products/';
@@ -150,9 +152,14 @@ async function main() {
   let off = [];
   try { off = await offCatalogue(); } catch (e) { console.error('OFF failed:', e.message); }
 
-  // Branded products photographed by AH (house brands excluded: an AH pack on a Jumbo product would mislead).
+  let shop = {};
+  try { shop = JSON.parse(await readFile(new URL('data/shop-images.json', ROOT), 'utf8')).img || {}; } catch { console.log('no shop photos yet'); }
+
+  // Branded products photographed by a shop (house brands excluded: an AH pack on a Jumbo product would mislead).
+  // The same pack of Calvé or Douwe Egberts is sold everywhere, so one shop's photo serves the others too.
   const branded = new Index();
   for (const { title, img } of ahById.values()) if (!HOUSE.test(norm(title))) branded.add(title, img);
+  for (const chain of prices) for (const p of chain.d) { const v = shop[`${chain.n}|${p.l}`]; if (v && !HOUSE.test(norm(p.n))) branded.add(p.n, v); }
   const offIdx = new Index();
   const byBrand = new Map(); // first word of brand -> Index of names without the brand
   for (const [name, brand, img] of off) {
@@ -180,13 +187,14 @@ async function main() {
       const key = `${chain.n}|${p.l}`;
       let hit = null;
       if (chain.n === 'ah') { const id = (p.l.match(/^wi(\d+)/) || [])[1]; hit = ahById.get(id)?.img; if (hit) s.own++; }
+      if (!hit && shop[key]) { hit = shop[key]; s.own++; }
       if (!hit && !HOUSE.test(norm(p.n))) { hit = branded.find(p.n, 0.8); if (hit) s.branded++; }
       if (!hit) { hit = offIdx.find(p.n, 0.7) || brandFind(p.n); if (hit) s.off++; }
       if (hit) img[key] = hit;
     }
   }
   for (const [c, s] of Object.entries(stats)) if (s.total) console.log(`${c}: ${s.total} products, photos: own ${s.own}, branded ${s.branded}, open food facts ${s.off} -> ${Math.round(((s.own + s.branded + s.off) / s.total) * 100)}%`);
-  const out = { updatedAt: new Date().toISOString(), prefixes: { a: AH_PREFIX, o: OFF_PREFIX }, img };
+  const out = { updatedAt: new Date().toISOString(), prefixes: { a: AH_PREFIX, o: OFF_PREFIX, ...SHOP_PREFIXES }, img };
   await writeFile(new URL('data/images.json', ROOT), JSON.stringify(out));
   console.log(`wrote ${Object.keys(img).length} photos`);
   if (!Object.keys(img).length) process.exit(1);

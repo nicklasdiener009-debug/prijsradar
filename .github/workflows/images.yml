@@ -23,7 +23,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node scripts/fetch-images.mjs
+      - name: Shop photos
+        run: node scripts/fetch-shop-images.mjs
+        continue-on-error: true
+      - name: Match photos to products
+        run: node scripts/fetch-images.mjs
       - name: Save changes
         run: |
           git config user.name "prijsradar-bot"

@@ -19,6 +19,7 @@ export function photoFor(chain, link) {
   let url = prefix + v.slice(1);
   // AH images come in several renditions; ask for a small one.
   if (v[0] === 'a') url = url.replace(/rendition=[^&]+/, 'rendition=200x200_JPG_Q85');
+  if (v[0] === 'd' || v[0] === 'k') url += '?width=400'; // Dirk and DekaMarkt resize on request
   return url;
 }
 

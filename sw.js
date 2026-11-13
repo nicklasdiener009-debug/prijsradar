@@ -9,7 +9,7 @@ const SHELL_FILES = [
   'src/i18n.js', 'src/hours.js', 'src/list.js', 'src/translate.js',
   'vendor/leaflet/leaflet.js', 'vendor/leaflet/leaflet.css',
 ];
-const IMG_HOSTS = ['images.openfoodfacts.org', 'static.ah.nl', 'raw.githubusercontent.com'];
+const IMG_HOSTS = ['images.openfoodfacts.org', 'static.ah.nl', 'raw.githubusercontent.com', 'static.hoogvliet.nl', 'web-fileserver.dirk.nl', 'web-fileserver.dekamarkt.nl', 'media.spar.nl'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(SHELL).then((c) => c.addAll(SHELL_FILES)).then(() => self.skipWaiting()));
