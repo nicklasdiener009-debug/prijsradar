@@ -1,10 +1,10 @@
 {
- "updatedAt": "2026-11-14T12:07:30.007Z",
+ "updatedAt": "2026-11-15T12:42:03.559Z",
  "chains": {
   "ah": {
    "status": "ok",
-   "checkedAt": "2026-11-14T12:07:30.007Z",
-   "fetchedAt": "2026-11-14T12:07:30.007Z",
+   "checkedAt": "2026-11-15T12:42:03.559Z",
+   "fetchedAt": "2026-11-15T12:42:03.559Z",
    "offers": [
     {
      "title": "AH Mandarijnen 1 kilo",
@@ -373,8 +373,8 @@
   },
   "jumbo": {
    "status": "ok",
-   "checkedAt": "2026-11-14T12:07:30.007Z",
-   "fetchedAt": "2026-11-14T12:07:30.007Z",
+   "checkedAt": "2026-11-15T12:42:03.559Z",
+   "fetchedAt": "2026-11-15T12:42:03.559Z",
    "offers": [
     {
      "title": "Mandarijnen",
@@ -611,8 +611,8 @@
   },
   "vomar": {
    "status": "ok",
-   "checkedAt": "2026-11-14T12:07:30.007Z",
-   "fetchedAt": "2026-11-14T12:07:30.007Z",
+   "checkedAt": "2026-11-15T12:42:03.559Z",
+   "fetchedAt": "2026-11-15T12:42:03.559Z",
    "offers": [
     {
      "title": "Stamppotgroenten",
@@ -751,171 +751,171 @@
      "mechanism": "Van 1,69 voor 1,29",
      "price": 1.29,
      "was": 1.69,
-     "page": 16,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/16"
+     "page": 17,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/17"
     },
     {
      "title": "Beemster",
      "mechanism": "Op=op",
-     "page": 18,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/18"
+     "page": 19,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/19"
     },
     {
      "title": "Galbani",
      "mechanism": "Op=op",
-     "page": 18,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/18"
+     "page": 19,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/19"
     },
     {
      "title": "M.u.v. 100% Juice",
      "mechanism": "Gratis",
-     "page": 20,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/20"
+     "page": 21,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/21"
     },
     {
      "title": "Jan Kruidnoot",
      "mechanism": "Op=op",
      "price": 2.99,
      "was": 4.3,
-     "page": 20,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/20"
+     "page": 21,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/21"
     },
     {
      "title": "Versgebakken",
      "mechanism": "Op=op",
      "price": 1.49,
-     "page": 22,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/22"
+     "page": 23,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/23"
     },
     {
      "title": "Verse Witte of Volkoren",
      "mechanism": "Op=op",
-     "page": 22,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/22"
+     "page": 23,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/23"
     },
     {
      "title": "Scharreleieren",
      "mechanism": "Op=op",
-     "page": 22,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/22"
+     "page": 23,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/23"
     },
     {
      "title": "Bananen",
      "mechanism": "Op=op",
-     "page": 22,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/22"
+     "page": 23,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/23"
     },
     {
      "title": "Echte Boter",
      "mechanism": "Op=op",
-     "page": 22,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/22"
+     "page": 23,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/23"
     },
     {
      "title": "Konings",
      "mechanism": "Op=op",
-     "page": 22,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/22"
+     "page": 23,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/23"
     },
     {
      "title": "Red Band",
      "mechanism": "Op=op",
-     "page": 23,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/23"
+     "page": 24,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/24"
     },
     {
      "title": "Dagelijks vers gebakken in de winkel",
      "mechanism": "Van 1,99 voor 1,36",
      "price": 1.36,
      "was": 1.99,
-     "page": 23,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/23"
+     "page": 24,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/24"
     },
     {
      "title": "Dr. Oetker Mix",
      "mechanism": "Op=op",
      "price": 2.15,
-     "page": 24,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/24"
+     "page": 25,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/25"
     },
     {
      "title": "Verkade Koek",
      "mechanism": "Gratis",
      "price": 3.15,
      "was": 6.3,
-     "page": 24,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/24"
+     "page": 25,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/25"
     },
     {
      "title": "Heinz Sandwichspread",
      "mechanism": "Van 4,49 voor 2,15",
      "price": 2.15,
      "was": 4.49,
-     "page": 24,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/24"
+     "page": 25,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/25"
     },
     {
      "title": "Gouda's",
      "mechanism": "Van 1,99 voor 1,89",
      "price": 1.89,
      "was": 1.99,
-     "page": 25,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/25"
+     "page": 26,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/26"
     },
     {
      "title": "Sheba Delices",
      "mechanism": "Van 3,99 voor 3,39",
      "price": 3.39,
      "was": 3.99,
-     "page": 25,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/25"
+     "page": 26,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/26"
     },
     {
      "title": "Koopmans",
      "mechanism": "Op=op",
      "price": 8.35,
-     "page": 26,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/26"
+     "page": 27,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/27"
     },
     {
      "title": "Gran Pavesi",
      "mechanism": "Op=op",
      "price": 2.59,
-     "page": 26,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/26"
+     "page": 27,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/27"
     },
     {
      "title": "Lay's Max",
      "mechanism": "Op=op",
-     "page": 26,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/26"
+     "page": 27,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/27"
     },
     {
      "title": "Spathiphyllum",
      "mechanism": "Op=op",
      "price": 9.99,
-     "page": 27,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/27"
+     "page": 28,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/28"
     },
     {
      "title": "Kies & Mix",
      "mechanism": "Op=op",
-     "page": 27,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/27"
+     "page": 28,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/28"
     },
     {
      "title": "Helleborus",
      "mechanism": "Op=op",
      "price": 14.99,
-     "page": 27,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/27"
+     "page": 28,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/28"
     },
     {
      "title": "Conica",
      "mechanism": "Op=op",
      "price": 19.99,
-     "page": 27,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/27"
+     "page": 28,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/28"
     },
     {
      "title": "Bio+ Bietjes",
@@ -923,93 +923,93 @@
      "price": 0.99,
      "was": 1.25,
      "size": "Pak 500 gram",
-     "page": 29,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/29"
+     "page": 30,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/30"
     },
     {
      "title": "Grolsch of Alfa Pils",
      "mechanism": "25% korting",
      "price": 18.65,
      "size": "Krat 24 flesjes à 30 cl.",
-     "page": 30,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/30"
+     "page": 31,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/31"
     },
     {
      "title": "Amstel Pils",
      "mechanism": "25% korting",
      "price": 16.89,
      "size": "Krat 24 flesjes à 30 cl",
-     "page": 30,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/30"
+     "page": 31,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/31"
     },
     {
      "title": "Texels Skuumkoppe",
      "mechanism": "Op=op",
-     "page": 30,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/30"
+     "page": 31,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/31"
     },
     {
      "title": "Licor 43 Original",
      "mechanism": "Op=op",
      "size": "1 liter of Grand",
-     "page": 31,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/31"
+     "page": 32,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/32"
     },
     {
      "title": "Perla",
      "mechanism": "Op=op",
      "price": 4.99,
-     "page": 38,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/38"
+     "page": 39,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/39"
     },
     {
      "title": "M.u.v. gekoeld",
      "mechanism": "25% korting",
      "price": 3.89,
      "was": 5.19,
-     "page": 38,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/38"
+     "page": 39,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/39"
     },
     {
      "title": "Verkade",
      "mechanism": "Op=op",
-     "page": 39,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/39"
+     "page": 40,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/40"
     },
     {
      "title": "Alléén op donderdag, vrijdag & zaterdag!",
      "mechanism": "Gratis",
      "size": "PER BAK",
-     "page": 39,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/39"
+     "page": 40,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/40"
     },
     {
      "title": "Echte Kaas",
      "mechanism": "Op=op",
      "price": 11.99,
-     "page": 40,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/40"
+     "page": 41,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/41"
     },
     {
      "title": "Slagers Filet",
      "mechanism": "Op=op",
      "price": 3.99,
-     "page": 40,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/40"
+     "page": 41,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/41"
     },
     {
      "title": "Witlof",
      "mechanism": "Op=op",
      "price": 7.99,
-     "page": 40,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/40"
+     "page": 41,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/41"
     },
     {
      "title": "Sushibox",
      "mechanism": "Op=op",
      "price": 8.99,
-     "page": 40,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/40"
+     "page": 41,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/41"
     },
     {
      "title": "Runderrollade",
@@ -1017,21 +1017,21 @@
      "price": 9.99,
      "was": 11.99,
      "size": "Per 600 gram",
-     "page": 41,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/41"
+     "page": 42,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/42"
     },
     {
      "title": "Varkenshaas",
      "mechanism": "Op=op",
      "price": 9.09,
-     "page": 41,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/41"
+     "page": 42,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/42"
     },
     {
      "title": "Scharrel",
      "mechanism": "Op=op",
-     "page": 41,
-     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/41"
+     "page": 42,
+     "url": "https://view.folders.nl/vomar/vomar-week-47-2026/page/42"
     }
    ],
    "folder": {
@@ -1039,171 +1039,171 @@
     "pages": [
      {
       "n": 1,
-      "image": "https://view.folders.nl/105809/3538339/pages/6b1778ff-e8a6-4455-969b-44c0540ed581-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/f4bfc372-9cb0-47e1-bc37-10e46d405241-at600.jpg"
      },
      {
       "n": 2,
-      "image": "https://view.folders.nl/105809/3538339/pages/961b8504-7ae8-4aef-a42e-de51f760a44c-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/dbcb0c1c-75a2-4eca-a048-e7cb4d212c7c-at600.jpg"
      },
      {
       "n": 3,
-      "image": "https://view.folders.nl/105809/3538339/pages/2b055cad-65d1-4007-9ff0-74a50d43ece3-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/5421b5b1-dd54-4e89-b369-42bfb02b6dfc-at600.jpg"
      },
      {
       "n": 4,
-      "image": "https://view.folders.nl/105809/3538339/pages/777eea72-9364-4bb2-8f37-90e8580d30d3-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/d0b6ddb1-4fc6-493c-b5ab-d99de19e1710-at600.jpg"
      },
      {
       "n": 5,
-      "image": "https://view.folders.nl/105809/3538339/pages/feb5b496-5aa7-46c3-a2bb-53d6d7db40d2-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/cda4bb77-253f-40b9-bc44-3d58c02a79d5-at600.jpg"
      },
      {
       "n": 6,
-      "image": "https://view.folders.nl/105809/3538339/pages/3437cebb-6279-4fa5-a456-5be13ce5d9ad-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/3b13c2c2-de6b-4ee3-8391-9330a1e808ea-at600.jpg"
      },
      {
       "n": 7,
-      "image": "https://view.folders.nl/105809/3538339/pages/8bf2bdf4-2db2-4289-84e1-4ec428ea4ec5-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/ef39c766-1a53-4961-9d44-72cefc829604-at600.jpg"
      },
      {
       "n": 8,
-      "image": "https://view.folders.nl/105809/3538339/pages/bed4cec4-07cf-4a3e-ac94-4e8ad38a854a-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/4b656653-84c3-450e-9796-b48dbc3349d2-at600.jpg"
      },
      {
       "n": 9,
-      "image": "https://view.folders.nl/105809/3538339/pages/d4fb3eb8-10a2-4739-bf7b-28923f19a339-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/b6166336-18f8-4d8c-ada8-586d79ae048f-at600.jpg"
      },
      {
       "n": 10,
-      "image": "https://view.folders.nl/105809/3538339/pages/366b59eb-0ba6-4693-a4dd-7cf28e145559-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/015018eb-cda0-46a4-98f6-0ee36191013e-at600.jpg"
      },
      {
       "n": 11,
-      "image": "https://view.folders.nl/105809/3538339/pages/ea5bc007-5ab9-4167-9f15-701d18ec8079-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/93ce45a0-3bb2-4adc-928a-7e99d5d861b7-at600.jpg"
      },
      {
       "n": 12,
-      "image": "https://view.folders.nl/105809/3538339/pages/5f5fb2bf-2702-4b47-b506-492a588f5c19-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/0055e750-a49d-489d-a205-f2ea2bcd0169-at600.jpg"
      },
      {
       "n": 13,
-      "image": "https://view.folders.nl/105809/3538339/pages/b5f090c9-f7cd-4dfb-9d89-59ee6176b8c9-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/d2229975-37b6-4381-a660-b031ebc06e62-at600.jpg"
      },
      {
       "n": 14,
-      "image": "https://view.folders.nl/105809/3538339/pages/b25ff8a2-a342-4252-bf7c-700d36f0af4e-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/691adf8d-0daa-4703-a67f-139b2202c837-at600.jpg"
      },
      {
       "n": 15,
-      "image": "https://view.folders.nl/105809/3538339/pages/f8db599b-5482-4aee-99e1-de42d4b9c06d-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/f218d083-472e-4b44-b444-4b572c58490c-at600.jpg"
      },
      {
       "n": 16,
-      "image": "https://view.folders.nl/105809/3538339/pages/beb0ee2c-c13e-45c5-b1c1-b312ccd324ad-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/93baec19-889f-407b-a1f3-c333658c04d6-at600.jpg"
      },
      {
       "n": 17,
-      "image": "https://view.folders.nl/105809/3538339/pages/1c783235-e914-48e6-82b6-b61f69e3fa46-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/94405cfd-552d-49f9-9bb2-6474b4482087-at600.jpg"
      },
      {
       "n": 18,
-      "image": "https://view.folders.nl/105809/3538339/pages/3362b6ee-08a0-48fa-b4be-46f0540cf0a7-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/92b63c7f-5c44-465a-9272-81ff3187b7af-at600.jpg"
      },
      {
       "n": 19,
-      "image": "https://view.folders.nl/105809/3538339/pages/6d236c93-2a25-4c33-a385-6c731d292dfe-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/5ed38713-957b-4c66-8346-dc22bae76ce3-at600.jpg"
      },
      {
       "n": 20,
-      "image": "https://view.folders.nl/105809/3538339/pages/2573b75b-76ba-4e7a-8ba5-65bfdd36e9bb-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/7a3d8541-096d-4015-aa6e-b021b988b5f6-at600.jpg"
      },
      {
       "n": 21,
-      "image": "https://view.folders.nl/105809/3538339/pages/4f1d7083-37aa-43a3-83e3-4a70ed5bca08-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/3a29c54b-5d42-429b-b3a4-2fb14eed6ac2-at600.jpg"
      },
      {
       "n": 22,
-      "image": "https://view.folders.nl/105809/3538339/pages/339c2d35-3865-417a-a8f9-a0dae46994f9-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/1ac96ec8-332b-4872-b737-7e6a20079a5b-at600.jpg"
      },
      {
       "n": 23,
-      "image": "https://view.folders.nl/105809/3538339/pages/60da4e5c-a0d4-498d-a32d-28c2a92e9a45-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/1c11cf57-9ed0-4d8e-b51e-7fbe134904f4-at600.jpg"
      },
      {
       "n": 24,
-      "image": "https://view.folders.nl/105809/3538339/pages/e1000703-8cc4-4484-98cf-f3b9bff14aee-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/ce7d737b-2ddb-4728-8e42-ec1b649178b0-at600.jpg"
      },
      {
       "n": 25,
-      "image": "https://view.folders.nl/105809/3538339/pages/4fb9d917-9436-4f1f-b810-7ad2e6ea9ab6-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/7a4a0ce0-0a28-4a54-8665-3c62b21bcfce-at600.jpg"
      },
      {
       "n": 26,
-      "image": "https://view.folders.nl/105809/3538339/pages/0fb1dbf0-1fae-4a97-86ec-32d70fd4f854-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/38d96bcb-7cb3-4066-9de5-c6bd714ca0e2-at600.jpg"
      },
      {
       "n": 27,
-      "image": "https://view.folders.nl/105809/3538339/pages/1ebcd705-b949-467d-b333-beaea5f01132-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/151d406a-8862-440f-af39-c7c7670ba954-at600.jpg"
      },
      {
       "n": 28,
-      "image": "https://view.folders.nl/105809/3538339/pages/41f50693-0b15-4bd5-955f-38c99f28498a-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/2bd56882-6309-486d-9f53-3d43df0b1ea4-at600.jpg"
      },
      {
       "n": 29,
-      "image": "https://view.folders.nl/105809/3538339/pages/02cb0b8f-5931-4ce4-aafb-3f45530d1070-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/1d0c26e4-d6c4-42fe-82c5-3192c61a6d6e-at600.jpg"
      },
      {
       "n": 30,
-      "image": "https://view.folders.nl/105809/3538339/pages/e3bfc243-a467-4a7f-8b84-e5b76fd332a2-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/d732d98b-4a43-40f4-8583-7675be49a7fd-at600.jpg"
      },
      {
       "n": 31,
-      "image": "https://view.folders.nl/105809/3538339/pages/5612570b-4ebb-48e1-825d-c0cdaaf7e248-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/3c9ec913-5599-43ff-bb90-119e758a51d8-at600.jpg"
      },
      {
       "n": 32,
-      "image": "https://view.folders.nl/105809/3538339/pages/3bcf38e3-cfe0-45ae-92ff-89a36bde9d6d-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/9dfef556-6f6d-40ce-a1d5-cef3af048452-at600.jpg"
      },
      {
       "n": 33,
-      "image": "https://view.folders.nl/105809/3538339/pages/af0afda3-8845-47e9-900d-6e34191b5a74-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/24132d33-4646-4c98-b62c-a3b22fc28bca-at600.jpg"
      },
      {
       "n": 34,
-      "image": "https://view.folders.nl/105809/3538339/pages/5e598b86-b514-4127-8461-cab32b44b6e1-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/a735cf95-22ce-436f-8dcc-80531bde6ba3-at600.jpg"
      },
      {
       "n": 35,
-      "image": "https://view.folders.nl/105809/3538339/pages/1e57c301-13ae-452f-8e27-dbfa7fbcf34c-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/fbdc2983-365c-46ae-8735-134fc424acc9-at600.jpg"
      },
      {
       "n": 36,
-      "image": "https://view.folders.nl/105809/3538339/pages/ea186033-0b4b-433f-bebf-e364776265cd-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/132bcc1a-1d70-4054-936a-a49e5e71c067-at600.jpg"
      },
      {
       "n": 37,
-      "image": "https://view.folders.nl/105809/3538339/pages/51818514-fc19-45ca-ac86-0a4a16902b1e-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/335453f3-4f9b-4e85-ac89-9a343783e368-at600.jpg"
      },
      {
       "n": 38,
-      "image": "https://view.folders.nl/105809/3538339/pages/ab5fccc0-10b2-447f-a29f-6a899a64befd-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/c2347b0c-d0a5-43fd-b10b-d90477f690d3-at600.jpg"
      },
      {
       "n": 39,
-      "image": "https://view.folders.nl/105809/3538339/pages/95d5528e-c7f5-4960-92ef-a1072a374f9a-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/e365ea3f-800b-43a5-8c6b-8776b842ccf1-at600.jpg"
      },
      {
       "n": 40,
-      "image": "https://view.folders.nl/105809/3538339/pages/36f554ce-a165-44cd-bf03-df32fe5c4fbd-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/a04df03b-bc19-4b8b-b4b3-88516fbac12d-at600.jpg"
      }
     ]
    }
   },
   "dekamarkt": {
    "status": "ok",
-   "checkedAt": "2026-11-14T12:07:30.007Z",
-   "fetchedAt": "2026-11-14T12:07:30.007Z",
+   "checkedAt": "2026-11-15T12:42:03.559Z",
+   "fetchedAt": "2026-11-15T12:42:03.559Z",
    "offers": [],
    "folder": {
     "url": "https://view.publitas.com/dekamarkt/aanbiedingen-week-47/page/1",
@@ -1317,8 +1317,8 @@
   },
   "spar": {
    "status": "ok",
-   "checkedAt": "2026-11-14T12:07:30.007Z",
-   "fetchedAt": "2026-11-14T12:07:30.007Z",
+   "checkedAt": "2026-11-15T12:42:03.559Z",
+   "fetchedAt": "2026-11-15T12:42:03.559Z",
    "offers": [
     {
      "title": "SPAR appeltaart met",
@@ -1461,8 +1461,8 @@
   },
   "hoogvliet": {
    "status": "ok",
-   "checkedAt": "2026-11-14T12:07:30.007Z",
-   "fetchedAt": "2026-11-14T12:07:30.007Z",
+   "checkedAt": "2026-11-15T12:42:03.559Z",
+   "fetchedAt": "2026-11-15T12:42:03.559Z",
    "offers": [
     {
      "title": "Taartschep",
@@ -1837,8 +1837,8 @@
   },
   "ekoplaza": {
    "status": "ok",
-   "checkedAt": "2026-11-14T12:07:30.007Z",
-   "fetchedAt": "2026-11-14T12:07:30.007Z",
+   "checkedAt": "2026-11-15T12:42:03.559Z",
+   "fetchedAt": "2026-11-15T12:42:03.559Z",
    "offers": [
     {
      "title": "Rude Health",
@@ -2198,14 +2198,14 @@
   },
   "dirk": {
    "status": "error",
-   "checkedAt": "2026-11-14T12:07:30.007Z",
+   "checkedAt": "2026-11-15T12:42:03.559Z",
    "fetchedAt": null,
    "error": "no folder found at https://view.publitas.com/dirk-van-den-broek-supermarkten, https://view.publitas.com/dirk-vdbroek, https://view.folders.nl/dirk-van-den-broek",
    "offers": []
   },
   "plus": {
    "status": "error",
-   "checkedAt": "2026-11-14T12:07:30.007Z",
+   "checkedAt": "2026-11-15T12:42:03.559Z",
    "fetchedAt": null,
    "error": "no folder found at https://view.publitas.com/plus-supermarkten, https://view.publitas.com/plus-retail, https://view.folders.nl/plus",
    "offers": []
