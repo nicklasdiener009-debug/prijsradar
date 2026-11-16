@@ -1,10 +1,10 @@
 {
- "updatedAt": "2026-11-15T12:42:03.559Z",
+ "updatedAt": "2026-11-16T13:34:51.254Z",
  "chains": {
   "ah": {
    "status": "ok",
-   "checkedAt": "2026-11-15T12:42:03.559Z",
-   "fetchedAt": "2026-11-15T12:42:03.559Z",
+   "checkedAt": "2026-11-16T13:34:51.254Z",
+   "fetchedAt": "2026-11-16T13:34:51.254Z",
    "offers": [
     {
      "title": "AH Mandarijnen 1 kilo",
@@ -373,8 +373,8 @@
   },
   "jumbo": {
    "status": "ok",
-   "checkedAt": "2026-11-15T12:42:03.559Z",
-   "fetchedAt": "2026-11-15T12:42:03.559Z",
+   "checkedAt": "2026-11-16T13:34:51.254Z",
+   "fetchedAt": "2026-11-16T13:34:51.254Z",
    "offers": [
     {
      "title": "Mandarijnen",
@@ -392,10 +392,10 @@
      "mechanism": "Van 2,00 voor 1,50",
      "price": 1.5,
      "was": 2,
-     "page": 26,
+     "page": 25,
      "validFrom": "2026-11-18",
      "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-qnla-47/page/26"
+     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-qnla-47/page/25"
     },
     {
      "title": "Kips kleintje smeerleverworst",
@@ -403,10 +403,10 @@
      "price": 2.19,
      "was": 2.39,
      "size": "Zakje 120 gram",
-     "page": 39,
+     "page": 38,
      "validFrom": "2026-11-18",
      "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-qnla-47/page/39"
+     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-qnla-47/page/38"
     },
     {
      "title": "Hamburgers classic",
@@ -414,20 +414,20 @@
      "price": 0.89,
      "was": 9.96,
      "size": "Schaal 8 stuks",
-     "page": 48,
+     "page": 47,
      "validFrom": "2026-11-18",
      "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-qnla-47/page/48"
+     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-qnla-47/page/47"
     },
     {
      "title": "Montaignan",
      "mechanism": "2 voor 8.99",
      "price": 11.98,
      "size": "Alle flessen à 750 ml",
-     "page": 51,
+     "page": 50,
      "validFrom": "2026-11-18",
      "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-qnla-47/page/51"
+     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-qnla-47/page/50"
     },
     {
      "title": "Ritorna",
@@ -435,10 +435,10 @@
      "price": 4.49,
      "was": 5.99,
      "size": "Alle flessen à 750 ml, per fles",
-     "page": 52,
+     "page": 51,
      "validFrom": "2026-11-18",
      "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-qnla-47/page/52"
+     "url": "https://view.publitas.com/jumbo-supermarkten/jumbo-actiefolder-qnla-47/page/51"
     }
    ],
    "folder": {
@@ -446,163 +446,163 @@
     "pages": [
      {
       "n": 1,
-      "image": "https://view.publitas.com/171/3537629/pages/8c0dd2da-9c11-4095-87eb-befda4ca7914-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/60e8a0fc-a982-4c26-8312-8d33089643bc-at600.jpg"
      },
      {
       "n": 2,
-      "image": "https://view.publitas.com/171/3537629/pages/1be83bce-724d-4c1c-8416-7b8f5aeef782-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/6be8b000-8901-44d7-a38b-4f12b42fe33d-at600.jpg"
      },
      {
       "n": 3,
-      "image": "https://view.publitas.com/171/3537629/pages/1649dde3-d9ad-41a5-b898-ef4069937bb5-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/2c412251-09ba-43b3-925d-68ed9bf49cd9-at600.jpg"
      },
      {
       "n": 4,
-      "image": "https://view.publitas.com/171/3537629/pages/8d110ce7-134f-4415-ae4a-cb35c8ccd5f7-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/9b92a82f-20cc-43de-821f-ed9f16bd0103-at600.jpg"
      },
      {
       "n": 5,
-      "image": "https://view.publitas.com/171/3537629/pages/471401d9-391a-48cb-a226-759408f77bdc-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/115e5467-75e9-4a41-8dfe-521c8cb7a641-at600.jpg"
      },
      {
       "n": 6,
-      "image": "https://view.publitas.com/171/3537629/pages/fe745eaa-900a-4296-a940-fe2e6a4213b0-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/a5f9f16e-3077-41ec-898c-5157e247ca43-at600.jpg"
      },
      {
       "n": 7,
-      "image": "https://view.publitas.com/171/3537629/pages/56c7f225-73b7-4bb7-b80d-bb97d34cf979-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/12962b13-2896-47df-b6ed-dcdfad76b9a3-at600.jpg"
      },
      {
       "n": 8,
-      "image": "https://view.publitas.com/171/3537629/pages/169c3b6d-0719-43c8-a175-27aa61bacbfd-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/d1960011-8df5-410c-98be-203c82f00ce7-at600.jpg"
      },
      {
       "n": 9,
-      "image": "https://view.publitas.com/171/3537629/pages/b3a9bdc2-9d96-4ecb-b9b1-4999d0da5557-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/eabd04f8-b181-4345-a190-25d1b749bd58-at600.jpg"
      },
      {
       "n": 10,
-      "image": "https://view.publitas.com/171/3537629/pages/3b0ad06e-7d1f-4e9f-b9ff-4c3600364d71-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/2ba63f67-63ba-42b2-8116-cbc8bdb5cf00-at600.jpg"
      },
      {
       "n": 11,
-      "image": "https://view.publitas.com/171/3537629/pages/899eba68-7a1a-4885-b2cd-e8e6143f4442-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/1f019089-b579-4c0b-bcc0-5bea245434ec-at600.jpg"
      },
      {
       "n": 12,
-      "image": "https://view.publitas.com/171/3537629/pages/1f35c3b5-0c94-4e40-b2fd-fb742a693885-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/930721dc-0aef-4832-9d15-0668bff84cda-at600.jpg"
      },
      {
       "n": 13,
-      "image": "https://view.publitas.com/171/3537629/pages/73eeb874-4072-4c9d-9f8d-b7451bc2e98c-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/20e45e51-6037-4568-9b3e-009484b04f0f-at600.jpg"
      },
      {
       "n": 14,
-      "image": "https://view.publitas.com/171/3537629/pages/aed42559-ff0a-49dd-8c5a-17385d2e7d31-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/d173501c-d573-4228-93ab-e3cfa95d1e7c-at600.jpg"
      },
      {
       "n": 15,
-      "image": "https://view.publitas.com/171/3537629/pages/6a9d6f65-5742-4f05-b325-2e3b6ede2bd7-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/6cef45bf-4abd-49e1-ab0c-a68e58048ed3-at600.jpg"
      },
      {
       "n": 16,
-      "image": "https://view.publitas.com/171/3537629/pages/b48fbccf-74d4-4e14-b961-eab283bc5f40-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/5f51ead8-1ec7-4f7f-ad7b-c44001b40e73-at600.jpg"
      },
      {
       "n": 17,
-      "image": "https://view.publitas.com/171/3537629/pages/e2d0ea3b-710e-411b-b281-110230bd062e-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/1b8e230e-dc63-4dc4-aeaa-b006cdedbd6d-at600.jpg"
      },
      {
       "n": 18,
-      "image": "https://view.publitas.com/171/3537629/pages/22b49922-1a49-48a2-827d-a3db38622c30-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/3afdf20c-c40b-4a8d-b797-c85ff59e1ffd-at600.jpg"
      },
      {
       "n": 19,
-      "image": "https://view.publitas.com/171/3537629/pages/9361463e-011a-4f39-9892-f5b9a4947a94-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/d68215f9-bed1-4d7b-a675-02acbc9db3fe-at600.jpg"
      },
      {
       "n": 20,
-      "image": "https://view.publitas.com/171/3537629/pages/544762fa-4c2c-46bf-b47e-b74e68f01370-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/2c8840c0-91bd-4a5a-94fe-087eafaccb33-at600.jpg"
      },
      {
       "n": 21,
-      "image": "https://view.publitas.com/171/3537629/pages/4adcb221-6415-457e-989d-d08f80e65656-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/77c5837e-a9c5-4ac2-873c-7089451b55c5-at600.jpg"
      },
      {
       "n": 22,
-      "image": "https://view.publitas.com/171/3537629/pages/68fbc157-7974-4b27-bbc8-bf6f7732875d-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/829557f1-ef55-4b2e-9db1-d5309756600f-at600.jpg"
      },
      {
       "n": 23,
-      "image": "https://view.publitas.com/171/3537629/pages/4719c960-31da-4066-93e4-8ed3dd172ae6-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/f4bfaadd-484d-4c64-b5f9-8921f785725b-at600.jpg"
      },
      {
       "n": 24,
-      "image": "https://view.publitas.com/171/3537629/pages/cefc80d6-2712-47b3-bd75-7e11d51248d0-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/ef7b71bc-e43b-42fa-83c6-0d9988daafb2-at600.jpg"
      },
      {
       "n": 25,
-      "image": "https://view.publitas.com/171/3537629/pages/0a36cd23-b6eb-444d-b67a-75e623bba811-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/5eee1237-9a2d-4ec2-946c-6cf96d64fb10-at600.jpg"
      },
      {
       "n": 26,
-      "image": "https://view.publitas.com/171/3537629/pages/aed64ef8-41e9-4319-b8be-8be2be70a177-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/b347acb0-04b4-4d03-b021-122968420bcc-at600.jpg"
      },
      {
       "n": 27,
-      "image": "https://view.publitas.com/171/3537629/pages/71f1a826-11f5-4893-9123-d873c689a31b-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/80ff66ae-8fbe-4a99-a0ac-5c3c3b79adb7-at600.jpg"
      },
      {
       "n": 28,
-      "image": "https://view.publitas.com/171/3537629/pages/641b5a33-e871-48f5-808c-531055b815f1-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/258335a9-dd9a-40ad-913d-214aeebd0e39-at600.jpg"
      },
      {
       "n": 29,
-      "image": "https://view.publitas.com/171/3537629/pages/aa6a97f8-abba-4d46-815d-09da85a53207-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/76c0d344-0ad7-420a-8791-cdf841ad166d-at600.jpg"
      },
      {
       "n": 30,
-      "image": "https://view.publitas.com/171/3537629/pages/26532ada-99a9-4c8a-8a33-4dd8bd50ffc5-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/1dcd6f11-3f5a-4613-be5b-283457a95daa-at600.jpg"
      },
      {
       "n": 31,
-      "image": "https://view.publitas.com/171/3537629/pages/a9f4e423-dc36-4200-bd8f-2e0738dbcd1e-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/7e389fca-9875-49e4-ac6c-7a141d4214ea-at600.jpg"
      },
      {
       "n": 32,
-      "image": "https://view.publitas.com/171/3537629/pages/859f7dce-13eb-46ec-b679-043803f49fd1-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/e8ce1611-2925-4b90-b6d4-82031482b76e-at600.jpg"
      },
      {
       "n": 33,
-      "image": "https://view.publitas.com/171/3537629/pages/27177d7c-b0b1-41a5-9475-5cc3e08d2744-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/3c8328df-b91f-40b2-84d8-025ef1414024-at600.jpg"
      },
      {
       "n": 34,
-      "image": "https://view.publitas.com/171/3537629/pages/0b0cefd0-8aab-46c3-b7a2-f45ad72bd35a-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/60023e9d-261d-45d0-87cd-2cade92306a2-at600.jpg"
      },
      {
       "n": 35,
-      "image": "https://view.publitas.com/171/3537629/pages/87823958-5dbd-4a3b-8a7a-f1ca0beb4d23-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/7c551272-32a5-4c4a-8231-aa53c66cb993-at600.jpg"
      },
      {
       "n": 36,
-      "image": "https://view.publitas.com/171/3537629/pages/c7738665-1472-4942-9d60-3d9948ec0c8f-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/881bcb2a-5481-4451-96a6-c5233f0237f2-at600.jpg"
      },
      {
       "n": 37,
-      "image": "https://view.publitas.com/171/3537629/pages/8353fc76-3b3f-42da-8c59-f2c7be2a5f33-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/454dcc44-85da-4148-a90b-5af0520cc1e7-at600.jpg"
      },
      {
       "n": 38,
-      "image": "https://view.publitas.com/171/3537629/pages/d7e9d9e4-cac1-481e-91ac-ab2c80a92cc7-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/cc31c451-7efd-43b0-9d20-81693b320ba4-at600.jpg"
      },
      {
       "n": 39,
-      "image": "https://view.publitas.com/171/3537629/pages/a26838e2-177c-42b1-a372-b1c3fc8c592e-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/6e7a80eb-b505-4e2f-af37-ba5658437bf2-at600.jpg"
      },
      {
       "n": 40,
-      "image": "https://view.publitas.com/171/3537629/pages/b7b4cfe2-6ed6-4b9f-8ffd-7ece39723847-at600.jpg"
+      "image": "https://view.publitas.com/171/3537629/pages/d00eff7f-ce7b-4d9f-b2d4-d311342581bb-at600.jpg"
      }
     ],
     "validFrom": "2026-11-18",
@@ -611,8 +611,8 @@
   },
   "vomar": {
    "status": "ok",
-   "checkedAt": "2026-11-15T12:42:03.559Z",
-   "fetchedAt": "2026-11-15T12:42:03.559Z",
+   "checkedAt": "2026-11-16T13:34:51.254Z",
+   "fetchedAt": "2026-11-16T13:34:51.254Z",
    "offers": [
     {
      "title": "Stamppotgroenten",
@@ -1039,286 +1039,279 @@
     "pages": [
      {
       "n": 1,
-      "image": "https://view.folders.nl/105809/3538339/pages/f4bfc372-9cb0-47e1-bc37-10e46d405241-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/8e4fc585-be67-4152-9121-abc00cf3357b-at600.jpg"
      },
      {
       "n": 2,
-      "image": "https://view.folders.nl/105809/3538339/pages/dbcb0c1c-75a2-4eca-a048-e7cb4d212c7c-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/484b2d7d-96b7-4d2e-be55-b212457374a1-at600.jpg"
      },
      {
       "n": 3,
-      "image": "https://view.folders.nl/105809/3538339/pages/5421b5b1-dd54-4e89-b369-42bfb02b6dfc-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/221b7228-0296-4ccb-aac6-056331a9aac6-at600.jpg"
      },
      {
       "n": 4,
-      "image": "https://view.folders.nl/105809/3538339/pages/d0b6ddb1-4fc6-493c-b5ab-d99de19e1710-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/1c811e6f-097c-499d-b241-966eddb7e5a0-at600.jpg"
      },
      {
       "n": 5,
-      "image": "https://view.folders.nl/105809/3538339/pages/cda4bb77-253f-40b9-bc44-3d58c02a79d5-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/55d456cb-6c3a-4ade-ae93-a9999283648e-at600.jpg"
      },
      {
       "n": 6,
-      "image": "https://view.folders.nl/105809/3538339/pages/3b13c2c2-de6b-4ee3-8391-9330a1e808ea-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/b4f9215b-8e85-4752-9e59-82991b801c1c-at600.jpg"
      },
      {
       "n": 7,
-      "image": "https://view.folders.nl/105809/3538339/pages/ef39c766-1a53-4961-9d44-72cefc829604-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/7dfb6318-7bc6-49b6-b4ba-f526f427e72e-at600.jpg"
      },
      {
       "n": 8,
-      "image": "https://view.folders.nl/105809/3538339/pages/4b656653-84c3-450e-9796-b48dbc3349d2-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/70403601-640a-4f07-82c5-a582079ffebc-at600.jpg"
      },
      {
       "n": 9,
-      "image": "https://view.folders.nl/105809/3538339/pages/b6166336-18f8-4d8c-ada8-586d79ae048f-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/51a0fb68-f3ab-47ba-840b-91e048b9c767-at600.jpg"
      },
      {
       "n": 10,
-      "image": "https://view.folders.nl/105809/3538339/pages/015018eb-cda0-46a4-98f6-0ee36191013e-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/59e2da95-2547-4109-b486-04a7ef56e1ca-at600.jpg"
      },
      {
       "n": 11,
-      "image": "https://view.folders.nl/105809/3538339/pages/93ce45a0-3bb2-4adc-928a-7e99d5d861b7-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/ea97d1f8-248b-4dfe-a107-7d18ec44a23d-at600.jpg"
      },
      {
       "n": 12,
-      "image": "https://view.folders.nl/105809/3538339/pages/0055e750-a49d-489d-a205-f2ea2bcd0169-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/42664ce4-8074-4e7f-9970-ce1cb94f9087-at600.jpg"
      },
      {
       "n": 13,
-      "image": "https://view.folders.nl/105809/3538339/pages/d2229975-37b6-4381-a660-b031ebc06e62-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/f0c3082b-7bd7-4512-967d-4e9ffd2cae51-at600.jpg"
      },
      {
       "n": 14,
-      "image": "https://view.folders.nl/105809/3538339/pages/691adf8d-0daa-4703-a67f-139b2202c837-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/73bca5ee-0010-4a43-a866-fb15d174195a-at600.jpg"
      },
      {
       "n": 15,
-      "image": "https://view.folders.nl/105809/3538339/pages/f218d083-472e-4b44-b444-4b572c58490c-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/f3163cc3-ad64-4c88-aef9-47eb8784c37e-at600.jpg"
      },
      {
       "n": 16,
-      "image": "https://view.folders.nl/105809/3538339/pages/93baec19-889f-407b-a1f3-c333658c04d6-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/bebc8285-a371-40a9-985b-00fdb767af35-at600.jpg"
      },
      {
       "n": 17,
-      "image": "https://view.folders.nl/105809/3538339/pages/94405cfd-552d-49f9-9bb2-6474b4482087-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/a25c466a-eb8e-4f56-90de-3b065f6c87bb-at600.jpg"
      },
      {
       "n": 18,
-      "image": "https://view.folders.nl/105809/3538339/pages/92b63c7f-5c44-465a-9272-81ff3187b7af-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/4e3572c8-f47f-4e87-9ec0-43095c9e1395-at600.jpg"
      },
      {
       "n": 19,
-      "image": "https://view.folders.nl/105809/3538339/pages/5ed38713-957b-4c66-8346-dc22bae76ce3-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/30b3c065-8d90-4721-b014-1def20861ebc-at600.jpg"
      },
      {
       "n": 20,
-      "image": "https://view.folders.nl/105809/3538339/pages/7a3d8541-096d-4015-aa6e-b021b988b5f6-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/4d4766b6-f228-4e40-bd09-ad4255dc6208-at600.jpg"
      },
      {
       "n": 21,
-      "image": "https://view.folders.nl/105809/3538339/pages/3a29c54b-5d42-429b-b3a4-2fb14eed6ac2-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/9a505096-7013-44e6-92b8-6bac71368d09-at600.jpg"
      },
      {
       "n": 22,
-      "image": "https://view.folders.nl/105809/3538339/pages/1ac96ec8-332b-4872-b737-7e6a20079a5b-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/8637176a-8a52-481f-877e-3684fa544204-at600.jpg"
      },
      {
       "n": 23,
-      "image": "https://view.folders.nl/105809/3538339/pages/1c11cf57-9ed0-4d8e-b51e-7fbe134904f4-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/be8ea67d-c326-45f9-8fd3-e184f4b3a91e-at600.jpg"
      },
      {
       "n": 24,
-      "image": "https://view.folders.nl/105809/3538339/pages/ce7d737b-2ddb-4728-8e42-ec1b649178b0-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/5c1ad6ac-c0b2-4f50-bbab-4e46dbcc89c1-at600.jpg"
      },
      {
       "n": 25,
-      "image": "https://view.folders.nl/105809/3538339/pages/7a4a0ce0-0a28-4a54-8665-3c62b21bcfce-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/55a09039-4cc2-4ca0-99b3-eed9ff04235c-at600.jpg"
      },
      {
       "n": 26,
-      "image": "https://view.folders.nl/105809/3538339/pages/38d96bcb-7cb3-4066-9de5-c6bd714ca0e2-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/165f7893-2118-4092-a48d-f0938c4761ef-at600.jpg"
      },
      {
       "n": 27,
-      "image": "https://view.folders.nl/105809/3538339/pages/151d406a-8862-440f-af39-c7c7670ba954-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/1b40c4f4-8bb1-49d2-85bd-80a6bb034da9-at600.jpg"
      },
      {
       "n": 28,
-      "image": "https://view.folders.nl/105809/3538339/pages/2bd56882-6309-486d-9f53-3d43df0b1ea4-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/8abd1584-497e-48b9-8dd8-c24dff6f9fa8-at600.jpg"
      },
      {
       "n": 29,
-      "image": "https://view.folders.nl/105809/3538339/pages/1d0c26e4-d6c4-42fe-82c5-3192c61a6d6e-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/dd372993-7447-41f8-885c-25cbe73322d6-at600.jpg"
      },
      {
       "n": 30,
-      "image": "https://view.folders.nl/105809/3538339/pages/d732d98b-4a43-40f4-8583-7675be49a7fd-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/f9d0dfcb-bbed-45e0-9836-0d4042ca5801-at600.jpg"
      },
      {
       "n": 31,
-      "image": "https://view.folders.nl/105809/3538339/pages/3c9ec913-5599-43ff-bb90-119e758a51d8-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/0e281694-fced-4aeb-84fa-cd6d363de9ab-at600.jpg"
      },
      {
       "n": 32,
-      "image": "https://view.folders.nl/105809/3538339/pages/9dfef556-6f6d-40ce-a1d5-cef3af048452-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/cc509697-69f0-4ee2-b9b9-994e0f08dd5a-at600.jpg"
      },
      {
       "n": 33,
-      "image": "https://view.folders.nl/105809/3538339/pages/24132d33-4646-4c98-b62c-a3b22fc28bca-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/34d84247-57dc-442d-88b6-ef047a2740e9-at600.jpg"
      },
      {
       "n": 34,
-      "image": "https://view.folders.nl/105809/3538339/pages/a735cf95-22ce-436f-8dcc-80531bde6ba3-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/a6833663-b35d-4c7f-b697-117b96f5d79c-at600.jpg"
      },
      {
       "n": 35,
-      "image": "https://view.folders.nl/105809/3538339/pages/fbdc2983-365c-46ae-8735-134fc424acc9-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/0cb3bc7b-3bc5-44f0-aec0-7e90446a7e8a-at600.jpg"
      },
      {
       "n": 36,
-      "image": "https://view.folders.nl/105809/3538339/pages/132bcc1a-1d70-4054-936a-a49e5e71c067-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/ea691ad3-8ac2-4900-890e-574d2d1e00a2-at600.jpg"
      },
      {
       "n": 37,
-      "image": "https://view.folders.nl/105809/3538339/pages/335453f3-4f9b-4e85-ac89-9a343783e368-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/5e991192-e840-433c-a505-e60345fc6ab8-at600.jpg"
      },
      {
       "n": 38,
-      "image": "https://view.folders.nl/105809/3538339/pages/c2347b0c-d0a5-43fd-b10b-d90477f690d3-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/037e7eb9-9cd6-44a8-bfc7-9ea3f81dc140-at600.jpg"
      },
      {
       "n": 39,
-      "image": "https://view.folders.nl/105809/3538339/pages/e365ea3f-800b-43a5-8c6b-8776b842ccf1-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/d1e1c670-439f-4a3b-8a30-53c769629994-at600.jpg"
      },
      {
       "n": 40,
-      "image": "https://view.folders.nl/105809/3538339/pages/a04df03b-bc19-4b8b-b4b3-88516fbac12d-at600.jpg"
+      "image": "https://view.folders.nl/105809/3538339/pages/dfdbad9e-26f9-4b2c-a620-244ab8631733-at600.jpg"
      }
     ]
    }
   },
   "dekamarkt": {
    "status": "ok",
-   "checkedAt": "2026-11-15T12:42:03.559Z",
-   "fetchedAt": "2026-11-15T12:42:03.559Z",
-   "offers": [],
+   "checkedAt": "2026-11-16T13:34:51.254Z",
+   "fetchedAt": "2026-11-16T13:34:51.254Z",
+   "offers": [
+    {
+     "title": "Seizoensboeket",
+     "mechanism": "50% korting",
+     "page": 1,
+     "url": "https://view.publitas.com/dekamarkt/haarlem-reinaldapark/page/1"
+    },
+    {
+     "title": "Ook goed",
+     "mechanism": "84% korting",
+     "page": 3,
+     "url": "https://view.publitas.com/dekamarkt/haarlem-reinaldapark/page/3"
+    },
+    {
+     "title": "Fles 1 liter. € 1.99",
+     "mechanism": "50% korting",
+     "page": 4,
+     "url": "https://view.publitas.com/dekamarkt/haarlem-reinaldapark/page/4"
+    },
+    {
+     "title": "Friethoes écht verse friet",
+     "mechanism": "50% korting",
+     "size": "Schaal 450 gram. € 1.49",
+     "page": 4,
+     "url": "https://view.publitas.com/dekamarkt/haarlem-reinaldapark/page/4"
+    },
+    {
+     "title": "Johma brood & toast salade",
+     "mechanism": "1+1 gratis",
+     "size": "Kuip 175 gram. Van € 2.45 tot € 4.09.",
+     "page": 5,
+     "url": "https://view.publitas.com/dekamarkt/haarlem-reinaldapark/page/5"
+    },
+    {
+     "title": "Verkade",
+     "mechanism": "50% korting",
+     "page": 6,
+     "url": "https://view.publitas.com/dekamarkt/haarlem-reinaldapark/page/6"
+    },
+    {
+     "title": "Nalys toiletpapier soft",
+     "mechanism": "1+2 gratis",
+     "size": "Pak 24 rollen. op=op",
+     "page": 7,
+     "url": "https://view.publitas.com/dekamarkt/haarlem-reinaldapark/page/7"
+    },
+    {
+     "title": "Ariel of Lenor",
+     "mechanism": "1+2 gratis",
+     "price": 13.99,
+     "page": 7,
+     "url": "https://view.publitas.com/dekamarkt/haarlem-reinaldapark/page/7"
+    },
+    {
+     "title": "EERSTE 500",
+     "mechanism": "Op=op",
+     "page": 8,
+     "url": "https://view.publitas.com/dekamarkt/haarlem-reinaldapark/page/8"
+    },
+    {
+     "title": "Ruitensproeier",
+     "mechanism": "Op=op",
+     "page": 8,
+     "url": "https://view.publitas.com/dekamarkt/haarlem-reinaldapark/page/8"
+    }
+   ],
    "folder": {
-    "url": "https://view.publitas.com/dekamarkt/aanbiedingen-week-47/page/1",
+    "url": "https://view.publitas.com/dekamarkt/haarlem-reinaldapark/page/1",
     "pages": [
      {
       "n": 1,
-      "image": "https://view.publitas.com/99/3521405/pages/8b4fda2c-fab5-4f2f-ab7a-febdadd4eda6-at600.jpg"
+      "image": "https://view.publitas.com/99/3423679/pages/54df78d7-b15c-463c-b7bf-3a897ab0f1d6-at600.jpg"
      },
      {
       "n": 2,
-      "image": "https://view.publitas.com/99/3521405/pages/c23bedd0-a757-4a37-b768-135e3027caaf-at600.jpg"
+      "image": "https://view.publitas.com/99/3423679/pages/9501f9ce-0e02-4ada-ac17-fae5a4fc5078-at600.jpg"
      },
      {
       "n": 3,
-      "image": "https://view.publitas.com/99/3521405/pages/5c8eac4d-c35c-412e-9ec0-3ed02161e6cc-at600.jpg"
+      "image": "https://view.publitas.com/99/3423679/pages/470bf05c-59fa-43b5-93b3-9d3c16f2bce2-at600.jpg"
      },
      {
       "n": 4,
-      "image": "https://view.publitas.com/99/3521405/pages/ab467dc8-4150-42bc-99c9-f3f122cc457a-at600.jpg"
+      "image": "https://view.publitas.com/99/3423679/pages/8c2bb141-ff94-4b3a-b9f6-068166c455f2-at600.jpg"
      },
      {
       "n": 5,
-      "image": "https://view.publitas.com/99/3521405/pages/39e5243e-153c-4070-8a64-545adc822b25-at600.jpg"
+      "image": "https://view.publitas.com/99/3423679/pages/8d1e3913-c669-4291-9d35-9d64fe538b8a-at600.jpg"
      },
      {
       "n": 6,
-      "image": "https://view.publitas.com/99/3521405/pages/4cc6ed3e-a363-4a14-ba72-592b8913bf90-at600.jpg"
+      "image": "https://view.publitas.com/99/3423679/pages/3b9816c6-799f-4a04-971a-3181e557510c-at600.jpg"
      },
      {
       "n": 7,
-      "image": "https://view.publitas.com/99/3521405/pages/9b20651a-0c20-4345-8a4e-c9158762d694-at600.jpg"
+      "image": "https://view.publitas.com/99/3423679/pages/fa3aad04-6761-462e-b4c6-4ffa0c78a7dd-at600.jpg"
      },
      {
       "n": 8,
-      "image": "https://view.publitas.com/99/3521405/pages/abeba778-5f12-45af-b39f-7749be3d2f88-at600.jpg"
-     },
-     {
-      "n": 9,
-      "image": "https://view.publitas.com/99/3521405/pages/e828b550-f6b6-495f-bf8b-7274a47d39fd-at600.jpg"
-     },
-     {
-      "n": 10,
-      "image": "https://view.publitas.com/99/3521405/pages/baa555c9-7be6-4202-951d-595a0821b85f-at600.jpg"
-     },
-     {
-      "n": 11,
-      "image": "https://view.publitas.com/99/3521405/pages/dd178ca4-5550-47ef-b25d-936b98ebd377-at600.jpg"
-     },
-     {
-      "n": 12,
-      "image": "https://view.publitas.com/99/3521405/pages/6124a053-2c8a-474f-be14-0dc6bde63976-at600.jpg"
-     },
-     {
-      "n": 13,
-      "image": "https://view.publitas.com/99/3521405/pages/0201e620-e55d-40ac-b11e-2e4641332ee6-at600.jpg"
-     },
-     {
-      "n": 14,
-      "image": "https://view.publitas.com/99/3521405/pages/b0ec26a3-09b5-4d07-992f-b26f75f24043-at600.jpg"
-     },
-     {
-      "n": 15,
-      "image": "https://view.publitas.com/99/3521405/pages/0c82da64-9325-4ed7-ae65-16de2e09ee0c-at600.jpg"
-     },
-     {
-      "n": 16,
-      "image": "https://view.publitas.com/99/3521405/pages/da52ced8-c0bb-46b4-8b12-044c4298b953-at600.jpg"
-     },
-     {
-      "n": 17,
-      "image": "https://view.publitas.com/99/3521405/pages/2dbe708f-add1-4304-89cf-a770b53cacc2-at600.jpg"
-     },
-     {
-      "n": 18,
-      "image": "https://view.publitas.com/99/3521405/pages/5c61fe0a-1c27-4871-8732-99ca2eb076a7-at600.jpg"
-     },
-     {
-      "n": 19,
-      "image": "https://view.publitas.com/99/3521405/pages/491dfef1-d539-4960-81f7-7d9f840bb65b-at600.jpg"
-     },
-     {
-      "n": 20,
-      "image": "https://view.publitas.com/99/3521405/pages/9c23e6b2-fa3e-4b4c-adf8-b5f0c33c87e0-at600.jpg"
-     },
-     {
-      "n": 21,
-      "image": "https://view.publitas.com/99/3521405/pages/afd24910-f8e8-41dc-929f-f1e5eb2c6fcc-at600.jpg"
-     },
-     {
-      "n": 22,
-      "image": "https://view.publitas.com/99/3521405/pages/30bc8eab-eaa1-4f37-9270-33430b47ddc6-at600.jpg"
-     },
-     {
-      "n": 23,
-      "image": "https://view.publitas.com/99/3521405/pages/2de3af60-d665-4a2f-9cab-9a1290135639-at600.jpg"
-     },
-     {
-      "n": 24,
-      "image": "https://view.publitas.com/99/3521405/pages/41c32dda-f46b-4b69-8011-1537db602346-at600.jpg"
-     },
-     {
-      "n": 25,
-      "image": "https://view.publitas.com/99/3521405/pages/989ef746-8f2d-4586-86d8-26a53a5862dd-at600.jpg"
-     },
-     {
-      "n": 26,
-      "image": "https://view.publitas.com/99/3521405/pages/0f19184a-c47d-4ca8-9b6d-66cd2c0c67c9-at600.jpg"
+      "image": "https://view.publitas.com/99/3423679/pages/11bd610d-5bf8-4214-b3bb-2aae863e75d9-at600.jpg"
      }
     ]
    }
   },
   "spar": {
    "status": "ok",
-   "checkedAt": "2026-11-15T12:42:03.559Z",
-   "fetchedAt": "2026-11-15T12:42:03.559Z",
+   "checkedAt": "2026-11-16T13:34:51.254Z",
+   "fetchedAt": "2026-11-16T13:34:51.254Z",
    "offers": [
     {
      "title": "SPAR appeltaart met",
@@ -1461,8 +1454,8 @@
   },
   "hoogvliet": {
    "status": "ok",
-   "checkedAt": "2026-11-15T12:42:03.559Z",
-   "fetchedAt": "2026-11-15T12:42:03.559Z",
+   "checkedAt": "2026-11-16T13:34:51.254Z",
+   "fetchedAt": "2026-11-16T13:34:51.254Z",
    "offers": [
     {
      "title": "Taartschep",
@@ -1837,8 +1830,8 @@
   },
   "ekoplaza": {
    "status": "ok",
-   "checkedAt": "2026-11-15T12:42:03.559Z",
-   "fetchedAt": "2026-11-15T12:42:03.559Z",
+   "checkedAt": "2026-11-16T13:34:51.254Z",
+   "fetchedAt": "2026-11-16T13:34:51.254Z",
    "offers": [
     {
      "title": "Rude Health",
@@ -2198,14 +2191,14 @@
   },
   "dirk": {
    "status": "error",
-   "checkedAt": "2026-11-15T12:42:03.559Z",
+   "checkedAt": "2026-11-16T13:34:51.254Z",
    "fetchedAt": null,
    "error": "no folder found at https://view.publitas.com/dirk-van-den-broek-supermarkten, https://view.publitas.com/dirk-vdbroek, https://view.folders.nl/dirk-van-den-broek",
    "offers": []
   },
   "plus": {
    "status": "error",
-   "checkedAt": "2026-11-15T12:42:03.559Z",
+   "checkedAt": "2026-11-16T13:34:51.254Z",
    "fetchedAt": null,
    "error": "no folder found at https://view.publitas.com/plus-supermarkten, https://view.publitas.com/plus-retail, https://view.folders.nl/plus",
    "offers": []
