@@ -1,374 +1,144 @@
 {
- "updatedAt": "2026-11-19T14:22:35.165Z",
+ "updatedAt": "2026-11-20T13:57:48.190Z",
  "chains": {
   "ah": {
    "status": "ok",
-   "checkedAt": "2026-11-19T14:22:35.165Z",
-   "fetchedAt": "2026-11-19T14:22:35.165Z",
+   "checkedAt": "2026-11-20T13:57:48.190Z",
+   "fetchedAt": "2026-11-20T13:57:48.190Z",
    "offers": [
     {
-     "title": "AH Mandarijnen 1 kilo",
-     "mechanism": "43% korting",
-     "page": 1,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/1"
+     "title": "Robotstofzuiger met dweilfunctie",
+     "mechanism": "Gratis",
+     "page": 2,
+     "url": "https://folder.ah.nl/voordeelshop-folder-week-48-2026/page/2"
     },
     {
-     "title": "AH Winterdorp",
-     "mechanism": "Op=op",
+     "title": "Beveiligingscamera",
+     "mechanism": "Gratis",
+     "page": 3,
+     "url": "https://folder.ah.nl/voordeelshop-folder-week-48-2026/page/3"
+    },
+    {
+     "title": "Dubbele airfryer",
+     "mechanism": "Gratis",
+     "size": "NA150/00 – 2 lades van 3.55 liter",
      "page": 4,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/4"
+     "url": "https://folder.ah.nl/voordeelshop-folder-week-48-2026/page/4"
     },
     {
-     "title": "Om je eigen dorp",
-     "mechanism": "Op=op",
-     "price": 1.99,
-     "page": 4,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/4"
+     "title": "DEAL DEAL",
+     "mechanism": "Gratis",
+     "page": 6,
+     "url": "https://folder.ah.nl/voordeelshop-folder-week-48-2026/page/6"
     },
     {
-     "title": "Klik",
-     "mechanism": "Op=op",
-     "price": 2.49,
-     "page": 4,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/4"
-    },
-    {
-     "title": "Hak witte bonen in",
-     "mechanism": "65% korting",
-     "size": "tomatensaus 360 gram",
-     "page": 5,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/5"
-    },
-    {
-     "title": "AH Witlof 4 stuks",
-     "mechanism": "34% korting",
-     "price": 2.29,
-     "size": "Minimaal 600 gram",
-     "page": 7,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/7"
-    },
-    {
-     "title": "AH Snoepgroente tomaat 500 gram",
-     "mechanism": "Halve prijs",
+     "title": "Inclusief",
+     "mechanism": "Gratis",
      "page": 8,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/8"
+     "url": "https://folder.ah.nl/voordeelshop-folder-week-48-2026/page/8"
     },
     {
-     "title": "AH Gerookte",
-     "mechanism": "25% korting",
+     "title": "Multifunctionele trainingsbank",
+     "mechanism": "Gratis",
      "page": 10,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/10"
-    },
-    {
-     "title": "AH Roomboterappelflappen",
-     "mechanism": "50% korting",
-     "page": 12,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/12"
-    },
-    {
-     "title": "Egberts",
-     "mechanism": "Halve prijs",
-     "page": 17,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/17"
-    },
-    {
-     "title": "Knaks",
-     "mechanism": "2+1 gratis",
-     "page": 19,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/19"
-    },
-    {
-     "title": "El Yucateco",
-     "mechanism": "Halve prijs",
-     "page": 21,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/21"
-    },
-    {
-     "title": "Ice Tea",
-     "mechanism": "25% korting",
-     "size": "1.5 liter",
-     "page": 25,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/25"
-    },
-    {
-     "title": "Diepvries",
-     "mechanism": "Gratis",
-     "page": 25,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/25"
-    },
-    {
-     "title": "AH Brabantse worstenbroodjes of hotdog",
-     "mechanism": "25% korting",
-     "size": "per stuk",
-     "page": 26,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/26"
-    },
-    {
-     "title": "Soepel",
-     "mechanism": "25% korting",
-     "page": 28,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/28"
-    },
-    {
-     "title": "Birra Moretti",
-     "mechanism": "25% korting",
-     "page": 29,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/29"
-    },
-    {
-     "title": "Page toiletpapier",
-     "mechanism": "Gratis",
-     "page": 32,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/32"
-    },
-    {
-     "title": "Mijn Bonus Box.",
-     "mechanism": "Van 66,58 voor 33,28",
-     "price": 33.28,
-     "was": 66.58,
-     "page": 33,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/33"
-    },
-    {
-     "title": "PEFC-gerecycled",
-     "mechanism": "78% korting",
-     "page": 34,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/34"
-    },
-    {
-     "title": "AH Germinimix",
-     "mechanism": "3+2 gratis",
-     "page": 36,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/36"
-    },
-    {
-     "title": "Rowenta",
-     "mechanism": "Op=op",
-     "page": 37,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/37"
-    },
-    {
-     "title": "Tefal Perfectmix+",
-     "mechanism": "Op=op",
-     "page": 38,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/38"
-    },
-    {
-     "title": "SodaStream bruiswatertoestel Classic",
-     "mechanism": "Op=op",
-     "page": 39,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/39"
-    },
-    {
-     "title": "Overnachting",
-     "mechanism": "Gratis",
-     "page": 40,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/40"
+     "url": "https://folder.ah.nl/voordeelshop-folder-week-48-2026/page/10"
     },
     {
      "title": "Verzwaringsknuffel",
-     "mechanism": "30% korting",
-     "size": "Schaap - 2kg",
-     "page": 40,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/40"
-    },
-    {
-     "title": "Reis voor €9.90 extra vanaf",
      "mechanism": "Gratis",
-     "price": 95,
-     "page": 41,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/41"
+     "size": "2 kg",
+     "page": 12,
+     "url": "https://folder.ah.nl/voordeelshop-folder-week-48-2026/page/12"
     },
     {
-     "title": "Reisassistent en flitsmelder",
+     "title": "Naalden gemaakt van",
      "mechanism": "Gratis",
-     "page": 42,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/42"
-    },
-    {
-     "title": "Klik hier",
-     "mechanism": "2+3 gratis",
-     "page": 47,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/47"
-    },
-    {
-     "title": "MOSCOW MULE",
-     "mechanism": "60% korting",
-     "size": "- 45 ml Smirnoff",
-     "page": 47,
-     "url": "https://folder.ah.nl/bonus-week-47-2026/page/47"
+     "page": 14,
+     "url": "https://folder.ah.nl/voordeelshop-folder-week-48-2026/page/14"
     }
    ],
    "folder": {
-    "url": "https://folder.ah.nl/bonus-week-47-2026/page/1",
+    "url": "https://folder.ah.nl/voordeelshop-folder-week-48-2026/page/1",
     "pages": [
      {
       "n": 1,
-      "image": "https://folder.ah.nl/15958/3530340/pages/d20fec36-7482-4349-8745-dd5675a907c1-at600.jpg"
+      "image": "https://folder.ah.nl/15958/3551759/pages/fe5a51a4-bdb5-4aaf-ae4f-4acdc65829d0-at600.jpg"
      },
      {
       "n": 2,
-      "image": "https://folder.ah.nl/15958/3530340/pages/54e15382-1599-4415-ab9e-49566fc7adcf-at600.jpg"
+      "image": "https://folder.ah.nl/15958/3551759/pages/1a7c555d-3ea3-4fd5-8a15-356dea151b59-at600.jpg"
      },
      {
       "n": 3,
-      "image": "https://folder.ah.nl/15958/3530340/pages/7249f620-0818-4a5a-a1b7-947694cc808d-at600.jpg"
+      "image": "https://folder.ah.nl/15958/3551759/pages/3cf2dbbc-3604-47ed-816d-094cd514e414-at600.jpg"
      },
      {
       "n": 4,
-      "image": "https://folder.ah.nl/15958/3530340/pages/6f6bb502-d3dd-4352-b6ea-6a478feadc31-at600.jpg"
+      "image": "https://folder.ah.nl/15958/3551759/pages/2652df08-f898-4bff-afbd-9a28e2ddf006-at600.jpg"
      },
      {
       "n": 5,
-      "image": "https://folder.ah.nl/15958/3530340/pages/92fc94b9-ba60-4d16-ab8c-de375e4fd8e7-at600.jpg"
+      "image": "https://folder.ah.nl/15958/3551759/pages/129bd88b-5501-404d-980b-540d001da656-at600.jpg"
      },
      {
       "n": 6,
-      "image": "https://folder.ah.nl/15958/3530340/pages/0d6e8651-4bb0-4480-a6e5-b507ecf60213-at600.jpg"
+      "image": "https://folder.ah.nl/15958/3551759/pages/54dcfec6-7135-415d-9fab-a771d3e41a4a-at600.jpg"
      },
      {
       "n": 7,
-      "image": "https://folder.ah.nl/15958/3530340/pages/fb64f05a-2eb7-4bda-b985-a7f8e41549d8-at600.jpg"
+      "image": "https://folder.ah.nl/15958/3551759/pages/6d9a098f-beee-4d55-a4c4-bbdbb45d1719-at600.jpg"
      },
      {
       "n": 8,
-      "image": "https://folder.ah.nl/15958/3530340/pages/631cd9fb-bad6-40e3-9e0f-3ea80c72a1bd-at600.jpg"
+      "image": "https://folder.ah.nl/15958/3551759/pages/92359bc4-06f1-44a6-b09c-7a119ad74124-at600.jpg"
      },
      {
       "n": 9,
-      "image": "https://folder.ah.nl/15958/3530340/pages/113b5a2d-daa2-4ce8-98ec-934798a934b9-at600.jpg"
+      "image": "https://folder.ah.nl/15958/3551759/pages/ff38b21f-1610-4e7f-9b4c-9851444a4cfb-at600.jpg"
      },
      {
       "n": 10,
-      "image": "https://folder.ah.nl/15958/3530340/pages/7dcd67fe-258e-44a9-839f-86abdb6f6ca7-at600.jpg"
+      "image": "https://folder.ah.nl/15958/3551759/pages/cb17d1c0-7164-4a4d-bf75-0d617c88d45f-at600.jpg"
      },
      {
       "n": 11,
-      "image": "https://folder.ah.nl/15958/3530340/pages/d608e535-c24a-4822-b8a2-60aca0788cb2-at600.jpg"
+      "image": "https://folder.ah.nl/15958/3551759/pages/22626d08-4767-43eb-9128-bd1c87b46e1b-at600.jpg"
      },
      {
       "n": 12,
-      "image": "https://folder.ah.nl/15958/3530340/pages/cacdb9ce-51c3-4956-8c3b-ec9e274a7aaa-at600.jpg"
+      "image": "https://folder.ah.nl/15958/3551759/pages/eb0b5c50-42f6-458d-a8e0-340fcc34524f-at600.jpg"
      },
      {
       "n": 13,
-      "image": "https://folder.ah.nl/15958/3530340/pages/c2a1a552-a59b-4406-92af-dafa72b9dc35-at600.jpg"
+      "image": "https://folder.ah.nl/15958/3551759/pages/bf6498fd-5173-4e77-b58b-dc0684793300-at600.jpg"
      },
      {
       "n": 14,
-      "image": "https://folder.ah.nl/15958/3530340/pages/1fcbaf20-bdeb-4d17-b78f-02e74044f680-at600.jpg"
+      "image": "https://folder.ah.nl/15958/3551759/pages/dae83854-9933-4b06-b10c-093e9036cfe3-at600.jpg"
      },
      {
       "n": 15,
-      "image": "https://folder.ah.nl/15958/3530340/pages/865d889c-22aa-47aa-a06d-29620f59a604-at600.jpg"
+      "image": "https://folder.ah.nl/15958/3551759/pages/33a9a80b-ced9-4ef8-834e-7cd6184bbd23-at600.jpg"
      },
      {
       "n": 16,
-      "image": "https://folder.ah.nl/15958/3530340/pages/e15666ea-f598-4779-96a4-73ffb6f216a2-at600.jpg"
+      "image": "https://folder.ah.nl/15958/3551759/pages/e9ae17ad-1b27-4495-aaab-e49f3c6ba741-at600.jpg"
      },
      {
       "n": 17,
-      "image": "https://folder.ah.nl/15958/3530340/pages/01f76b32-3e79-4387-a35c-cd49fabba42e-at600.jpg"
+      "image": "https://folder.ah.nl/15958/3551759/pages/078b6d67-0d0c-43b0-a007-cfbbb5981403-at600.jpg"
      },
      {
       "n": 18,
-      "image": "https://folder.ah.nl/15958/3530340/pages/40305057-8681-4b71-83e8-86375a1bc1d2-at600.jpg"
-     },
-     {
-      "n": 19,
-      "image": "https://folder.ah.nl/15958/3530340/pages/94c33765-6a0b-4e81-9fc5-63e62f0765b4-at600.jpg"
-     },
-     {
-      "n": 20,
-      "image": "https://folder.ah.nl/15958/3530340/pages/634a0d55-17c6-452f-92df-01566dca75ed-at600.jpg"
-     },
-     {
-      "n": 21,
-      "image": "https://folder.ah.nl/15958/3530340/pages/4f6206d8-1100-4e5b-81b1-7f009cb58efd-at600.jpg"
-     },
-     {
-      "n": 22,
-      "image": "https://folder.ah.nl/15958/3530340/pages/2aedb18c-0aec-40b1-b964-ba8b57e0576f-at600.jpg"
-     },
-     {
-      "n": 23,
-      "image": "https://folder.ah.nl/15958/3530340/pages/57e2bd9a-753a-41cd-9c1f-5a040372c586-at600.jpg"
-     },
-     {
-      "n": 24,
-      "image": "https://folder.ah.nl/15958/3530340/pages/7a856aca-cf84-48ac-a147-aaa2c19c2015-at600.jpg"
-     },
-     {
-      "n": 25,
-      "image": "https://folder.ah.nl/15958/3530340/pages/0273d232-f4b3-4293-9eff-9c5ba390fe0a-at600.jpg"
-     },
-     {
-      "n": 26,
-      "image": "https://folder.ah.nl/15958/3530340/pages/8b1de71b-ff4c-47b2-a984-1e4b4a179a0a-at600.jpg"
-     },
-     {
-      "n": 27,
-      "image": "https://folder.ah.nl/15958/3530340/pages/6f750ccd-a1a2-4a6c-bb33-ca1bc1ce2190-at600.jpg"
-     },
-     {
-      "n": 28,
-      "image": "https://folder.ah.nl/15958/3530340/pages/d90804bc-674b-42b3-bc8f-86913ef364c0-at600.jpg"
-     },
-     {
-      "n": 29,
-      "image": "https://folder.ah.nl/15958/3530340/pages/bfb47f56-d878-4133-8daa-e05797a4155a-at600.jpg"
-     },
-     {
-      "n": 30,
-      "image": "https://folder.ah.nl/15958/3530340/pages/59acb1c0-6dc4-4a42-b8b0-cb35f312006e-at600.jpg"
-     },
-     {
-      "n": 31,
-      "image": "https://folder.ah.nl/15958/3530340/pages/ac49a57b-89bd-4c09-bcaa-85e51bd5a663-at600.jpg"
-     },
-     {
-      "n": 32,
-      "image": "https://folder.ah.nl/15958/3530340/pages/9a9c76d7-6e73-480c-adea-f8685fcc4754-at600.jpg"
-     },
-     {
-      "n": 33,
-      "image": "https://folder.ah.nl/15958/3530340/pages/cb1de4c4-dcac-48af-9742-57ac5f8bf3e3-at600.jpg"
-     },
-     {
-      "n": 34,
-      "image": "https://folder.ah.nl/15958/3530340/pages/552bd80a-3515-4d73-86a6-85aa86354942-at600.jpg"
-     },
-     {
-      "n": 35,
-      "image": "https://folder.ah.nl/15958/3530340/pages/ade2e694-222e-4c97-abcb-d8b346391ee9-at600.jpg"
-     },
-     {
-      "n": 36,
-      "image": "https://folder.ah.nl/15958/3530340/pages/3c56f407-6e82-4c97-a539-0ab25b84f4e2-at600.jpg"
-     },
-     {
-      "n": 37,
-      "image": "https://folder.ah.nl/15958/3530340/pages/260fb9cf-885d-43b5-aa92-e13c5fdd2727-at600.jpg"
-     },
-     {
-      "n": 38,
-      "image": "https://folder.ah.nl/15958/3530340/pages/0240fe9b-7629-4b74-aa50-a87a02dab0f3-at600.jpg"
-     },
-     {
-      "n": 39,
-      "image": "https://folder.ah.nl/15958/3530340/pages/dc3e8fbd-54cf-46d3-ad37-2e8c43b163d7-at600.jpg"
-     },
-     {
-      "n": 40,
-      "image": "https://folder.ah.nl/15958/3530340/pages/23586f5c-7fcc-40a4-8acc-40a3a05ac40b-at600.jpg"
+      "image": "https://folder.ah.nl/15958/3551759/pages/6214726e-fa42-4b6a-bccf-23f09def7f44-at600.jpg"
      }
     ]
    }
   },
   "jumbo": {
    "status": "ok",
-   "checkedAt": "2026-11-19T14:22:35.165Z",
-   "fetchedAt": "2026-11-19T14:22:35.165Z",
+   "checkedAt": "2026-11-20T13:57:48.190Z",
+   "fetchedAt": "2026-11-20T13:57:48.190Z",
    "offers": [
     {
      "title": "Biologische snackgroente",
@@ -615,8 +385,8 @@
   },
   "vomar": {
    "status": "ok",
-   "checkedAt": "2026-11-19T14:22:35.165Z",
-   "fetchedAt": "2026-11-19T14:22:35.165Z",
+   "checkedAt": "2026-11-20T13:57:48.190Z",
+   "fetchedAt": "2026-11-20T13:57:48.190Z",
    "offers": [
     {
      "title": "Stamppotgroenten",
@@ -1206,8 +976,8 @@
   },
   "dekamarkt": {
    "status": "ok",
-   "checkedAt": "2026-11-19T14:22:35.165Z",
-   "fetchedAt": "2026-11-19T14:22:35.165Z",
+   "checkedAt": "2026-11-20T13:57:48.190Z",
+   "fetchedAt": "2026-11-20T13:57:48.190Z",
    "offers": [],
    "folder": {
     "url": "https://view.publitas.com/dekamarkt/aanbiedingen-week-47/page/1",
@@ -1321,8 +1091,8 @@
   },
   "spar": {
    "status": "ok",
-   "checkedAt": "2026-11-19T14:22:35.165Z",
-   "fetchedAt": "2026-11-19T14:22:35.165Z",
+   "checkedAt": "2026-11-20T13:57:48.190Z",
+   "fetchedAt": "2026-11-20T13:57:48.190Z",
    "offers": [
     {
      "title": "Chocomel of Fristi",
@@ -1525,8 +1295,8 @@
   },
   "hoogvliet": {
    "status": "ok",
-   "checkedAt": "2026-11-19T14:22:35.165Z",
-   "fetchedAt": "2026-11-19T14:22:35.165Z",
+   "checkedAt": "2026-11-20T13:57:48.190Z",
+   "fetchedAt": "2026-11-20T13:57:48.190Z",
    "offers": [
     {
      "title": "Taartschep",
@@ -1901,375 +1671,43 @@
   },
   "ekoplaza": {
    "status": "ok",
-   "checkedAt": "2026-11-19T14:22:35.165Z",
-   "fetchedAt": "2026-11-19T14:22:35.165Z",
-   "offers": [
-    {
-     "title": "Rude Health",
-     "mechanism": "2+1 gratis",
-     "page": 1,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/1"
-    },
-    {
-     "title": "Actieprijs per kg: 20.90",
-     "mechanism": "Nu 2.09",
-     "page": 2,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/2"
-    },
-    {
-     "title": "Laitois",
-     "mechanism": "20% korting",
-     "page": 3,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/3"
-    },
-    {
-     "title": "Laitois",
-     "mechanism": "Nu 1.35",
-     "page": 3,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/3"
-    },
-    {
-     "title": "Abbot Kinney’s",
-     "mechanism": "15% korting",
-     "page": 3,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/3"
-    },
-    {
-     "title": "Your Organic Nature",
-     "mechanism": "Nu 6.72",
-     "page": 3,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/3"
-    },
-    {
-     "title": "Kari’s Crackers",
-     "mechanism": "15% korting",
-     "page": 5,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/5"
-    },
-    {
-     "title": "De Hobbit",
-     "mechanism": "Nu 5.27",
-     "page": 5,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/5"
-    },
-    {
-     "title": "Ministry of Tea",
-     "mechanism": "Nu 4.31",
-     "page": 8,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/8"
-    },
-    {
-     "title": "Nice & Nuts",
-     "mechanism": "Nu 5.68",
-     "page": 8,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/8"
-    },
-    {
-     "title": "Rhythm 108",
-     "mechanism": "Gratis",
-     "page": 9,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/9"
-    },
-    {
-     "title": "Joannusmolen",
-     "mechanism": "20% korting",
-     "page": 9,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/9"
-    },
-    {
-     "title": "Lifebar",
-     "mechanism": "20% korting",
-     "page": 9,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/9"
-    },
-    {
-     "title": "CHiKKO NOT COFFEE",
-     "mechanism": "15% korting",
-     "price": 5.99,
-     "page": 11,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/11"
-    },
-    {
-     "title": "Lima",
-     "mechanism": "15% korting",
-     "price": 29.95,
-     "page": 11,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/11"
-    },
-    {
-     "title": "Lichtweiss",
-     "mechanism": "Gratis",
-     "page": 14,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/14"
-    },
-    {
-     "title": "Sonnenschliff",
-     "mechanism": "Gratis",
-     "page": 15,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/15"
-    },
-    {
-     "title": "Bio-Verde",
-     "mechanism": "20% korting",
-     "page": 17,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/17"
-    },
-    {
-     "title": "Mixblik",
-     "mechanism": "15% korting",
-     "page": 17,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/17"
-    },
-    {
-     "title": "Kleinstesoepfabriek",
-     "mechanism": "20% korting",
-     "page": 17,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/17"
-    },
-    {
-     "title": "The Good Witch",
-     "mechanism": "30% korting",
-     "page": 24,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/24"
-    },
-    {
-     "title": "WERFZEEP",
-     "mechanism": "20% korting",
-     "page": 24,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/24"
-    },
-    {
-     "title": "ECHiNAFORCE",
-     "mechanism": "Nu 5.94",
-     "page": 25,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/25"
-    },
-    {
-     "title": "TEA TREE",
-     "mechanism": "Nu 7.86",
-     "page": 25,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/25"
-    },
-    {
-     "title": "Nieuw in het verzorgingsschap: de natuurlijke verzorgingsproducten",
-     "mechanism": "20% korting",
-     "page": 25,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/25"
-    },
-    {
-     "title": "THEELiCHTJES",
-     "mechanism": "25% korting",
-     "size": "50 st",
-     "page": 26,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/26"
-    },
-    {
-     "title": "Green Age",
-     "mechanism": "Nu 7.49",
-     "page": 26,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/26"
-    },
-    {
-     "title": "UC TiS",
-     "mechanism": "Nu 2.99",
-     "page": 26,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/26"
-    },
-    {
-     "title": "Meesters van de Halm",
-     "mechanism": "25% korting",
-     "page": 26,
-     "validFrom": "2026-11-18",
-     "validUntil": "2026-11-24",
-     "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/26"
-    }
-   ],
+   "checkedAt": "2026-11-20T13:57:48.190Z",
+   "fetchedAt": "2026-11-20T13:57:48.190Z",
+   "offers": [],
    "folder": {
-    "url": "https://view.publitas.com/ekoplaza/ekoplaza-folder-week-47-2026/page/1",
+    "url": "https://view.publitas.com/ekoplaza/udea-weekfolder-47-agf-9361d/page/1",
     "pages": [
      {
       "n": 1,
-      "image": "https://view.publitas.com/1270/3537513/pages/6cd7b444-3945-44b0-8dd1-9798780ca0f9-at600.jpg"
+      "image": "https://view.publitas.com/1270/3552543/pages/bc2e38fb-e029-48c4-8104-111c97dfb229-at600.jpg"
      },
      {
       "n": 2,
-      "image": "https://view.publitas.com/1270/3537513/pages/651cbe61-c1d7-4071-b7ea-99cbebfea52d-at600.jpg"
+      "image": "https://view.publitas.com/1270/3552543/pages/24df909b-15f0-41d0-b86f-6bbfe4a16e46-at600.jpg"
      },
      {
       "n": 3,
-      "image": "https://view.publitas.com/1270/3537513/pages/19d57a0d-a5e6-442e-acc2-9ace6866cfc6-at600.jpg"
+      "image": "https://view.publitas.com/1270/3552543/pages/11a73267-7230-435f-a93f-82868d7e63b1-at600.jpg"
      },
      {
       "n": 4,
-      "image": "https://view.publitas.com/1270/3537513/pages/96e2b765-27b3-4329-af2a-623bceab84b8-at600.jpg"
-     },
-     {
-      "n": 5,
-      "image": "https://view.publitas.com/1270/3537513/pages/ecd2a89c-753a-4da0-873a-407df1d3db6f-at600.jpg"
-     },
-     {
-      "n": 6,
-      "image": "https://view.publitas.com/1270/3537513/pages/93b6004e-adac-469d-b35e-2db2e56330b1-at600.jpg"
-     },
-     {
-      "n": 7,
-      "image": "https://view.publitas.com/1270/3537513/pages/6e1ada12-e2c3-4508-be48-4495b259a3f4-at600.jpg"
-     },
-     {
-      "n": 8,
-      "image": "https://view.publitas.com/1270/3537513/pages/6781ebf7-6b2d-4da4-98cd-507bd32df6f2-at600.jpg"
-     },
-     {
-      "n": 9,
-      "image": "https://view.publitas.com/1270/3537513/pages/b8291319-d3d5-4f43-a1ce-d88b2ec35f7c-at600.jpg"
-     },
-     {
-      "n": 10,
-      "image": "https://view.publitas.com/1270/3537513/pages/f33cbae1-7e32-4bb0-8df5-907904957e4a-at600.jpg"
-     },
-     {
-      "n": 11,
-      "image": "https://view.publitas.com/1270/3537513/pages/4b822eb6-c550-47e4-9617-1d693694bd45-at600.jpg"
-     },
-     {
-      "n": 12,
-      "image": "https://view.publitas.com/1270/3537513/pages/9d494a29-0593-44d9-990f-f19fe121fbeb-at600.jpg"
-     },
-     {
-      "n": 13,
-      "image": "https://view.publitas.com/1270/3537513/pages/4c502311-fc24-4de1-9b0d-acd940d2c115-at600.jpg"
-     },
-     {
-      "n": 14,
-      "image": "https://view.publitas.com/1270/3537513/pages/4c7181f4-d4e2-47e1-a478-f06beba56adf-at600.jpg"
-     },
-     {
-      "n": 15,
-      "image": "https://view.publitas.com/1270/3537513/pages/01fa2728-237e-4ecd-87a3-dc176e92609f-at600.jpg"
-     },
-     {
-      "n": 16,
-      "image": "https://view.publitas.com/1270/3537513/pages/7d38e57b-2d76-4eda-85e3-68bb679247ef-at600.jpg"
-     },
-     {
-      "n": 17,
-      "image": "https://view.publitas.com/1270/3537513/pages/36214e8c-5256-420e-b243-24724ebadf78-at600.jpg"
-     },
-     {
-      "n": 18,
-      "image": "https://view.publitas.com/1270/3537513/pages/2fb3fff8-5bf9-48b2-80d2-09462ccf0438-at600.jpg"
-     },
-     {
-      "n": 19,
-      "image": "https://view.publitas.com/1270/3537513/pages/7e7c5a7c-ed12-4b0d-9ef3-1cd6f5faa1b6-at600.jpg"
-     },
-     {
-      "n": 20,
-      "image": "https://view.publitas.com/1270/3537513/pages/b5b3efac-6cfb-45b9-b704-399697999800-at600.jpg"
-     },
-     {
-      "n": 21,
-      "image": "https://view.publitas.com/1270/3537513/pages/3b85cfc1-1fca-407b-8759-02aa3b123509-at600.jpg"
-     },
-     {
-      "n": 22,
-      "image": "https://view.publitas.com/1270/3537513/pages/1389f11d-7521-4856-9cf6-24406b646494-at600.jpg"
-     },
-     {
-      "n": 23,
-      "image": "https://view.publitas.com/1270/3537513/pages/9e227ead-1a3a-4b1f-a9e7-9c693c7d3c87-at600.jpg"
-     },
-     {
-      "n": 24,
-      "image": "https://view.publitas.com/1270/3537513/pages/3a3b0d4e-2d23-439a-979e-682ac3688e0a-at600.jpg"
-     },
-     {
-      "n": 25,
-      "image": "https://view.publitas.com/1270/3537513/pages/afc59ce9-5095-4221-b18a-bb60ee969244-at600.jpg"
-     },
-     {
-      "n": 26,
-      "image": "https://view.publitas.com/1270/3537513/pages/6a43a29f-17a9-427a-9451-d4a96aeab5f3-at600.jpg"
-     },
-     {
-      "n": 27,
-      "image": "https://view.publitas.com/1270/3537513/pages/f3c60ff3-17f2-45de-8e18-3056d162783d-at600.jpg"
-     },
-     {
-      "n": 28,
-      "image": "https://view.publitas.com/1270/3537513/pages/88d44789-aaba-46b0-b44d-551f8721606a-at600.jpg"
+      "image": "https://view.publitas.com/1270/3552543/pages/6adb36eb-5908-49b7-a842-afcb219f49cd-at600.jpg"
      }
     ],
-    "validFrom": "2026-11-18",
-    "validUntil": "2026-11-24"
+    "validFrom": "2026-11-25",
+    "validUntil": "2026-12-01"
    }
   },
   "dirk": {
    "status": "error",
-   "checkedAt": "2026-11-19T14:22:35.165Z",
+   "checkedAt": "2026-11-20T13:57:48.190Z",
    "fetchedAt": null,
    "error": "no folder found at https://view.publitas.com/dirk-van-den-broek-supermarkten, https://view.publitas.com/dirk-vdbroek, https://view.folders.nl/dirk-van-den-broek",
    "offers": []
   },
   "plus": {
    "status": "error",
-   "checkedAt": "2026-11-19T14:22:35.165Z",
+   "checkedAt": "2026-11-20T13:57:48.190Z",
    "fetchedAt": null,
    "error": "no folder found at https://view.publitas.com/plus-supermarkten, https://view.publitas.com/plus-retail, https://view.folders.nl/plus",
    "offers": []
